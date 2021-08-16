@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/css/Login.css" rel="stylesheet" />
+    <script src="~/js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+
+<body>
+    <div id="app" class="main" @@mouseout="colorRemoval">
+        <h1 v-on:click="colorChange">Hello World</h1>
+        <div style="margin: 20px;"></div>
+        <el-form :model="login" :rules="rules" ref="login" label-width="100px" class="demo-login">
+            <div class="right">
+                <el-form-item label="姓名:" prop="name">
+                    <el-input v-model="login.name" prefix-icon="el-icon-user-solid" clearable></el-input>
+                </el-form-item>
+            </div>
+            <div class="right">
+                <el-form-item label="密码:" prop="password">
+                    <el-input v-model="login.password" prefix-icon="el-icon-lock" show-password clearable>
+                    </el-input>
+                </el-form-item>
+            </div>
+            <div>
+                <el-form-item label="验证码:" prop="checkCode">
+                    <el-input v-model="login.checkCode" style="width:40%;float:left" clearable></el-input>
+                    <img style="float: left; margin-left:5.5%;" v-on:click="captchaChange" id="img-captcha"
+                        src="/AccountControllers/GetCaptchaImage" />
+                </el-form-item>
+            </div>
+            <div>
+                <el-switch style="float:left; margin-left:7.5%;" v-model="value1" inactive-text="记住密码">
+                </el-switch>
+            </div>
+            <br /><br />
+            <el-form-item>
+                &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+                <el-button type="primary" v-on:click="submitForm('login')">Login</el-button>
+                <el-button type="primary" v-on:click="resetForm('login')">Reset</el-button>
+            </el-form-item>
+        </el-form>
+        <a v-on:click='Create()' id="Register">没有账号？立即注册</a>
+    </div>
+    <script src="~/js/Login.js"></script>
+</body>
+
+</html>

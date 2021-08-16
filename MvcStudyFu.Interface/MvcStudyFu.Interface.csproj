@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MvcStudyFu.Common\MvcStudyFu.Common.csproj" />
+    <ProjectReference Include="..\MvcStudyFu.EFCore.SQLSever\MvcStudyFu.EFCore.SQLSever.csproj" />
+  </ItemGroup>
+
+</Project>
