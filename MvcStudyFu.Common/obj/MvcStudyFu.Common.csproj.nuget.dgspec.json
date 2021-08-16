@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {}
+    "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {}
   },
   "projects": {
-    "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+    "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "projectName": "MvcStudyFu.Common",
-        "projectPath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "g:\\WebApplication\\MvcStudyFu.Common\\obj\\",
+        "outputPath": "G:\\WebApplication\\MvcStudyFu.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",

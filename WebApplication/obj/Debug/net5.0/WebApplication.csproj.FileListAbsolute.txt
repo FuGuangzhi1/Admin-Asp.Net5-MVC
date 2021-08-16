@@ -432,7 +432,6 @@ G:\WebApplication\WebApplication\bin\Debug\net5.0\MvcStudyFu.Interface.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\MvcStudyFu.Interface.pdb
 G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\HomePage\Index.cshtml.g.cs
 G:\WebApplication\webapplication\obj\Debug\net5.0\Razor\Views\AccountControllers\CreateUser.cshtml.g.cs
-G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Azure.KeyVault.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Azure.KeyVault.WebKey.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Azure.Management.AppService.Fluent.dll
@@ -896,3 +895,4 @@ G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.dll
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\ref\WebApplication.dll
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.pdb
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.genruntimeconfig.cache
+G:\WebApplication\WebApplication\bin\Debug\net5.0\WebApplication.StaticWebAssets.xml
