@@ -36,6 +36,7 @@ namespace MvcStudyFu.Services.DomainServices
                 iswater = await _dbContext.UserPassword.Select(x => x.NewPassword == password.ToMD5() & x.UserId == UserEntity.Id).FirstOrDefaultAsync();
                 if (iswater) id = UserEntity.Id;
             }
+            await _dbContext.DisposeAsync();
             return new(iswater, id);
         }
     }
