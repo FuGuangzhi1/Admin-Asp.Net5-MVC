@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h8FoFOCGynV3a+cPdPt6mQZFwR5FavZkYlkr+Ea9XXj9wVWhEoHvUmMufTmPzMQPcnLr3bRRAe8QcBG5pN2sPg==",
+  "dgSpecHash": "M8Ju9CKnZyqtQmid3IfR4/QPeHRhCI55TKcCxMOuESo6+d8JJsiX1maPHkkpRWBWCqcrI6S0JPsRKl4p1KmsBg==",
   "success": true,
-  "projectFilePath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+  "projectFilePath": "G:\\StudyMVC\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",

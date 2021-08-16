@@ -10,3 +10,15 @@ G:\WebApplication\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.dll
 G:\WebApplication\MvcStudyFu.Common\obj\Debug\net5.0\ref\MvcStudyFu.Common.dll
 G:\WebApplication\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.pdb
 G:\WebApplication\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.csproj.AssemblyReference.cache
+G:\StudyMVC\MvcStudyFu.Common\bin\Debug\net5.0\MvcStudyFu.Common.deps.json
+G:\StudyMVC\MvcStudyFu.Common\bin\Debug\net5.0\MvcStudyFu.Common.dll
+G:\StudyMVC\MvcStudyFu.Common\bin\Debug\net5.0\ref\MvcStudyFu.Common.dll
+G:\StudyMVC\MvcStudyFu.Common\bin\Debug\net5.0\MvcStudyFu.Common.pdb
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.csproj.AssemblyReference.cache
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.AssemblyInfoInputs.cache
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.AssemblyInfo.cs
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.csproj.CoreCompileInputs.cache
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.dll
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\ref\MvcStudyFu.Common.dll
+G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.pdb

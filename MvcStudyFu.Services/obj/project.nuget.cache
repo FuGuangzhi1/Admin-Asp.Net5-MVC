@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AKNe1YCpeOUC0j66iDJ9SoBN7hC/+Fxyd2ccefiaKoH9uN4+l1xRYPyQLZyNDiNRUYk9liDrce+Ba2ixoSmWkQ==",
+  "dgSpecHash": "x/IOLrA14rxWhu5EvIVgzgqAFpR8OM0sEFBm9cAdw3BCPrhnBAkK82XQWsfXWYZcLpy5aX1JZgI8DKOF9u4+NQ==",
   "success": true,
-  "projectFilePath": "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+  "projectFilePath": "G:\\StudyMVC\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.azure.keyvault\\3.0.5\\microsoft.azure.keyvault.3.0.5.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.azure.keyvault.webkey\\3.0.5\\microsoft.azure.keyvault.webkey.3.0.5.nupkg.sha512",

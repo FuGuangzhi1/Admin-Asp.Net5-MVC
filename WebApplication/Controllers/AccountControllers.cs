@@ -43,11 +43,11 @@ namespace WebApplication.Controllers
             {
                 if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase))
                 {
-                  (bool,User) isUser= await _iloginDomain.GetUserasync(login.Name,login.Password);
+                  (bool,Guid?) isUser= await _iloginDomain.GetUserasync(login.Name,login.Password);
                     if (isUser.Item1)
                     {
                         stringResult = "OK";
-                        HttpContext.Session.SetString("Id", isUser.Item2.Id.ToString());
+                        HttpContext.Session.SetString("Id", isUser.Item2.ToString());
                     }
                     else stringResult = "账号或者密码错误";
                 }

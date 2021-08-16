@@ -9,6 +9,6 @@ namespace MvcStudyFu.Interface.DomainInterface
 {
    public interface ILoginDomain
     {
-        public Task<(bool,User)> GetUserasync(string name, string password); 
+        public Task<(bool,Guid?)> GetUserasync(string name, string password); 
     }
 }
