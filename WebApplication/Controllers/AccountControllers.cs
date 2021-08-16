@@ -22,7 +22,7 @@ namespace WebApplication.Controllers
         private readonly IDbContextFactory _dbContextFactory;
         private readonly ILoginDomain _iloginDomain;
 
-        public AccountControllers(IDbContextFactory dbContextFactory,ILoginDomain iloginDomain)
+        public AccountControllers(IDbContextFactory dbContextFactory, ILoginDomain iloginDomain)
         {
             this._dbContextFactory = dbContextFactory;
             this._iloginDomain = iloginDomain;
@@ -36,25 +36,32 @@ namespace WebApplication.Controllers
         [HttpPost]
         public async Task<ActionResult> Login([FromBody] Login login)
         {
-            using var dbcontex = _dbContextFactory.CreateDbContext(ReadWriteEnum.Read);
             string stringResult = string.Empty;
-            string checkCode = HttpContext.Session.GetString("CaptchaCode");
-            if (ModelState.IsValid)
+            ActionResult result;
+            try
             {
-                if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase))
+                string checkCode = HttpContext.Session.GetString("CaptchaCode");
+                if (ModelState.IsValid)
                 {
-                  (bool,Guid?) isUser= await _iloginDomain.GetUserasync(login.Name,login.Password);
-                    if (isUser.Item1)
+                    if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase))
                     {
-                        stringResult = "OK";
-                        HttpContext.Session.SetString("Id", isUser.Item2.ToString());
+                        (bool, Guid?) isUser = await _iloginDomain.GetUserasync(login.Name, login.Password);
+                        if (isUser.Item1)
+                        {
+                            stringResult = "OK";
+                            HttpContext.Session.SetString("Id", isUser.Item2.ToString());
+                        }
+                        else stringResult = "账号或者密码错误";
                     }
-                    else stringResult = "账号或者密码错误";
+                    else stringResult = "验证码错误";
                 }
-                else stringResult = "验证码错误";
+                else stringResult = "数据格式不对！！！";
+                result = Content(stringResult);
             }
-            else stringResult = "数据格式不对！！！";
-            ActionResult result = Content(stringResult);
+            catch (Exception ex)
+            {
+                result = Content(ex.Message);
+            }
             return result;
         }
         [HttpGet]

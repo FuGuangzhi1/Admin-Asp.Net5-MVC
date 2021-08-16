@@ -30,10 +30,10 @@ namespace MvcStudyFu.Services.DomainServices
             _dbContext = _contextFactory.CreateDbContext(ReadWriteEnum.Read);
             Guid? id = Guid.Empty;
             bool iswater = false;
-            User UserEntity = await _dbContext.User.Where(x => x.Name == name).Include("UserPassword").FirstOrDefaultAsync();
+            User UserEntity = await _dbContext?.User.Where(x => x.Name == name).Include("UserPassword").FirstOrDefaultAsync();
             if (UserEntity != null)
             {
-                iswater = await _dbContext.UserPassword.Select(x => x.NewPassword == password.ToMD5() & x.UserId == UserEntity.Id).FirstOrDefaultAsync();
+                iswater = await _dbContext?.UserPassword.Select(x => x.NewPassword == password.ToMD5() & x.UserId == UserEntity.Id).FirstOrDefaultAsync();
                 if (iswater) id = UserEntity.Id;
             }
             await _dbContext.DisposeAsync();
