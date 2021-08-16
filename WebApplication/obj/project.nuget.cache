@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "brl0dOCeeGf0FfbuzAJ2YQ7RV7nyAD59ovMI4IDi67VcZys/ezVSiQyiQbhElGf6cxalaSOQlUyIo/pYqaImZw==",
+  "dgSpecHash": "LkUa0aDmXNc/ZTSgYJZwBl3ojS8zpugyb0+ZG6FewlXtuiSl9Foz8ftQvSXx9G9/hEt3DzfCMXm7HzClyBJFCQ==",
   "success": true,
-  "projectFilePath": "G:\\StudyMVC\\WebApplication\\WebApplication.csproj",
+  "projectFilePath": "G:\\WebApplication\\WebApplication\\WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
