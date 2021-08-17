@@ -56,7 +56,7 @@ namespace WebApplication
             });
         }
         /// <summary>
-        /// ���ݿⴴ�������������
+        /// 创建数据库，不存在的话
         /// </summary>
         private void Create()
         {
