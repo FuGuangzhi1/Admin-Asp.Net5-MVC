@@ -895,4 +895,4 @@ G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.dll
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\ref\WebApplication.dll
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.pdb
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.genruntimeconfig.cache
-G:\WebApplication\WebApplication\bin\Debug\net5.0\WebApplication.StaticWebAssets.xml
+G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml

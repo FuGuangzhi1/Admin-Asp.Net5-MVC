@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lJsY3glp22zIuDpFFXt5mUzCyaDWPUFzHryvQNEreEH3bttSW6yw+XYeMtxfxwiLQ/cGZUy4TdiywYIcU4Y/AQ==",
+  "dgSpecHash": "FR8h6PcptVm/48hWYOR1zbOflej421ZDbKCdRqxkyIQ9CseCQb9DFcAWzUnjvZ3u/mV0NMIrmO7yn+oRFNnMmA==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
+  "projectFilePath": "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

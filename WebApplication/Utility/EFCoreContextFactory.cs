@@ -42,7 +42,13 @@ namespace WebApplication.Utility
                     break;
                 //主库连接 
                 case ReadWriteEnum.Read:
-                    context = new StudyMVCDBContext(GetReadConnect());
+                    try
+                    {
+                        context = new StudyMVCDBContext(GetReadConnect());
+                    }
+                    catch {
+                        context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
+                    }
                     //从库连接
                     break;
                 default:

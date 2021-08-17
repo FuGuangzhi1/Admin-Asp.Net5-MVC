@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qP6fkKT1aMgU/ymVe2Qt+vBpSljIkAeGM56RPz9YWeH+LgrAr0WF0iL0r577cstIxwLLCEZIv1F6rJANfyk8RA==",
+  "dgSpecHash": "6szI2q437xawBELEgyUWK5sl/N7CYCthokCj3HwvGH2QfJU5a9cWW1h1dg5IB4FlRvbUD6mftJPdUASjmZvYpA==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+  "projectFilePath": "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -30,7 +30,7 @@ namespace WebApplication
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-{
+        {
             // services.AddMvc(options =>
             // {
             //     options.Filters.Add(typeof(ActionLoginFilterAttribute));
@@ -41,17 +41,29 @@ namespace WebApplication
             services.AddSession();
             services.AddScoped<IDbContextFactory, EFCoreContextFactory>();
             services.AddScoped<ILoginDomain, LoginDomain>();
-            //Create();
+            try
+            {
+                Create();
+            }
+            catch (Exception ex)
+            {
+                Console.Out.Write(true);
+                Console.WriteLine(ex.Message);
+            }
             services.AddDbContext<StudyMVCDBContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:Write"]);
             });
         }
-        //private void Create() {
-        //    IDbContextFactory dbContextFactory = new EFCoreContextFactory(Configuration);
-        //    dbContextFactory.CreateDbContext( MvcStudyFu.Common.Enum.ReadWriteEnum.Write).Database.EnsureDeleted();
-        //    dbContextFactory.CreateDbContext(MvcStudyFu.Common.Enum.ReadWriteEnum.Write).Database.EnsureCreated();
-        //}
+        /// <summary>
+        /// ���ݿⴴ�������������
+        /// </summary>
+        private void Create()
+        {
+            IDbContextFactory dbContextFactory = new EFCoreContextFactory(Configuration);
+            using var _dbContext = dbContextFactory.CreateDbContext(MvcStudyFu.Common.Enum.ReadWriteEnum.Write);
+            var isCreate = _dbContext.Database.EnsureCreated();
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

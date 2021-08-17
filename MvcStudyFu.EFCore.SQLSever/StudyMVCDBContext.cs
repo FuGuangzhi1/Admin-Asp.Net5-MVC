@@ -17,7 +17,7 @@ namespace MvcStudyFu.EFCore.SQLSever
         { }
         public StudyMVCDBContext() 
         {
-            _strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
+            //_strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
         }
         public StudyMVCDBContext(string strConn) 
         {

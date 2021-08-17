@@ -19,12 +19,10 @@ namespace WebApplication.Controllers
     //[ApiController]
     public class AccountControllers : Controller
     {
-        private readonly IDbContextFactory _dbContextFactory;
         private readonly ILoginDomain _iloginDomain;
 
-        public AccountControllers(IDbContextFactory dbContextFactory, ILoginDomain iloginDomain)
+        public AccountControllers( ILoginDomain iloginDomain)
         {
-            this._dbContextFactory = dbContextFactory;
             this._iloginDomain = iloginDomain;
         }
         [HttpGet]
@@ -45,6 +43,7 @@ namespace WebApplication.Controllers
                 {
                     if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase))
                     {
+                        //账号密码判断用户
                         (bool, Guid?) isUser = await _iloginDomain.GetUserasync(login.Name, login.Password);
                         if (isUser.Item1)
                         {
