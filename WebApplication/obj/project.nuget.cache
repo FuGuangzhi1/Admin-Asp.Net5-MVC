@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0WnYHoWr5/uTPryE3wIWBwOTcXYZLOe1xGamAvTWsKQ2DV+mM5RbC6Kel3+7T6cw8G7HF2Ui4rKWaHZ+1bLQ4Q==",
+  "dgSpecHash": "gw81R0yYc0NBlOkWCM1g2lu/Rg5r3YMY2KI/1fTpW/UPVuTcKfLHfQWA9/wvrAGjbiLd3a98rQh3Ypxc/hd9XQ==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\WebApplication\\WebApplication.csproj",
+  "projectFilePath": "g:\\WebApplication\\WebApplication\\WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\autofac.configuration\\6.0.0\\autofac.configuration.6.0.0.nupkg.sha512",
@@ -189,7 +189,8 @@
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
   ],
   "logs": []
 }
