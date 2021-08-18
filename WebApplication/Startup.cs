@@ -48,15 +48,6 @@ namespace WebApplication
             services.AddSession();
             //services.AddScoped<IDbContextFactory, EFCoreContextFactory>();
             //services.AddScoped<ILoginDomain, LoginDomain>();
-            try
-            {
-                Create();
-            }
-            catch (Exception ex)
-            {
-                Console.Out.Write(true);
-                Console.WriteLine(ex.Message);
-            }
             services.AddDbContext<StudyMVCDBContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:Write"]);
@@ -67,14 +58,21 @@ namespace WebApplication
         /// </summary>
         private void Create()
         {
-            IDbContextFactory dbContextFactory = new EFCoreContextFactory(Configuration);
-            using var _dbContext = dbContextFactory.CreateDbContext(MvcStudyFu.Common.Enum.ReadWriteEnum.Write);
-            var isCreate = _dbContext.Database.EnsureCreated();
+            try
+            {
+                IDbContextFactory dbContextFactory = new EFCoreContextFactory(Configuration);
+                using var _dbContext = dbContextFactory.CreateDbContext(MvcStudyFu.Common.Enum.ReadWriteEnum.Write);
+                var isCreate = _dbContext.Database.EnsureCreated();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
-        public void ConfigureContainer(ContainerBuilder builder) 
+        public void ConfigureContainer(ContainerBuilder builder)
         {
             #region 手动注册
-            builder.RegisterType<EFCoreContextFactory>().As<IDbContextFactory >();
+            builder.RegisterType<EFCoreContextFactory>().As<IDbContextFactory>();
             builder.RegisterType<LoginDomain>().As<ILoginDomain>();
             #endregion
 

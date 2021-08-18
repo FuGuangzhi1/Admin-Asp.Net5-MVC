@@ -19,6 +19,7 @@ namespace WebApplication.Controllers
     //[ApiController]
     public class AccountControllers : Controller
     {
+        private const string V = "OK";
         private readonly ILoginDomain _iloginDomain;
 
         public AccountControllers(ILoginDomain iloginDomain)
@@ -47,7 +48,7 @@ namespace WebApplication.Controllers
                     (bool, Guid?) isUser = await _iloginDomain.GetUserasync(login.Name, login.Password);
                     if (isUser.Item1)
                     {
-                        stringResult = "OK";
+                        stringResult = V;
                         HttpContext.Session.SetString("Id", isUser.Item2.ToString());
                     }
                     else stringResult = "账号或者密码错误";
