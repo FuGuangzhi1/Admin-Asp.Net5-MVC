@@ -83,7 +83,7 @@
                         await this.$message({
                             showClose: true,
                             message: result.data,
-                            type: 'success'
+                            type: 'warning'
                         });
                         this.captcha();
                     }
