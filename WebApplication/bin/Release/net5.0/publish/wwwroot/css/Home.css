@@ -1,0 +1,43 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.el-container {
+    width: 100%;
+    height: 100%;
+}
+
+.el-header {
+    background-color: #409EFF;
+    color: black;
+}
+
+.el-aside {
+    border-right: solid #DCDFE6 1px;
+}
+
+.el-footer {
+    background-color: #AAAAAA;
+    color: white;
+}
+
+#copyright {
+    text-align: center;
+    padding-top: 20px;
+}

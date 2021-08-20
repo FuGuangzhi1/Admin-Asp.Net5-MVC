@@ -1,0 +1,37 @@
+﻿html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+}
+
+#Register {
+    float: left;
+    margin-top: -11%;
+    margin-left: 8%;
+    color: #276ace;
+    cursor:pointer;
+}
+
+.main {
+    /*border:1px solid black;*/
+    text-align: center;
+    opacity: 0.9;
+    background-color: white;
+    border-radius: 20px;
+    width: 450px;
+    height: 380px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 10px #808080;
+}
+
+.right {
+    margin-right: 11%;
+}

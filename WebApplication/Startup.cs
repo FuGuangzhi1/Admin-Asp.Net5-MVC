@@ -53,22 +53,6 @@ namespace WebApplication
                 options.UseSqlServer(Configuration["ConnectionStrings:Write"]);
             });
         }
-        /// <summary>
-        /// 创建数据库，不存在的话
-        /// </summary>
-        private void Create()
-        {
-            try
-            {
-                IDbContextFactory dbContextFactory = new EFCoreContextFactory(Configuration);
-                using var _dbContext = dbContextFactory.CreateDbContext(MvcStudyFu.Common.Enum.ReadWriteEnum.Write);
-                var isCreate = _dbContext.Database.EnsureCreated();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
         public void ConfigureContainer(ContainerBuilder builder)
         {
             #region 手动注册

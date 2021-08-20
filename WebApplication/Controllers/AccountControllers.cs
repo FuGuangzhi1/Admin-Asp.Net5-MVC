@@ -37,7 +37,7 @@ namespace WebApplication.Controllers
         {
             //Login login1 = null;
             //login1.CheckCode = "";  //错误效果测试
-            string stringResult = string.Empty;
+            string stringResult;
             ActionResult result;
             string checkCode = HttpContext.Session.GetString("CaptchaCode");
             if (ModelState.IsValid)

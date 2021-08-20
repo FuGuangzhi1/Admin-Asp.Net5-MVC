@@ -13,13 +13,13 @@ namespace MvcStudyFu.EFCore.SQLSever
     public class StudyMVCDBContext : DbContext
     {
         private readonly string _strConn;
-        public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) :base(options)
+        public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
         { }
-        public StudyMVCDBContext() 
+        public StudyMVCDBContext()
         {
             //_strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
         }
-        public StudyMVCDBContext(string strConn) 
+        public StudyMVCDBContext(string strConn)
         {
             this._strConn = strConn;
         }
@@ -44,7 +44,8 @@ namespace MvcStudyFu.EFCore.SQLSever
                 Id = userGuid,
                 Name = "小杰",
                 CheckCode = ""
-                ,UserPasswordId= userPasswordGuid
+                ,
+                UserPasswordId = userPasswordGuid
             };
             modelBuilder.Entity<User>().HasData(new List<User>() {
              emptyUser

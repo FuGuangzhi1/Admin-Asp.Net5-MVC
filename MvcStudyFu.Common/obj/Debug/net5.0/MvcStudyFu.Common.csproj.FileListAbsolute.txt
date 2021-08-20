@@ -21,3 +21,4 @@ G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.csproj.CoreComp
 G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.dll
 G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\ref\MvcStudyFu.Common.dll
 G:\StudyMVC\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.pdb
+G:\WebApplication\MvcStudyFu.Common\obj\Debug\net5.0\MvcStudyFu.Common.csproj.AssemblyReference.cache

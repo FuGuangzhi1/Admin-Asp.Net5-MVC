@@ -1,0 +1,84 @@
+﻿2021-08-20 01:33:54,588| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-20 01:33:54,598| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:33:54,600| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:33:54,604| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 01:35:36,669| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-20 01:35:36,681| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:35:36,683| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:35:36,684| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 01:37:00,217| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-20 01:37:00,230| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:37:00,232| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:37:00,233| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 01:40:07,405| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-20 01:40:07,418| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:40:07,419| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:40:07,421| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 01:45:08,326| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:45:08,352| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:45:08,354| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 01:47:26,745| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:47:26,764| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:47:26,766| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 01:52:09,514| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 01:52:09,534| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 01:52:09,536| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-20 15:32:59,718| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-20 15:32:59,738| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-20 15:32:59,740| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------

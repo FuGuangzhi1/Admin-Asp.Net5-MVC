@@ -15,16 +15,16 @@ namespace WebApplication.Utility
     {
         private static IConfiguration _configuration;
         private static DBConnectionOption _dBConnectionOption;
+        private static StudyMVCDBContext _context = null;
+        private static bool b=false;
         public EFCoreContextFactory(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
-        private static StudyMVCDBContext context = null;
-
         public StudyMVCDBContext CreateDbContext(ReadWriteEnum writeOrRead)
         {
-            if (_configuration.GetSection("ConnectionStrings") == null) 
+            if (_configuration.GetSection("ConnectionStrings") == null)
             {
                 throw new Exception("请设置配置文件");
             }
@@ -35,26 +35,26 @@ namespace WebApplication.Utility
                     _configuration["ConnectionStrings:Read:0"],
                     _configuration["ConnectionStrings:Read:1"], }
             };
-            switch (writeOrRead)
+            if (!b) { Create(); b = true; }
+            if (bool.TryParse(_configuration.GetSection
+            ("WhetherToSeparateReadingAndWriting").ToString(), out _))
             {
-                case ReadWriteEnum.Write:
-                    context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
-                    break;
-                //主库连接 
-                case ReadWriteEnum.Read:
-                    try
-                    {
-                        context = new StudyMVCDBContext(GetReadConnect());
-                    }
-                    catch {
-                        context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
-                    }
-                    //从库连接
-                    break;
-                default:
-                    break;
+                switch (writeOrRead)
+                {
+                    case ReadWriteEnum.Write:
+                        _context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
+                        break;
+                    //主库连接 
+                    case ReadWriteEnum.Read:
+                        _context = new StudyMVCDBContext(GetReadConnect());
+                        //从库连接
+                        break;
+                    default:
+                        break;
+                }
             }
-            return context;
+            else _context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
+            return _context;
 
         }
 
@@ -73,10 +73,15 @@ namespace WebApplication.Utility
             // return strConns[i];
 
         }
+        /// <summary>
+        /// 创建数据库，不存在的话
+        /// </summary>
+        private static void Create()
+        {
+            _context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
+            _context.Database.EnsureCreated();
 
+        }
 
     }
-
-
-
 }

@@ -895,10 +895,10 @@ G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.dll
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\ref\WebApplication.dll
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.pdb
 G:\StudyMVC\WebApplication\obj\Debug\net5.0\WebApplication.genruntimeconfig.cache
-G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
 G:\WebApplication\WebApplication\bin\Debug\net5.0\log4net.config
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Autofac.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Autofac.Configuration.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\log4net.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
