@@ -15619,6 +15619,11 @@
   "RootNamespace": "WebApplication",
   "Documents": [
     {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Study\\FrontEndknowledge.cshtml",
+      "TargetPath": "Views\\Study\\FrontEndknowledge.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "g:\\WebApplication\\WebApplication\\Views\\AccountControllers\\CreateUser.cshtml",
       "TargetPath": "Views\\AccountControllers\\CreateUser.cshtml",
       "FileKind": "mvc"
