@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcStudyFu.Services", "MvcS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcStudyFu.EFCore.SQLSever", "MvcStudyFu.EFCore.SQLSever\MvcStudyFu.EFCore.SQLSever.csproj", "{BD2D88B9-B0F7-4A04-BF80-58A07879D9AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyMVCFu.Model", "StudyMVCFu.Model\StudyMVCFu.Model.csproj", "{6BC7BF3E-6141-4E93-9126-5F4CE00F5DC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BD2D88B9-B0F7-4A04-BF80-58A07879D9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD2D88B9-B0F7-4A04-BF80-58A07879D9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD2D88B9-B0F7-4A04-BF80-58A07879D9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BC7BF3E-6141-4E93-9126-5F4CE00F5DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC7BF3E-6141-4E93-9126-5F4CE00F5DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BC7BF3E-6141-4E93-9126-5F4CE00F5DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BC7BF3E-6141-4E93-9126-5F4CE00F5DC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -32,3 +32,5 @@ G:\StudyMVC\MvcStudyFu.Interface\obj\Debug\net5.0\MvcStudyFu.Interface.csproj.Co
 G:\StudyMVC\MvcStudyFu.Interface\obj\Debug\net5.0\MvcStudyFu.Interface.dll
 G:\StudyMVC\MvcStudyFu.Interface\obj\Debug\net5.0\ref\MvcStudyFu.Interface.dll
 G:\StudyMVC\MvcStudyFu.Interface\obj\Debug\net5.0\MvcStudyFu.Interface.pdb
+G:\WebApplication\MvcStudyFu.Interface\bin\Debug\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.Interface\bin\Debug\net5.0\StudyMVCFu.Model.pdb

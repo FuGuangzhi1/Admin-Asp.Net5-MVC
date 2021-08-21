@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using MvcStudyFu.Common;
-using MvcStudyFu.EFCore.SQLSever.DomainModel;
+using StudyMVCFu.Model;
 using System;
 using System.Collections.Generic;
 
@@ -15,10 +15,10 @@ namespace MvcStudyFu.EFCore.SQLSever
         private readonly string _strConn;
         public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
         { }
-        public StudyMVCDBContext()
-        {
-            //_strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
-        }
+        //public StudyMVCDBContext()
+        //{
+        //   _strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
+        //}
         public StudyMVCDBContext(string strConn)
         {
             this._strConn = strConn;

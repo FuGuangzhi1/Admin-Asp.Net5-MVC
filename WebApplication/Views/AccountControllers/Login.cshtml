@@ -18,7 +18,7 @@
     <div id="app" class="main" @@mouseout="colorRemoval">
         <h1 v-on:click="colorChange">Hello World</h1>
         <div style="margin: 20px;"></div>
-        <el-form :model="login" :rules="rules" ref="login" label-width="100px" class="demo-login">
+        <el-form :model="login" :rules="rules" ref="login" label-width="100px" class="demo-login" v-loading="loading">
             <div class="right">
                 <el-form-item label="姓名:" prop="name">
                     <el-input v-model="login.name" prefix-icon="el-icon-user-solid" clearable></el-input>

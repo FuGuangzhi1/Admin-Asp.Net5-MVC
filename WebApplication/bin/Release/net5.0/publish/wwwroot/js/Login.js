@@ -109,8 +109,8 @@
                 }
             });
         },
-        async resetForm(formname) {
-            await this.$refs[formname].resetFields();
+         resetForm(formname) {
+            this.$refs[formname].resetFields();
         },
         Create() {
             window.open("/AccountControllers/CreateUser");

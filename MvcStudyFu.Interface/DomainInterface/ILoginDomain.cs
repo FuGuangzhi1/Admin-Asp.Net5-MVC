@@ -1,4 +1,4 @@
-﻿using MvcStudyFu.EFCore.SQLSever.DomainModel;
+﻿using MvcStudyFu.EFCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MvcStudyFu.Interface.DomainInterface
 {
-   public interface ILoginDomain
+    public interface ILoginDomain
     {
         /// <summary>
         /// 账号密码判断用户
@@ -15,6 +15,6 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// <param name="name"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public Task<(bool,Guid?)> GetUserasync(string name, string password); 
+        public Task<(bool, Guid?)> GetUserasync(string name, string password);
     }
 }

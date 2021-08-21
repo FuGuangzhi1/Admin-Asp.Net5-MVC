@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using MvcStudyFu.Common;
 using MvcStudyFu.EFCore.SQLSever;
@@ -16,9 +17,9 @@ using MvcStudyFu.Interface.DomainInterface;
 using MvcStudyFu.Services.DomainServices;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication.Utility;
 
 namespace WebApplication
 {
@@ -34,20 +35,15 @@ namespace WebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddMvc(options =>
-            // {
-            //     options.Filters.Add(typeof(ActionLoginFilterAttribute));
-            // });
             services.AddMvc(options =>
             {
+                options.Filters.Add(typeof(ActionLoginFilterAttribute));
                 options.Filters.Add(typeof(CustomExceptionAttribute));
             });
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             //services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
             services.AddControllersWithViews();
             services.AddSession();
-            //services.AddScoped<IDbContextFactory, EFCoreContextFactory>();
-            //services.AddScoped<ILoginDomain, LoginDomain>();
             services.AddDbContext<StudyMVCDBContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:Write"]);
@@ -84,7 +80,12 @@ namespace WebApplication
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider
+                (Path.Combine(Directory.GetCurrentDirectory(), "wwwroot"))
+            });
 
             app.UseRouting();
 

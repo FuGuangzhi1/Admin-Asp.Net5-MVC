@@ -2,16 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcStudyFu.Common;
-using MvcStudyFu.Common.Enum;
-using MvcStudyFu.EFCore.SQLSever.DomainModel;
 using MvcStudyFu.Interface;
 using MvcStudyFu.Interface.DomainInterface;
+using StudyMVCFu.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication.Utility;
 
 namespace WebApplication.Controllers
 {
@@ -27,12 +25,14 @@ namespace WebApplication.Controllers
             this._iloginDomain = iloginDomain;
         }
         [HttpGet]
+        [CustomAllownonymous]
         public ActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [CustomAllownonymous]
         public async Task<ActionResult> Login([FromBody] Login login)
         {
             //Login login1 = null;
@@ -60,6 +60,7 @@ namespace WebApplication.Controllers
             return result;
         }
         [HttpGet]
+        [CustomAllownonymous]
         public IActionResult GetCaptchaImage()
         {
             int width = 140;
@@ -71,6 +72,7 @@ namespace WebApplication.Controllers
             return new FileStreamResult(s, "image/png");
         }
         [HttpGet]
+        [CustomAllownonymous]
         public IActionResult CreateUser()
         {
             return View();

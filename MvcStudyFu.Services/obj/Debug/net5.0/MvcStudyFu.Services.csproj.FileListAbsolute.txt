@@ -36,3 +36,5 @@ G:\StudyMVC\MvcStudyFu.Services\obj\Debug\net5.0\MvcStudyFu.Services.csproj.Copy
 G:\StudyMVC\MvcStudyFu.Services\obj\Debug\net5.0\MvcStudyFu.Services.dll
 G:\StudyMVC\MvcStudyFu.Services\obj\Debug\net5.0\ref\MvcStudyFu.Services.dll
 G:\StudyMVC\MvcStudyFu.Services\obj\Debug\net5.0\MvcStudyFu.Services.pdb
+G:\WebApplication\MvcStudyFu.Services\bin\Debug\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.Services\bin\Debug\net5.0\StudyMVCFu.Model.pdb

@@ -34,3 +34,5 @@ G:\StudyMVC\MvcStudyFu.EFCore.SQLSever\obj\Debug\net5.0\MvcStudyFu.EFCore.SQLSev
 G:\StudyMVC\MvcStudyFu.EFCore.SQLSever\obj\Debug\net5.0\ref\MvcStudyFu.EFCore.SQLSever.dll
 G:\StudyMVC\MvcStudyFu.EFCore.SQLSever\obj\Debug\net5.0\MvcStudyFu.EFCore.SQLSever.pdb
 G:\StudyMVC\MvcStudyFu.EFCore.SQLSever\obj\Debug\net5.0\MvcStudyFu.EFCore.SQLSever.genruntimeconfig.cache
+G:\WebApplication\MvcStudyFu.EFCore.SQLSever\bin\Debug\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.EFCore.SQLSever\bin\Debug\net5.0\StudyMVCFu.Model.pdb

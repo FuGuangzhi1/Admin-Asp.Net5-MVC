@@ -1,0 +1,18 @@
+﻿2021-08-21 02:39:21,044| ERROR 
+An exception was thrown while activating MvcStudyFu.Services.DomainServices.LoginDomain -> WebApplication.Utility.EFCoreContextFactory.
+--------------------------------
+2021-08-21 04:11:59,372| ERROR 
+An exception was thrown while activating MvcStudyFu.Services.DomainServices.LoginDomain -> WebApplication.Utility.EFCoreContextFactory.
+--------------------------------
+2021-08-21 13:02:28,252| ERROR 
+An exception was thrown while activating MvcStudyFu.Services.DomainServices.LoginDomain -> WebApplication.Utility.EFCoreContextFactory.
+--------------------------------
+2021-08-21 14:38:34,162| ERROR 
+用户 'sa' 登录失败。
+--------------------------------
+2021-08-21 15:46:35,790| ERROR 
+An exception was thrown while activating MvcStudyFu.Services.DomainServices.LoginDomain.
+--------------------------------
+2021-08-21 15:50:39,307| ERROR 
+用户 'sa' 登录失败。
+--------------------------------
