@@ -43,12 +43,12 @@
         captchaChange() {
             this.captcha();
         },
-        captcha: function () {
+        captcha: function() {
             var captcha = document.getElementById("img-captcha");
             d = new Date();
             captcha.src = "/AccountControllers/GetCaptchaImage?" + d.getTime();
         },
-        randomHexColor: function () {
+        randomHexColor: function() {
             //随机生成十六进制颜色
             var hex = Math.floor(Math.random() * 16777216).toString(16); //生成ffffff以内16进制数
             while (hex.length < 6) { //while循环判断hex位数，少于6位前面加0凑够6位
@@ -57,11 +57,12 @@
             return '#' + hex; //返回‘#'开头16进制颜色
         },
         //登录按钮
-        loginForm: function (url) {
+        loginForm: function(url) {
             this.loading = true;
             axios.post(url, this.login).then(result => {
                 console.log(result)
                 if (result.status >= 200 && result.status <= 299) {
+                    this.timeOut();
                     if (result.data == "OK") {
                         this.$message({
                             showClose: true,
@@ -91,10 +92,12 @@
                         this.captcha();
                     }
                 } else {
+                    this.timeOut();
                     this.$message.error('数据请求失败！！！');
                     this.captcha();
                 }
             }).catch(error => {
+                this.timeOut();
                 console.log(error);
                 this.$message.error('请求地址错误，或者没有网络，或者服务器爆炸！！！');
                 this.captcha();
@@ -106,7 +109,6 @@
                     console.log("格式正确");
                     let url = "/AccountControllers/Login";
                     this.loginForm(url);
-                    this.timeOut();
                 } else {
                     console.log('error submit!!');
                     return false;

@@ -26,8 +26,9 @@ namespace WebApplication
                //loggingBuilder.AddLog4Net("log4net.config");
                //一定要注意文件的路径
                loggingBuilder.AddLog4Net(Path.Combine(Directory.GetCurrentDirectory(), "log4net.config"));
-           }).ConfigureWebHostDefaults(webBuilder =>{
+           }).ConfigureWebHostDefaults(webBuilder =>
+           {
                webBuilder.UseStartup<Startup>();
-        }).UseServiceProviderFactory(new AutofacServiceProviderFactory());
+           }).UseServiceProviderFactory(new AutofacServiceProviderFactory());
     }
 }

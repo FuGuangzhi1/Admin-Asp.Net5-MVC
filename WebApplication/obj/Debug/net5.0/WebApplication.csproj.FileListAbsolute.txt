@@ -901,7 +901,6 @@ G:\WebApplication\WebApplication\bin\Debug\net5.0\Autofac.Configuration.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\log4net.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
-G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Z.EntityFramework.Extensions.EFCore.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Z.EntityFramework.Plus.EFCore.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Z.Expressions.Eval.dll

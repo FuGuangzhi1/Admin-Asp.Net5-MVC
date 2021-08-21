@@ -169,3 +169,27 @@ Hosting environment: Development
 2021-08-21 15:53:28,073| INFO Microsoft.Hosting.Lifetime 
 Content root path: G:\WebApplication\WebApplication
 --------------------------------
+2021-08-21 18:43:08,784| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-21 18:43:08,800| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-21 18:43:08,802| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-21 18:43:08,804| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
+2021-08-21 18:45:35,480| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-21 18:45:35,488| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-21 18:45:35,488| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-21 18:45:35,488| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------
