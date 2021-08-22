@@ -6,6 +6,7 @@ using System.ComponentModel;
 namespace StudyMVCFu.Model
 {
     [Description("UserModel")]
+    [Table("User")]
     public class User
     {
         [Key]

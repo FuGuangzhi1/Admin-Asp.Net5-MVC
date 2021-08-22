@@ -7,32 +7,37 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using StudyMVCFu.Model;
+using MvcStudyFu.Common.ConvertTpye;
 
 namespace MvcStudyFu.EFCore.SQLSever
 {
     public class EFCoreContextFactory : IDbContextFactory
     {
-        private readonly IConfiguration _configuration;
-        private static DBConnectionOption _dBConnectionOption;
+        private readonly IConfiguration _configuration=null;
+        private static DBConnectionOption _dBConnectionOption=null;
         private static StudyMVCDBContext _context = null;
-        private static bool b = true;
+        //private static bool b = true;
         public EFCoreContextFactory(IConfiguration configuration)
         {
+            if (this._configuration==null)
             this._configuration = configuration;
             if (_configuration["ConnectionStrings:Write"]==null)
             {
                 throw new Exception("请设置配置文件");
             }
-            _dBConnectionOption = new DBConnectionOption()
+            if (_dBConnectionOption == null)
             {
-                MainConnectionString = _configuration["ConnectionStrings:Write"],
-                SlaveConnectionStringList = new List<string> {
+                _dBConnectionOption = new DBConnectionOption()
+                {
+                    MainConnectionString = _configuration["ConnectionStrings:Write"],
+                    SlaveConnectionStringList = new List<string> {
                     _configuration["ConnectionStrings:Read:0"],
                     _configuration["ConnectionStrings:Read:1"], }
-            };
-            if (b) { Create(); b = false; }
+                };
+            }
+            //if (b) { Create(); b = false; }
         }
-        public static StudyMVCDBContext CreateDbContext()
+        public  StudyMVCDBContext CreateDbContext()
         {
             return new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
         }
@@ -41,7 +46,7 @@ namespace MvcStudyFu.EFCore.SQLSever
             var whetherToSeparateReadingAndWriting = _configuration.GetSection("WhetherToSeparateReadingAndWriting");
             if (!whetherToSeparateReadingAndWriting.Exists())
             {
-                if (!bool.TryParse(whetherToSeparateReadingAndWriting.Value,out _))
+                if (whetherToSeparateReadingAndWriting.ToBool())
                 {
                 return new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
                 }
@@ -62,9 +67,13 @@ namespace MvcStudyFu.EFCore.SQLSever
                         break;
                 }
             }
-            catch (Exception)
+            catch (OutOfMemoryException)  //用 new 分配内存失败
             {
                 return new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
+            }
+            catch (Exception)
+            {
+                throw new Exception("请配置数据库或者打开数据库代理");
             }
             return _context;
         }
@@ -87,12 +96,12 @@ namespace MvcStudyFu.EFCore.SQLSever
         /// <summary>
         /// 创建数据库，不存在的话
         /// </summary>
-        private static void Create()
-        {
-            _context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
-            _context.Database.EnsureCreated();
-
-        }
+        //private static void Create()
+        //{
+        //    _context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
+        //    _context.Database.EnsureDeleted();
+        //    _context.Database.EnsureCreated();
+        //}
 
     }
 }

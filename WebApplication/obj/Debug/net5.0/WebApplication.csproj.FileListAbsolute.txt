@@ -904,7 +904,8 @@ G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Extensions.Logging.L
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Z.EntityFramework.Extensions.EFCore.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Z.EntityFramework.Plus.EFCore.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Z.Expressions.Eval.dll
-G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Study\FrontEndknowledge.cshtml.g.cs
 G:\WebApplication\WebApplication\bin\Debug\net5.0\linq2db.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\StudyMVCFu.Model.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\StudyMVCFu.Model.pdb
+G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Study\Studyknowledge.cshtml.g.cs

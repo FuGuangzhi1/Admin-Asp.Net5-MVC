@@ -12,5 +12,7 @@ namespace MvcStudyFu.EFCore.SQLSever
     {
         public StudyMVCDBContext CreateDbContext(ReadWriteEnum readWriteEnum);
 
+        public StudyMVCDBContext CreateDbContext();
+
     }
 }

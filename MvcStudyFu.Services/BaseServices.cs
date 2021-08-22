@@ -12,19 +12,17 @@ using System.Threading.Tasks;
 
 namespace MvcStudyFu.Services
 {
-    public class BaseService : IBaseService, IDisposable
+    public abstract class BaseService : IBaseService, IDisposable
     {
-        public StudyMVCDBContext _writeDbContext;
-        public StudyMVCDBContext _readDbContext;
+        public StudyMVCDBContext _DBContext;
 
         public IDbContextFactory _contextFactory;
 
         public BaseService(IDbContextFactory contextFactory)
         {
             this._contextFactory = contextFactory;
-            Create();
+            this._DBContext = this._contextFactory.CreateDbContext();
         }
-
         public void Commit()
         {
             throw new NotImplementedException();
@@ -55,16 +53,13 @@ namespace MvcStudyFu.Services
             throw new NotImplementedException();
         }
 
-        public  void Dispose()
+        public void Dispose()
         {
-           // if (_writeDbContext != null || _readDbContext != null) GC.SuppressFinalize(this);
-            if (_writeDbContext != null) _writeDbContext.Dispose();
-            if (_readDbContext != null) _writeDbContext.Dispose();
+            if (_DBContext != null) _DBContext.Dispose();
         }
         public async Task DisposeAyscn()
         {
-            if (_writeDbContext != null)await _writeDbContext.DisposeAsync();
-            if (_readDbContext != null)await _writeDbContext.DisposeAsync();
+            if (_DBContext != null) await _DBContext.DisposeAsync();
         }
         public virtual void Excute<T>(string sql, SqlParameter[] parameter) where T : class
         {
@@ -175,19 +170,17 @@ namespace MvcStudyFu.Services
         {
             throw new NotImplementedException();
         }
-
-        void Create()
-        {
-            this._writeDbContext = _contextFactory.CreateDbContext(ReadWriteEnum.Write);
-            this._readDbContext = _contextFactory.CreateDbContext(ReadWriteEnum.Read);
-        }
-
-        PageResult<T> IBaseService.QueryPage<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc)
+        PageResult<T> IBaseService.QueryPage<T, S>
+        (Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc)
         {
             throw new NotImplementedException();
         }
 
-        Task<PageResult<T>> IBaseService.QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc)
+        Task<PageResult<T>> IBaseService.QueryPageAsync<T, S>
+            (Expression<Func<T, bool>> funWhere,
+            int pageSize, int pageIndex,
+            Expression<Func<T, S>> funcOderby,
+            bool isAsc)
         {
             throw new NotImplementedException();
         }
