@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = StudyMVCFu.Model
-build_property.ProjectDir = G:\WebApplication\StudyMVCFu.Model\
+build_property.ProjectDir = G:\WebApplication1\StudyMVCFu.Model\

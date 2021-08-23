@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+      "projectUniqueName": "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
       "projectName": "StudyMVCFu.Model",
-      "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+      "projectPath": "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
       "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-      "outputPath": "G:\\WebApplication\\StudyMVCFu.Model\\obj\\",
+      "outputPath": "G:\\WebApplication1\\StudyMVCFu.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",

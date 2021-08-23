@@ -6175,11 +6175,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+      "projectUniqueName": "G:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
       "projectName": "MvcStudyFu.EFCore.SQLSever",
-      "projectPath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+      "projectPath": "G:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
       "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-      "outputPath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\obj\\",
+      "outputPath": "G:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6196,11 +6196,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-              "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+            "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+              "projectPath": "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
             },
-            "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-              "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+            "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+              "projectPath": "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
             }
           }
         }

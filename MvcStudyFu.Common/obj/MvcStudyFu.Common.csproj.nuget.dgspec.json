@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {}
+    "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {}
   },
   "projects": {
-    "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+    "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectUniqueName": "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "projectName": "MvcStudyFu.Common",
-        "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectPath": "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\MvcStudyFu.Common\\obj\\",
+        "outputPath": "G:\\WebApplication1\\MvcStudyFu.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-                "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+              "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+                "projectPath": "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+    "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+        "projectUniqueName": "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
         "projectName": "StudyMVCFu.Model",
-        "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+        "projectPath": "G:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\StudyMVCFu.Model\\obj\\",
+        "outputPath": "G:\\WebApplication1\\StudyMVCFu.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",

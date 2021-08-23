@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "60YDzwMjYrwnMNe7Hw2k24bzjAEFW53R0OgFpumkOJ0XMdJqGoIdCA58mgbryDGiN2F6WIjgp+F2XcyDL0UCBw==",
+  "dgSpecHash": "yGDPvUJZWJVOOPlQvleL7/bHJMC6zgbK9oBdXKsUl/BWiVQcFR8n8suHpAeaPqVzfRBaCyjdqYqdZg3xNLHzug==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+  "projectFilePath": "G:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

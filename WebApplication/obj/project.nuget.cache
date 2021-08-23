@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WL1wcz2XYbaAGgafS5zVLkr/Q47SZ1lOPhcJ0DWqc6Loiv14H5Ej73Fp1V3bN+yTyiJUbdRKiccZ6/mPCJlyFw==",
+  "dgSpecHash": "n8E6OIOEDP/DYll4jMv+sVJCuwfGpXoNOOVsVTv0V4cHc4z1oKpNx9ZS3I8fTrRh5AJSaKJ5+vBum1dcXcqFdg==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\WebApplication\\WebApplication.csproj",
+  "projectFilePath": "G:\\WebApplication1\\WebApplication\\WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\autofac.configuration\\6.0.0\\autofac.configuration.6.0.0.nupkg.sha512",

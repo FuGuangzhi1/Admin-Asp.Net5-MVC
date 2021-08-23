@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nioWHLJTu451BcVdqLfmwxubGOTvS9HbAVYNhHu3UVxQd2YECN/0Z/f7WNqQ9pNzO1p1gsCTRRnkPBIE/sdGbw==",
+  "dgSpecHash": "tiuEsJSFnplbuEm1i4aqywGRTL8jIgWdBX+CZo3T9hPe1Hs5m3NwPnu76Lp8VElU9LveQmM0Zu1GhyzW2zZVTw==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
+  "projectFilePath": "G:\\WebApplication1\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\linq2db\\3.4.3\\linq2db.3.4.3.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
