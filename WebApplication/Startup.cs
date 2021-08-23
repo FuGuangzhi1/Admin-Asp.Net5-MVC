@@ -54,7 +54,7 @@ namespace WebApplication
         {
             builder.RegisterModule(new AutofacModule());
 
-           #region 配置文件注册
+            #region 配置文件注册
             //IConfigurationBuilder config = new ConfigurationBuilder();
             //IConfigurationSource autoJsonconfigSource = new JsonConfigurationSource() 
             //{
@@ -65,7 +65,7 @@ namespace WebApplication
             //config.Add(autoJsonconfigSource);
             //var module = new ConfigurationModule(config.Build());
             //builder.RegisterModule(module);
-           #endregion
+            #endregion
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
