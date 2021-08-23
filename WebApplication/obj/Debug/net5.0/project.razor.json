@@ -1,5 +1,5 @@
 {
-  "FilePath": "g:\\WebApplication1\\WebApplication\\WebApplication.csproj",
+  "FilePath": "g:\\WebApplication\\WebApplication\\WebApplication.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,23 +15619,23 @@
   "RootNamespace": "WebApplication",
   "Documents": [
     {
-      "FilePath": "g:\\WebApplication1\\WebApplication\\Views\\AccountControllers\\Login.cshtml",
-      "TargetPath": "Views\\AccountControllers\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication1\\WebApplication\\Views\\HomePage\\Index.cshtml",
-      "TargetPath": "Views\\HomePage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication1\\WebApplication\\Views\\Study\\Studyknowledge.cshtml",
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Study\\Studyknowledge.cshtml",
       "TargetPath": "Views\\Study\\Studyknowledge.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "g:\\WebApplication1\\WebApplication\\Views\\AccountControllers\\CreateUser.cshtml",
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\AccountControllers\\CreateUser.cshtml",
       "TargetPath": "Views\\AccountControllers\\CreateUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\HomePage\\Index.cshtml",
+      "TargetPath": "Views\\HomePage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\AccountControllers\\Login.cshtml",
+      "TargetPath": "Views\\AccountControllers\\Login.cshtml",
       "FileKind": "mvc"
     }
   ],

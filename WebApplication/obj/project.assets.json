@@ -9983,11 +9983,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "g:\\WebApplication1\\WebApplication\\WebApplication.csproj",
+      "projectUniqueName": "g:\\WebApplication\\WebApplication\\WebApplication.csproj",
       "projectName": "WebApplication",
-      "projectPath": "g:\\WebApplication1\\WebApplication\\WebApplication.csproj",
+      "projectPath": "g:\\WebApplication\\WebApplication\\WebApplication.csproj",
       "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-      "outputPath": "g:\\WebApplication1\\WebApplication\\obj\\",
+      "outputPath": "g:\\WebApplication\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10004,17 +10004,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "g:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-              "projectPath": "g:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+            "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+              "projectPath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
             },
-            "g:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
-              "projectPath": "g:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
+            "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
+              "projectPath": "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
             },
-            "g:\\WebApplication1\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
-              "projectPath": "g:\\WebApplication1\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
+            "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+              "projectPath": "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
             },
-            "g:\\WebApplication1\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
-              "projectPath": "g:\\WebApplication1\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj"
+            "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
+              "projectPath": "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj"
             }
           }
         }

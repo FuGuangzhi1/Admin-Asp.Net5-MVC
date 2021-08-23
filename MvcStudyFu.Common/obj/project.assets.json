@@ -516,11 +516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "g:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+      "projectUniqueName": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
       "projectName": "MvcStudyFu.Common",
-      "projectPath": "g:\\WebApplication1\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+      "projectPath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
       "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-      "outputPath": "g:\\WebApplication1\\MvcStudyFu.Common\\obj\\",
+      "outputPath": "g:\\WebApplication\\MvcStudyFu.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -537,8 +537,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "g:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-              "projectPath": "g:\\WebApplication1\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+            "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+              "projectPath": "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
             }
           }
         }

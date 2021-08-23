@@ -19,12 +19,3 @@ Hosting environment: Development
 2021-08-23 18:56:55,024| INFO Microsoft.Hosting.Lifetime 
 Content root path: G:\WebApplication\WebApplication
 --------------------------------
-2021-08-23 19:53:24,162| INFO Microsoft.Hosting.Lifetime 
-Application started. Press Ctrl+C to shut down.
---------------------------------
-2021-08-23 19:53:24,181| INFO Microsoft.Hosting.Lifetime 
-Hosting environment: Development
---------------------------------
-2021-08-23 19:53:24,184| INFO Microsoft.Hosting.Lifetime 
-Content root path: G:\WebApplication1\WebApplication
---------------------------------
