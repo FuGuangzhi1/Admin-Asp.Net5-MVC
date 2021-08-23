@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gOFCETiNmS5tI5Mwx4rPjL92EE9NUCLBGGMpe7jReONnPD+JuGu6G7sfNy9oULghQedzdqw2igMgBam7bpTZqg==",
+  "dgSpecHash": "sDaY/cNandSdLozSdEdXEVOa3EDr7Pkksv6zwTgW5P7M+Y8pddU4ycPPQg4Be28NGUEeiZjw2I1EW12bBxzjoQ==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+  "projectFilePath": "g:\\WebApplication1\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\linq2db\\3.4.3\\linq2db.3.4.3.nupkg.sha512",

@@ -1,7 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-git config --global core.ignorecase false 
-git rm -r --cache .  
-git add .
-git commit -m "gitignore working"
-git push
