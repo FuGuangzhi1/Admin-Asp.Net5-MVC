@@ -1,25 +1,13 @@
 ﻿using Autofac;
-using Autofac.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using MvcStudyFu.Common;
 using MvcStudyFu.EFCore.SQLSever;
-using MvcStudyFu.Interface;
-using MvcStudyFu.Interface.DomainInterface;
-using MvcStudyFu.Services.DomainServices;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using WebApplication.Utility;
 
 namespace WebApplication

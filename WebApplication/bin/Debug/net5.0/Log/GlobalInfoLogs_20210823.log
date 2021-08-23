@@ -1,0 +1,12 @@
+﻿2021-08-23 16:47:39,953| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-08-23 16:47:39,962| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-23 16:47:39,964| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-08-23 16:47:39,965| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication
+--------------------------------

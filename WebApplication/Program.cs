@@ -29,6 +29,6 @@ namespace WebApplication
            }).ConfigureWebHostDefaults(webBuilder =>
            {
                webBuilder.UseStartup<Startup>();
-           }).UseServiceProviderFactory(new AutofacServiceProviderFactory());
+           }).UseServiceProviderFactory(new AutofacServiceProviderFactory());  //启用Autofac依赖注入
     }
 }

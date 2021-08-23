@@ -9,3 +9,4 @@ G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.csproj.Core
 G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.dll
 G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\ref\StudyMVCFu.Model.dll
 G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.pdb
+G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.csproj.AssemblyReference.cache
