@@ -23,10 +23,12 @@ namespace StudyMVCFu.Model
         [StringLength(100)]
         public string Email { get; set; }
         public ulong? QQ { get; set; }
-        [Required(ErrorMessage = "plaese input CheckCode")]
-        public string CheckCode { get; set; }
-        [StringLength(20)]
-        public bool? Remeber { get; set; }
+        [StringLength(400)]
+        public string Hobby { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime? Birthday { get; set; }
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? CreateDateTime { get; set; }
@@ -35,8 +37,5 @@ namespace StudyMVCFu.Model
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? UpdateDateTime { get; set; }
         public UserPassword UserPassword { get; set; }
-        public Guid UserPasswordId { get; set; }
-
-
     }
 }

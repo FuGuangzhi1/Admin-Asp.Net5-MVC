@@ -12,7 +12,6 @@ namespace StudyMVCFu.Model.DomainModel
         [Key]
         public int StudyTypeId { get; set;  }
         public string StudyTypeName { get; set; }
-        public virtual IComparable<Studyknowledge> Studyknowledge { get; set; }
-        public Guid StudyknowledgeId { get; set; }
+        public  List<Studyknowledge> Studyknowledge { get; set; }
     }
 }

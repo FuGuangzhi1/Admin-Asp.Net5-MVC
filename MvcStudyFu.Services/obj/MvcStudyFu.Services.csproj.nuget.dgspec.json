@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {}
+    "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {}
   },
   "projects": {
-    "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+    "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectUniqueName": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "projectName": "MvcStudyFu.Common",
-        "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectPath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\MvcStudyFu.Common\\obj\\",
+        "outputPath": "g:\\WebApplication\\MvcStudyFu.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-                "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+              "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+                "projectPath": "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
               }
             }
           }
@@ -76,18 +76,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
+    "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+        "projectUniqueName": "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
         "projectName": "MvcStudyFu.EFCore.SQLSever",
-        "projectPath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+        "projectPath": "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\obj\\",
+        "outputPath": "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -104,11 +104,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-                "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+              "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+                "projectPath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
               },
-              "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-                "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+              "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+                "projectPath": "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
               }
             }
           }
@@ -167,18 +167,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+    "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
+        "projectUniqueName": "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
         "projectName": "MvcStudyFu.Interface",
-        "projectPath": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
+        "projectPath": "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\MvcStudyFu.Interface\\obj\\",
+        "outputPath": "g:\\WebApplication\\MvcStudyFu.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -195,11 +195,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-                "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+              "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+                "projectPath": "g:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
               },
-              "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
-                "projectPath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
+              "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
+                "projectPath": "g:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
               }
             }
           }
@@ -234,18 +234,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
+    "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+        "projectUniqueName": "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
         "projectName": "MvcStudyFu.Services",
-        "projectPath": "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+        "projectPath": "g:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\MvcStudyFu.Services\\obj\\",
+        "outputPath": "g:\\WebApplication\\MvcStudyFu.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -262,8 +262,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
-                "projectPath": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
+              "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+                "projectPath": "g:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
               }
             }
           }
@@ -306,18 +306,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+    "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+        "projectUniqueName": "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
         "projectName": "StudyMVCFu.Model",
-        "projectPath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+        "projectPath": "g:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
         "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-        "outputPath": "G:\\WebApplication\\StudyMVCFu.Model\\obj\\",
+        "outputPath": "g:\\WebApplication\\StudyMVCFu.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -360,7 +360,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
         }
       }
     }

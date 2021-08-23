@@ -15619,8 +15619,8 @@
   "RootNamespace": "WebApplication",
   "Documents": [
     {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Study\\FrontEndknowledge.cshtml",
-      "TargetPath": "Views\\Study\\FrontEndknowledge.cshtml",
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Study\\Studyknowledge.cshtml",
+      "TargetPath": "Views\\Study\\Studyknowledge.cshtml",
       "FileKind": "mvc"
     },
     {

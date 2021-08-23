@@ -14,11 +14,13 @@ namespace MvcStudyFu.EFCore.SQLSever
     public class StudyMVCDBContext : DbContext
     {
         private readonly string _strConn;
-        public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
-        { }
         public StudyMVCDBContext()
         {
             _strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
+        }
+        public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
+        {
+        
         }
         public StudyMVCDBContext(string strConn)
         {
@@ -42,9 +44,9 @@ namespace MvcStudyFu.EFCore.SQLSever
                 .HasForeignKey<UserPassword>(x => x.UserId);
             #endregion
             #region  学习表和学习类型表外键设置  一对多
-            modelBuilder.Entity<StudyType>()
-                .HasOne(x => x.Studyknowledge)
-                .WithMany()
+            modelBuilder.Entity<Studyknowledge>()
+                .HasOne(x => x.StudyType)
+                .WithMany(y=>y.Studyknowledge)
                 .HasForeignKey(x => x.StudyTypeId);
             #endregion
 
@@ -64,9 +66,8 @@ namespace MvcStudyFu.EFCore.SQLSever
                 Account = 1314520,
                 Id = userGuid,
                 Name = "小杰",
-                CheckCode = ""
-                ,
-                UserPasswordId = userPasswordGuid
+                Birthday = new DateTime(2001, 11, 18),
+                Hobby = "Do Love",
             };
             var emptyUserPassword = new UserPassword()
             {
