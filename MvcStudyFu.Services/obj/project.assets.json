@@ -2399,7 +2399,6 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.8",
-          "MvcStudyFu.Common": "1.0.0",
           "MvcStudyFu.EFCore.SQLSever": "1.0.0"
         },
         "compile": {
@@ -8103,6 +8102,7 @@
     "net5.0": [
       "Microsoft.Azure.Management.AppService.Fluent >= 1.37.1",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
+      "MvcStudyFu.Common >= 1.0.0",
       "MvcStudyFu.Interface >= 1.0.0",
       "Z.EntityFramework.Plus.EFCore >= 5.2.7"
     ]
@@ -8134,6 +8134,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+              "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+            },
             "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
               "projectPath": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
             }

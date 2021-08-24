@@ -11,7 +11,7 @@ using MvcStudyFu.Common.ConvertTpye;
 
 namespace MvcStudyFu.EFCore.SQLSever
 {
-    public class EFCoreContextFactory : IDbContextFactory
+    public class EFCoreContextFactory : IDBContextFactory
     {
         private readonly IConfiguration _configuration=null;
         private static DBConnectionOption _dBConnectionOption=null;

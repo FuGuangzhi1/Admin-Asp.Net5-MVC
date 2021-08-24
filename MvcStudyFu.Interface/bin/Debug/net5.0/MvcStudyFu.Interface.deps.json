@@ -9,7 +9,6 @@
       "MvcStudyFu.Interface/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.8",
-          "MvcStudyFu.Common": "1.0.0",
           "MvcStudyFu.EFCore.SQLSever": "1.0.0"
         },
         "runtime": {

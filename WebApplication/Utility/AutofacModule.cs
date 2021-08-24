@@ -13,7 +13,7 @@ namespace WebApplication.Utility
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<EFCoreContextFactory>().As<IDbContextFactory>().SingleInstance();
+            builder.RegisterType<EFCoreContextFactory>().As<IDBContextFactory>().SingleInstance();
             builder.RegisterType<LoginDomain>().As<ILoginDomain>().SingleInstance();
         }
     }

@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MvcStudyFu.Common\MvcStudyFu.Common.csproj" />
     <ProjectReference Include="..\MvcStudyFu.EFCore.SQLSever\MvcStudyFu.EFCore.SQLSever.csproj" />
   </ItemGroup>
 

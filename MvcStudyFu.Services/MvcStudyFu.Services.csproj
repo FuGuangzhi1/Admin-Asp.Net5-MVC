@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MvcStudyFu.Common\MvcStudyFu.Common.csproj" />
     <ProjectReference Include="..\MvcStudyFu.Interface\MvcStudyFu.Interface.csproj" />
   </ItemGroup>
 

@@ -256,5 +256,22 @@ namespace MvcStudyFu.Common.ConvertTpye
             var startTime = TimeZoneInfo.ConvertTime(new DateTime(1970, 1, 1), TimeZoneInfo.Local);
             return (int)((time) - startTime).TotalSeconds;
         }
+
+        public static T IsTypeNull<T>(T type, T type1)
+        {
+            if (type == null)
+            {
+                type = type1;
+            }
+            return type;
+        } 
+
+        public  static void IsTypeNull<T,T1>(T type, T1 type1) where T:T1
+        {
+            if (type1 == null)
+            {
+                type1=type;
+            }
+        }
     }
 }

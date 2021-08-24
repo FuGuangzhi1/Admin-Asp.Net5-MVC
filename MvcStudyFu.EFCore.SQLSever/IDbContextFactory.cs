@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MvcStudyFu.EFCore.SQLSever
 {
-    public interface IDbContextFactory
+    public interface IDBContextFactory
     {
         public StudyMVCDBContext CreateDbContext(ReadWriteEnum readWriteEnum);
 

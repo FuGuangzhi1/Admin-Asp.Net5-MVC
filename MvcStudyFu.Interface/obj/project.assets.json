@@ -6089,7 +6089,6 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.EntityFrameworkCore >= 5.0.8",
-      "MvcStudyFu.Common >= 1.0.0",
       "MvcStudyFu.EFCore.SQLSever >= 1.0.0"
     ]
   },
@@ -6120,9 +6119,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-              "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
-            },
             "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
               "projectPath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
             }

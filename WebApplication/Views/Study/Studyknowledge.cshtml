@@ -21,7 +21,7 @@
 
         <!--表头模糊查询-->
         <el-form :inline="true" class="demo-form-inline">
-            <el-form-item label="知识内容:">
+            <el-form-item label="知识名称:">
                 <el-input placeholder="请输入需要查询知识....." v-model="T_Name"></el-input>
             </el-form-item>
             <el-form-item>
@@ -42,19 +42,19 @@
                 </el-table-column>
 
                 <el-table-column property="Name"
-                                 label="学生姓名"
+                                 label="知识名称"
                                  width="180">
                 </el-table-column>
                 <el-table-column property="Sex"
-                                 label="性别"
+                                 label="知识类型"
                                  width="180">
                 </el-table-column>
                 <el-table-column property="CuorseName"
-                                 label="科目"
+                                 label="知识内容"
                                  width="180">
                 </el-table-column>
                 <el-table-column property="Subject_score"
-                                 label="分数"
+                                 label="创建时间"
                                  width="180">
                 </el-table-column>
                 <el-table-column label="操作"

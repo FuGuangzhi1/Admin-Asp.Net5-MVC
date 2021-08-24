@@ -9,48 +9,67 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using static LinqToDB.SqlQuery.SqlPredicate;
+using MvcStudyFu.Common.ConvertTpye;
+using static LinqToDB.Reflection.Methods.LinqToDB.Insert;
 
 namespace MvcStudyFu.Services
 {
     public abstract class BaseService : IBaseService, IDisposable
     {
-        public StudyMVCDBContext _DBContext;
+        public StudyMVCDBContext _DBContext = null;
 
-        public IDbContextFactory _contextFactory;
+        public IDBContextFactory _contextFactory = null;
 
-        public BaseService(IDbContextFactory contextFactory)
+        public BaseService(IDBContextFactory contextFactory)
         {
-            this._contextFactory = contextFactory;
-            this._DBContext = this._contextFactory.CreateDbContext();
+            this._contextFactory = ConvertExtension.IsTypeNull<IDBContextFactory>
+                  (this._contextFactory, contextFactory);
+            this._DBContext = ConvertExtension.IsTypeNull<StudyMVCDBContext>
+             (_DBContext, this._contextFactory?.CreateDbContext());
         }
+        /// <summary>
+        /// 提交
+        /// </summary>
         public void Commit()
         {
-            throw new NotImplementedException();
+            _DBContext.SaveChanges();
         }
-
-        public virtual Task CommitAsync()
+        /// <summary>
+        /// 异步提交
+        /// </summary>
+        /// <returns></returns>
+        public async virtual Task CommitAsync()
         {
-            throw new NotImplementedException();
+            await _DBContext.SaveChangesAsync();
         }
-
+        /// <summary>
+        /// 根据主键删除实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
         public virtual void Delete<T>(Guid id) where T : class
         {
-            throw new NotImplementedException();
+            T t = _DBContext.Set<T>().Find(id);
+            if (t == null) throw new Exception("不存在这个，不用删");
+            _DBContext.Set<T>().Remove(t);
         }
-
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tList"></param>
         public virtual void Delete<T>(IEnumerable<T> tList) where T : class
         {
-            throw new NotImplementedException();
+            if (tList.Count() < 0) throw new Exception("不存在这个，不用删");
+            _DBContext.Set<T>().RemoveRange(tList);
         }
 
-        public virtual Task DeleteAsync<T>(Guid id) where T : class
+        public async virtual Task DeleteAsync<T>(Guid id) where T : class
         {
-            throw new NotImplementedException();
-        }
-
-        public virtual Task DeleteAsync<T>(IEnumerable<T> tList) where T : class
-        {
-            throw new NotImplementedException();
+            T t = await _DBContext.Set<T>().FindAsync(id);
+            if (t == null) throw new Exception("不存在这个，不用删");
+            _DBContext.Set<T>().Remove(t);
         }
 
         public void Dispose()
@@ -61,22 +80,26 @@ namespace MvcStudyFu.Services
         {
             if (_DBContext != null) await _DBContext.DisposeAsync();
         }
-        public virtual void Excute<T>(string sql, SqlParameter[] parameter) where T : class
+        public virtual void Excute<T>
+            (string sql, SqlParameter[] parameter) where T : class
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task ExcuteAsync<T>(string sql, SqlParameter[] parameter) where T : class
+        public virtual Task ExcuteAsync<T>
+            (string sql, SqlParameter[] parameter) where T : class
         {
             throw new NotImplementedException();
         }
 
-        public virtual IQueryable<T> ExcuteQuery<T>(string sql, SqlParameter[] parameter) where T : class
+        public virtual IQueryable<T> ExcuteQuery<T>
+            (string sql, SqlParameter[] parameter) where T : class
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<IQueryable<T>> ExcuteQueryAsync<T>(string sql, SqlParameter[] parameter) where T : class
+        public virtual Task<IQueryable<T>> ExcuteQueryAsync<T>
+            (string sql, SqlParameter[] parameter) where T : class
         {
             throw new NotImplementedException();
         }
@@ -96,7 +119,8 @@ namespace MvcStudyFu.Services
             throw new NotImplementedException();
         }
 
-        public virtual Task<T> FindAsync<T>(int id) where T : class
+        public virtual Task<T> FindAsync<T>
+            (int id) where T : class
         {
             throw new NotImplementedException();
         }
@@ -106,12 +130,14 @@ namespace MvcStudyFu.Services
             throw new NotImplementedException();
         }
 
-        public virtual IEnumerable<T> Insert<T>(IEnumerable<T> tList) where T : class
+        public virtual IEnumerable<T> Insert<T>
+            (IEnumerable<T> tList) where T : class
         {
             throw new NotImplementedException();
         }
 
-        public virtual Task<T> InsertAsync<T>(T t) where T : class
+        public virtual Task<T> InsertAsync<T>
+            (T t) where T : class
         {
             throw new NotImplementedException();
         }
