@@ -21,11 +21,6 @@ namespace WebApplication
             {
                 context.HttpContext.Response.Redirect("/AccountControllers/login");
             }
-
-
-
-
-
         }
     }
 }
