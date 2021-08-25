@@ -9,11 +9,12 @@
             total: 0,   //总记录数
             //模态框
             dialogFormVisible: false,
+            student_select: {},
             form: {
-                StudyknowledgeName: '',
-                StudyknowledgeNameType: '',
-                StudyknowledgeContent: '',
-                CreateDateTime: '',
+                StudyknowledgeName: '求Star',
+                StudyknowledgeNameType: '求Star',
+                StudyknowledgeContent: '求Star',
+                CreateDateTime: '2001-04-22',
                 StudyknowledgeNameId: '',
                 StudyTypeId: ''
             }/*,formLabelWidth:'120px'*/
