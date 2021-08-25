@@ -25,5 +25,6 @@ namespace StudyMVCFu.Model.DomainModel
         
         public StudyType StudyType { get; set; }
         public int StudyTypeId { get; set; }
+
     }
 }

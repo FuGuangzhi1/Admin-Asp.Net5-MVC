@@ -21,3 +21,6 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'connectionString
    at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
    at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
    at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-08-25 16:06:08,720| ERROR 
+Object reference not set to an instance of an object.
+--------------------------------

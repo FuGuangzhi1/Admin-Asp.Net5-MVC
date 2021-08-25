@@ -20,7 +20,6 @@ namespace MvcStudyFu.Services
         public StudyMVCDBContext _DBContext = null;
 
         public IDBContextFactory _contextFactory = null;
-        public BaseService() { }
         public BaseService(IDBContextFactory contextFactory)
         {
             this._contextFactory = ConvertExtension.IsTypeNull<IDBContextFactory>

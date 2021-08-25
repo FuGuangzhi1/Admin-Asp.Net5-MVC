@@ -12,6 +12,7 @@ namespace MvcStudyFu.Services.DomainServices
 {
     public class LoginDomain : BaseService, ILoginDomain
     {
+        public LoginDomain(IDBContextFactory dBContextFactory):base(dBContextFactory) { }
         public async Task<(bool, Guid?)> GetUserasync(string name, string password)
         {
             int account = name.ToInt32();
