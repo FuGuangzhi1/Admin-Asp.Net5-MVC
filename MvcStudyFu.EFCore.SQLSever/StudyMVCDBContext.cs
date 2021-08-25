@@ -13,10 +13,9 @@ namespace MvcStudyFu.EFCore.SQLSever
     //Update-Database CodeFirst
     public class StudyMVCDBContext : DbContext
     {
-        private readonly string _strConn;
+        private  string _strConn;
         public StudyMVCDBContext()
         {
-            _strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
         }
         public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
         {
@@ -30,9 +29,15 @@ namespace MvcStudyFu.EFCore.SQLSever
         public virtual DbSet<UserPassword> UserPassword { get; set; }
         public virtual DbSet<StudyType> StudyType { get; set; }
         public virtual DbSet<Studyknowledge> Studyknowledge { get; set; }
+
+        internal string GetStr()
+        {
+            return "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
+        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+            if (string.IsNullOrEmpty(_strConn)) _strConn = GetStr();
             optionsBuilder.UseSqlServer(_strConn);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

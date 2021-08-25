@@ -30,7 +30,6 @@ namespace WebApplication.Controllers
         {
             return View();
         }
-
         [HttpPost]
         [CustomAllownonymous]
         public async Task<ActionResult> Login([FromBody] Login login)

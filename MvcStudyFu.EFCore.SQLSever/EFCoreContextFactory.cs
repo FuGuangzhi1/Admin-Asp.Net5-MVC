@@ -16,7 +16,6 @@ namespace MvcStudyFu.EFCore.SQLSever
         private readonly IConfiguration _configuration=null;
         private static DBConnectionOption _dBConnectionOption=null;
         private static StudyMVCDBContext _context = null;
-        //private static bool b = true;
         public EFCoreContextFactory(IConfiguration configuration)
         {
             if (this._configuration==null)
@@ -35,7 +34,6 @@ namespace MvcStudyFu.EFCore.SQLSever
                     _configuration["ConnectionStrings:Read:1"], }
                 };
             }
-            //if (b) { Create(); b = false; }
         }
         public  StudyMVCDBContext CreateDbContext()
         {
@@ -93,15 +91,5 @@ namespace MvcStudyFu.EFCore.SQLSever
             // return strConns[i];
 
         }
-        /// <summary>
-        /// 创建数据库，不存在的话
-        /// </summary>
-        //private static void Create()
-        //{
-        //    _context = new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
-        //    _context.Database.EnsureDeleted();
-        //    _context.Database.EnsureCreated();
-        //}
-
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MAQxgNVgc/AHdKR3utVibDPXkAHgL4pZoy/N5CgzRCNmtvDRvt8mpKJnI4HhgvBnUZXSnanBm2qVi2hFEn2mwA==",
+  "dgSpecHash": "HsVqd6tbcrFpwO0qpTbKdFRYx5ZQO4+AsrnaKVhPytOYpnqxqB0/CIft0GzHbj7Bkz9csN5BzBeiiQkNwmE0qQ==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\WebApplication\\WebApplication.csproj",
+  "projectFilePath": "g:\\WebApplication\\WebApplication\\WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\付广志\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\autofac.configuration\\6.0.0\\autofac.configuration.6.0.0.nupkg.sha512",
@@ -190,7 +190,8 @@
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.7\\z.entityframework.extensions.efcore.5.2.7.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.7\\z.entityframework.plus.efcore.5.2.7.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\z.expressions.eval\\4.0.50\\z.expressions.eval.4.0.50.nupkg.sha512"
+    "C:\\Users\\付广志\\.nuget\\packages\\z.expressions.eval\\4.0.50\\z.expressions.eval.4.0.50.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
   ],
   "logs": []
 }

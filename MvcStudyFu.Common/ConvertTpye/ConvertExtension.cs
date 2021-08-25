@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -256,7 +258,13 @@ namespace MvcStudyFu.Common.ConvertTpye
             var startTime = TimeZoneInfo.ConvertTime(new DateTime(1970, 1, 1), TimeZoneInfo.Local);
             return (int)((time) - startTime).TotalSeconds;
         }
-
+        /// <summary>
+        /// 为空才赋值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="type"></param>
+        /// <param name="type1"></param>
+        /// <returns></returns>
         public static T IsTypeNull<T>(T type, T type1)
         {
             if (type == null)
@@ -264,14 +272,23 @@ namespace MvcStudyFu.Common.ConvertTpye
                 type = type1;
             }
             return type;
-        } 
-
-        public  static void IsTypeNull<T,T1>(T type, T1 type1) where T:T1
+        }
+        /// <summary>
+        /// 获取枚举类型的描述
+        /// </summary>
+        /// <param name="enumeration"></param>
+        /// <returns></returns>
+        public static string ToDescription(this Enum enumeration)
         {
-            if (type1 == null)
+            Type type = enumeration.GetType();
+            MemberInfo[] memInfo = type.GetMember(enumeration.ToString());
+            if (null != memInfo && memInfo.Length > 0)
             {
-                type1=type;
+                object[] attrs = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
+                if (null != attrs && attrs.Length > 0)
+                    return ((DescriptionAttribute)attrs[0]).Description;
             }
+            return enumeration.ToString();
         }
     }
 }

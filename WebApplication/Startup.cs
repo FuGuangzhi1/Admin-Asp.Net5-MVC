@@ -20,6 +20,7 @@ namespace WebApplication
         }
 
         public IConfiguration Configuration { get; }
+        private bool CreatDatabase = true;  //标记数据库是否创建了
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -58,6 +59,14 @@ namespace WebApplication
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //数据库创建
+            if (CreatDatabase)
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var dc = scope.ServiceProvider.GetService<StudyMVCDBContext>();
+                    dc.Database.EnsureCreated();
+                    CreatDatabase = false;
+                }
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -12,10 +12,6 @@ namespace MvcStudyFu.Services.DomainServices
 {
     public class LoginDomain : BaseService, ILoginDomain
     {
-        public LoginDomain(IDBContextFactory contextFactory) : base(contextFactory)
-        {
-            this._contextFactory = contextFactory;
-        }
         public async Task<(bool, Guid?)> GetUserasync(string name, string password)
         {
             int account = name.ToInt32();
@@ -24,9 +20,10 @@ namespace MvcStudyFu.Services.DomainServices
             User UserEntity;
             if (account == 0)
             {
-                 UserEntity = await base._DBContext?.User.Where(x => x.Name == name).Include("UserPassword").FirstOrDefaultAsync();
+                UserEntity = await base._DBContext?.User.Where(x => x.Name == name).Include("UserPassword").FirstOrDefaultAsync();
             }
-            else {
+            else
+            {
                 UserEntity = await base._DBContext?.User.Where(x => x.Account == (ulong)account).Include("UserPassword").FirstOrDefaultAsync();
             }
             if (UserEntity != null)

@@ -9,6 +9,7 @@ namespace StudyMVCFu.Model.DomainModel
 {
     public class Studyknowledge
     {
+        [Key]
         public Guid StudyknowledgeId { get; set; }
         [StringLength(50, ErrorMessage = "It's too long ,please be less than 50")]
         public string StudyknowledgeName { get; set; }

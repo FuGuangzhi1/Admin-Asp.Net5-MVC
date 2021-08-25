@@ -22,18 +22,18 @@
         <!--表头模糊查询-->
         <el-form :inline="true" class="demo-form-inline">
             <el-form-item label="知识名称:">
-                <el-input placeholder="请输入需要查询知识....." v-model="T_Name"></el-input>
+                <el-input placeholder="请输入需要查询知识....." v-model="SearchStudyknowledgeName"></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="success" size="small" v-on:click="Search"> 查询</el-button>
                 <el-button type="danger" size="small" v-on:click="dialogFormVisible = true"> 添加</el-button>
             </el-form-item>
             <el-form-item label="知识类别:">
-                
+
                 <el-button type="success" size="small">搜索</el-button>
             </el-form-item>
         </el-form>
-      
+
         <!--table表格-->
         <template>
             <el-table :data="tableData"
@@ -41,19 +41,19 @@
                 <el-table-column type="index" width:"50">
                 </el-table-column>
 
-                <el-table-column property="Name"
+                <el-table-column property="StudyknowledgeName"
                                  label="知识名称"
                                  width="180">
                 </el-table-column>
-                <el-table-column property="Sex"
+                <el-table-column property="StudyknowledgeNameType"
                                  label="知识类型"
                                  width="180">
                 </el-table-column>
-                <el-table-column property="CuorseName"
+                <el-table-column property="StudyknowledgeContent"
                                  label="知识内容"
                                  width="180">
                 </el-table-column>
-                <el-table-column property="Subject_score"
+                <el-table-column property="CreateDateTime"
                                  label="创建时间"
                                  width="180">
                 </el-table-column>
@@ -76,6 +76,62 @@
             </el-pagination>
         </template>
 
+        <!---模态框-->
+        <el-dialog title="提示"
+                   :visible.sync="dialogFormVisible"
+                   width="500px"
+                   :before-close="handleClose">
+            <el-form :inline="false"
+                     class="demo-form-inline"
+                     :model="form"
+                     :rules="rules"
+                     ref="form">
+                <el-form-item prop="Name">
+                    <el-col :span="8">
+                        &nbsp; &nbsp;  名字:
+                    </el-col>
+                    <el-col :span="12">
+                        <el-input placeholder="请输入学生姓名....." v-model="form.Name" style="width:240px"></el-input>
+                    </el-col>
+                </el-form-item>
+                <el-form-item prop="Sex">
+                    <el-col :span="8">
+                        &nbsp; &nbsp;   性别:
+                    </el-col>
+                    <el-col :span="12">
+                        <el-radio v-model="form.Sex" label="男">男</el-radio>
+                        <el-radio v-model="form.Sex" label="女">女</el-radio>
+                    </el-col>
+                </el-form-item>
+                <el-form-item prop="CuorseId">
+                    <el-col :span="8">
+                        &nbsp; &nbsp;   科目:
+                    </el-col>
+                    <el-col :span="12">
+                        <el-select v-model="form.CuorseId" placeholder="请选择" style="width:240px">
+                            <el-option v-for="item in student_select"
+                                       :key="item.CuorseId"
+                                       :label="item.CuorseName"
+                                       :value="item.CuorseId">
+                            </el-option>
+                        </el-select>
+                    </el-col>
+                </el-form-item>
+                <el-form-item prop="Subject_score">
+                    <el-col :span="8">
+                        &nbsp; &nbsp;   分数:
+                    </el-col>
+                    <el-col :span="12">
+                        <el-input placeholder="请输入学生分数....." v-model="form.Subject_score" style="width:240px"></el-input>
+                    </el-col>
+                    <input id="Hidden1" v-model="form.StudentId" type="hidden" />
+                </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                <el-button v-on:click="handleClose ">取 消</el-button>
+                <el-button type="primary" v-on:click="ConfirmAdd">确 定</el-button>
+            </span>
+        </el-dialog>
     </div>
     <script src="~/js/Studyknowledge.js"></script>
 </body>

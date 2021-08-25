@@ -63,8 +63,8 @@ namespace MvcStudyFu.Interface
         void Delete<T>(Guid id) where T : class;
         void Delete<T>(IEnumerable<T> tList) where T : class;
 
-        //Task DeleteAsync<T>(Guid id) where T : class;
-        //Task DeleteAsync<T>(IEnumerable<T> tList) where T : class;
+        Task DeleteAsync<T>(Guid id) where T : class;
+        Task DeleteAsync<T>(IEnumerable<T> tList) where T : class;
         #endregion
 
         #region Sql增删改

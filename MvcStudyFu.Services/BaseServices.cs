@@ -20,7 +20,7 @@ namespace MvcStudyFu.Services
         public StudyMVCDBContext _DBContext = null;
 
         public IDBContextFactory _contextFactory = null;
-
+        public BaseService() { }
         public BaseService(IDBContextFactory contextFactory)
         {
             this._contextFactory = ConvertExtension.IsTypeNull<IDBContextFactory>
@@ -64,12 +64,28 @@ namespace MvcStudyFu.Services
             if (tList.Count() < 0) throw new Exception("不存在这个，不用删");
             _DBContext.Set<T>().RemoveRange(tList);
         }
-
+        /// <summary>
+        /// 删除异步版
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async virtual Task DeleteAsync<T>(Guid id) where T : class
         {
             T t = await _DBContext.Set<T>().FindAsync(id);
             if (t == null) throw new Exception("不存在这个，不用删");
             _DBContext.Set<T>().Remove(t);
+        }
+        /// <summary>
+        /// 批量删除异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tList"></param>
+        /// <returns></returns>
+        public async Task DeleteAsync<T>(IEnumerable<T> tList) where T : class
+        {
+            if (tList.Count() < 0) throw new Exception("不存在这个，不用删");
+            await Task.Run(() => _DBContext.Set<T>().RemoveRange(tList));
         }
 
         public void Dispose()
@@ -80,49 +96,110 @@ namespace MvcStudyFu.Services
         {
             if (_DBContext != null) await _DBContext.DisposeAsync();
         }
+        /// <summary>
+        /// 增删改 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameter"></param>
         public virtual void Excute<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 增删改 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameter"></param>
         public virtual Task ExcuteAsync<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 带DBparam查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public virtual IQueryable<T> ExcuteQuery<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
-            throw new NotImplementedException();
+            var TIQueryable = _DBContext.Set<T>()
+                .FromSqlRaw(sql, parameter);
+            return TIQueryable;
         }
+        /// <summary>
+        ///字符串拼接查询 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
+        public virtual Task<IQueryable<T>> ExcuteQueryAsync<T>
+          (FormattableString sql) where T : class
+        {
+            Func<IQueryable<T>> func = () =>
+                _DBContext.Set<T>()
+                     .FromSqlInterpolated(sql);
+            Task<IQueryable<T>> TIQueryable = Task<IQueryable<T>>.Run(func);
+            Task.WaitAll(TIQueryable);
+            return TIQueryable;
 
+        }
+        /// <summary>
+        /// 字符串拼接查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <returns></returns>
+        public virtual IQueryable<T> ExcuteQuery<T>
+          (FormattableString sql) where T : class
+        {
+            var TIQueryable = _DBContext.Set<T>()
+                  .FromSqlInterpolated(sql);
+            return TIQueryable;
+        }
+        /// <summary>
+        /// 带DBparam查询 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public virtual Task<IQueryable<T>> ExcuteQueryAsync<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
-            throw new NotImplementedException();
+            Func<IQueryable<T>> func = () =>
+            _DBContext.Set<T>()
+               .FromSqlRaw(sql, parameter);
+            Task<IQueryable<T>> TIQueryable = Task<IQueryable<T>>.Run(func);
+            Task.WaitAll(TIQueryable);
+            return TIQueryable;
         }
 
         public virtual T Find<T>(int id) where T : class
         {
-            throw new NotImplementedException();
+            return _DBContext.Set<T>().Find(id);
         }
 
         public virtual T Find<T>(Guid? id) where T : class
         {
-            throw new NotImplementedException();
+            return _DBContext.Set<T>().Find(id);
         }
 
-        public virtual Task<T> FindAsync<T>(Guid? id) where T : class
+        public async virtual Task<T> FindAsync<T>(Guid? id) where T : class
         {
-            throw new NotImplementedException();
+            return await _DBContext.Set<T>().FindAsync(id);
         }
 
-        public virtual Task<T> FindAsync<T>
+        public async virtual Task<T> FindAsync<T>
             (int id) where T : class
         {
-            throw new NotImplementedException();
+            return await _DBContext.Set<T>().FindAsync(id);
         }
 
         public virtual T Insert<T>(T t) where T : class
