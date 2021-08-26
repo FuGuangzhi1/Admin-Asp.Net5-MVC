@@ -1,6 +1,5 @@
 ﻿const VM = new Vue({
-    el: '#app'
-    ,
+    el: '#app',
     data: {
         isCollapse: true,
         url: '../images/小新.jpg',

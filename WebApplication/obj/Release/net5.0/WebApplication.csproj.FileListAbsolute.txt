@@ -453,3 +453,10 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\ref\WebApplication.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.pdb
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.genruntimeconfig.cache
+G:\WebApplication\WebApplication\bin\Release\net5.0\linq2db.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\Z.EntityFramework.Extensions.EFCore.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\Z.EntityFramework.Plus.EFCore.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\Z.Expressions.Eval.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\StudyMVCFu.Model.pdb
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Study\Studyknowledge.cshtml.g.cs

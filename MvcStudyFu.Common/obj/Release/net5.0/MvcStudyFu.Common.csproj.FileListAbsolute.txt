@@ -10,3 +10,6 @@ G:\WebApplication\MvcStudyFu.Common\obj\Release\net5.0\MvcStudyFu.Common.csproj.
 G:\WebApplication\MvcStudyFu.Common\obj\Release\net5.0\MvcStudyFu.Common.dll
 G:\WebApplication\MvcStudyFu.Common\obj\Release\net5.0\ref\MvcStudyFu.Common.dll
 G:\WebApplication\MvcStudyFu.Common\obj\Release\net5.0\MvcStudyFu.Common.pdb
+G:\WebApplication\MvcStudyFu.Common\bin\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.Common\bin\Release\net5.0\StudyMVCFu.Model.pdb
+G:\WebApplication\MvcStudyFu.Common\obj\Release\net5.0\MvcStudyFu.Common.csproj.CopyComplete

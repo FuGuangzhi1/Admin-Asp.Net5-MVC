@@ -12,6 +12,10 @@ using System.Threading.Tasks;
 using static LinqToDB.SqlQuery.SqlPredicate;
 using MvcStudyFu.Common.ConvertTpye;
 using static LinqToDB.Reflection.Methods.LinqToDB.Insert;
+using Z.EntityFramework.Plus;
+using System.Collections;
+using Microsoft.Azure.Management.ResourceManager.Fluent;
+using System.Drawing.Printing;
 
 namespace MvcStudyFu.Services
 {
@@ -30,17 +34,18 @@ namespace MvcStudyFu.Services
         /// <summary>
         /// 提交
         /// </summary>
-        public void Commit()
+        public bool Commit()
         {
-            _DBContext.SaveChanges();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            return _DBContext.SaveChanges() > 0;
         }
         /// <summary>
         /// 异步提交
         /// </summary>
         /// <returns></returns>
-        public async virtual Task CommitAsync()
+        public async virtual Task<bool> CommitAsync()
         {
-            await _DBContext.SaveChangesAsync();
+            return await _DBContext.SaveChangesAsync() > 0;
         }
         /// <summary>
         /// 根据主键删除实体
@@ -49,6 +54,7 @@ namespace MvcStudyFu.Services
         /// <param name="id"></param>
         public virtual void Delete<T>(Guid id) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             T t = _DBContext.Set<T>().Find(id);
             if (t == null) throw new Exception("不存在这个，不用删");
             _DBContext.Set<T>().Remove(t);
@@ -60,6 +66,7 @@ namespace MvcStudyFu.Services
         /// <param name="tList"></param>
         public virtual void Delete<T>(IEnumerable<T> tList) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             if (tList.Count() < 0) throw new Exception("不存在这个，不用删");
             _DBContext.Set<T>().RemoveRange(tList);
         }
@@ -71,6 +78,7 @@ namespace MvcStudyFu.Services
         /// <returns></returns>
         public async virtual Task DeleteAsync<T>(Guid id) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             T t = await _DBContext.Set<T>().FindAsync(id);
             if (t == null) throw new Exception("不存在这个，不用删");
             _DBContext.Set<T>().Remove(t);
@@ -83,6 +91,7 @@ namespace MvcStudyFu.Services
         /// <returns></returns>
         public async Task DeleteAsync<T>(IEnumerable<T> tList) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             if (tList.Count() < 0) throw new Exception("不存在这个，不用删");
             await Task.Run(() => _DBContext.Set<T>().RemoveRange(tList));
         }
@@ -91,7 +100,7 @@ namespace MvcStudyFu.Services
         {
             if (_DBContext != null) _DBContext.Dispose();
         }
-        public async Task DisposeAyscn()
+        public async Task DisposeAsync()
         {
             if (_DBContext != null) await _DBContext.DisposeAsync();
         }
@@ -104,6 +113,7 @@ namespace MvcStudyFu.Services
         public virtual void Excute<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             throw new NotImplementedException();
         }
         /// <summary>
@@ -115,6 +125,7 @@ namespace MvcStudyFu.Services
         public virtual Task ExcuteAsync<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             throw new NotImplementedException();
         }
         /// <summary>
@@ -127,6 +138,7 @@ namespace MvcStudyFu.Services
         public virtual IQueryable<T> ExcuteQuery<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             var TIQueryable = _DBContext.Set<T>()
                 .FromSqlRaw(sql, parameter);
             return TIQueryable;
@@ -141,6 +153,7 @@ namespace MvcStudyFu.Services
         public virtual Task<IQueryable<T>> ExcuteQueryAsync<T>
           (FormattableString sql) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             Func<IQueryable<T>> func = () =>
                 _DBContext.Set<T>()
                      .FromSqlInterpolated(sql);
@@ -158,6 +171,7 @@ namespace MvcStudyFu.Services
         public virtual IQueryable<T> ExcuteQuery<T>
           (FormattableString sql) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             var TIQueryable = _DBContext.Set<T>()
                   .FromSqlInterpolated(sql);
             return TIQueryable;
@@ -172,6 +186,7 @@ namespace MvcStudyFu.Services
         public virtual Task<IQueryable<T>> ExcuteQueryAsync<T>
             (string sql, SqlParameter[] parameter) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             Func<IQueryable<T>> func = () =>
             _DBContext.Set<T>()
                .FromSqlRaw(sql, parameter);
@@ -179,112 +194,183 @@ namespace MvcStudyFu.Services
             Task.WaitAll(TIQueryable);
             return TIQueryable;
         }
-
+        /// <summary>
+        /// 根据主键查询实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
         public virtual T Find<T>(int id) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             return _DBContext.Set<T>().Find(id);
         }
-
+        /// <summary>
+        /// 根据主键查询实体
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
         public virtual T Find<T>(Guid? id) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             return _DBContext.Set<T>().Find(id);
         }
-
+        /// <summary>
+        /// 根据主键查询实体 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
         public async virtual Task<T> FindAsync<T>(Guid? id) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             return await _DBContext.Set<T>().FindAsync(id);
         }
-
+        /// <summary>
+        /// 根据主键查询实体 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
         public async virtual Task<T> FindAsync<T>
             (int id) where T : class
         {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             return await _DBContext.Set<T>().FindAsync(id);
         }
 
-        public virtual T Insert<T>(T t) where T : class
+        public virtual void Insert<T>(T t) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            _DBContext.Set<T>().Add(t);
         }
 
-        public virtual IEnumerable<T> Insert<T>
+        public virtual void Insert<T>
             (IEnumerable<T> tList) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            _DBContext.Set<T>().AddRange(tList);
         }
 
-        public virtual Task<T> InsertAsync<T>
+        public async virtual Task InsertAsync<T>
             (T t) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            await _DBContext.Set<T>().AddAsync(t);
         }
-
-        public Task<IEnumerable<T>> InsertAsync<T>(IEnumerable<T> tList) where T : class
+        /// <summary>
+        /// 批量 新增
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tList"></param>
+        /// <returns></returns>
+        public async Task InsertAsync<T>(IEnumerable<T> tList) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            await _DBContext.Set<T>().AddRangeAsync(tList);
         }
-
+        /// <summary>
+        /// 条件查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="funWhere"></param>
+        /// <returns></returns>
         public virtual IQueryable<T> Query<T>(Expression<Func<T, bool>> funWhere) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            return _DBContext.Set<T>().Where(funWhere);
         }
-
-        public virtual Task<IQueryable<T>> QueryAsync<T>(Expression<Func<T, bool>> funWhere) where T : class
+        /// <summary>
+        /// 条件查询 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="funWhere"></param>
+        /// <returns></returns>
+        public async virtual Task<IQueryable<T>> QueryAsync<T>(Expression<Func<T, bool>> funWhere) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            return await Task.Run(() => _DBContext.Set<T>().Where(funWhere).AsTracking());
         }
-
-        public virtual PageResult<T> QueryPage<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc = true) where T : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual Task<PageResult<T>> QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc = true) where T : class
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// 查询单实体集合
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public virtual IQueryable<T> Set<T>() where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            return _DBContext.Set<T>();
         }
+        /// <summary>
+        /// 查询单实体集合 异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
 
-        public virtual Task<IQueryable<T>> SetAsync<T>() where T : class
+        public async virtual Task<IQueryable<T>> SetAsync<T>() where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            return await Task.Run(() => _DBContext.Set<T>());
         }
-
+        /// <summary>
+        ///  修改
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tList"></param>
         public virtual void Update<T>(T t) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            _DBContext.Set<T>().Update(t);
         }
-
+        /// <summary>
+        /// 批量 修改
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tList"></param>
         public virtual void Update<T>(IEnumerable<T> tList) where T : class
         {
-            throw new NotImplementedException();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            _DBContext.Set<T>().UpdateRange(tList);
+        }
+        /// <summary>
+        /// 修改异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public async virtual Task UpdateAsync<T>(T t) where T : class
+        {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            await Task.Run(() => _DBContext.Set<T>().Update(t));
+        }
+        /// <summary>
+        ///批量 修改异步
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="tList"></param>
+        /// <returns></returns>
+        public async virtual Task UpdateAsync<T>(IEnumerable<T> tList) where T : class
+        {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            await Task.Run(() => _DBContext.Set<T>().UpdateRange(tList));
         }
 
-        public virtual Task UpdateAsync<T>(T t) where T : class
+        public PageResult<T> QueryPage<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
         {
-            throw new NotImplementedException();
+            PageResult<T> PageResult = new();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+
+            int offset = (pageIndex - 1) * pageSize; //当前页面
+            PageResult.Rows =  _DBContext.Set<T>().Where(funWhere).OrderBy(funcOderby).Skip(offset).Take(pageSize).ToList();
+            return PageResult;
         }
 
-        public virtual Task UpdateAsync<T>(IEnumerable<T> tList) where T : class
+        public async Task<PageResult<T>> QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
         {
-            throw new NotImplementedException();
-        }
-        PageResult<T> IBaseService.QueryPage<T, S>
-        (Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<PageResult<T>> IBaseService.QueryPageAsync<T, S>
-            (Expression<Func<T, bool>> funWhere,
-            int pageSize, int pageIndex,
-            Expression<Func<T, S>> funcOderby,
-            bool isAsc)
-        {
-            throw new NotImplementedException();
+            PageResult<T> PageResult = new();
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            int offset = (pageIndex - 1) * pageSize; //当前页面
+            PageResult.Rows = await _DBContext.Set<T>()
+                .Where(funWhere).OrderBy(funcOderby).Skip(offset).Take(pageSize).ToListAsync();
+            PageResult.Total = _DBContext.Set<T>().Count();
+            return PageResult;
         }
     }
 }

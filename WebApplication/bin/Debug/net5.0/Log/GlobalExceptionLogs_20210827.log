@@ -1,0 +1,9 @@
+﻿2021-08-27 00:11:13,716| ERROR 
+An attempt was made to use the context while it is being configured. A DbContext instance cannot be used inside 'OnConfiguring' since it is still being configured at this point. This can happen if a second operation is started on this context before a previous operation completed. Any instance members are not guaranteed to be thread safe.
+--------------------------------
+2021-08-27 02:14:59,816| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 02:15:54,420| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------

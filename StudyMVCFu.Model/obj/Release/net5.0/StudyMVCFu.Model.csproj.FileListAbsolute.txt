@@ -1,0 +1,12 @@
+G:\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\StudyMVCFu.Model.deps.json
+G:\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\ref\StudyMVCFu.Model.dll
+G:\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\StudyMVCFu.Model.pdb
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.csproj.AssemblyReference.cache
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.GeneratedMSBuildEditorConfig.editorconfig
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.AssemblyInfoInputs.cache
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.AssemblyInfo.cs
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.csproj.CoreCompileInputs.cache
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\ref\StudyMVCFu.Model.dll
+G:\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.pdb

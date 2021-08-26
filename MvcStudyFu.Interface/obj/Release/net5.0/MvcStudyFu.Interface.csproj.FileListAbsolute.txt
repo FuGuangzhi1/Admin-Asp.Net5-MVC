@@ -15,3 +15,5 @@ G:\WebApplication\MvcStudyFu.Interface\obj\Release\net5.0\MvcStudyFu.Interface.c
 G:\WebApplication\MvcStudyFu.Interface\obj\Release\net5.0\MvcStudyFu.Interface.dll
 G:\WebApplication\MvcStudyFu.Interface\obj\Release\net5.0\ref\MvcStudyFu.Interface.dll
 G:\WebApplication\MvcStudyFu.Interface\obj\Release\net5.0\MvcStudyFu.Interface.pdb
+G:\WebApplication\MvcStudyFu.Interface\bin\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.Interface\bin\Release\net5.0\StudyMVCFu.Model.pdb

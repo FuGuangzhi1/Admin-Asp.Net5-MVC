@@ -14,7 +14,7 @@ namespace StudyMVCFu.Model.ViewModel
        public class StudyKnowledgeView
     {
         public int StudyTypeId { get; set; }
-        public Guid StudyknowledgeNameId { get; set; }
+        public Guid StudyknowledgeId { get; set; }
         public string StudyknowledgeName { get; set; }
         public string StudyknowledgeContent { get; set; }
         public string StudyknowledgeNameType { get; set; }

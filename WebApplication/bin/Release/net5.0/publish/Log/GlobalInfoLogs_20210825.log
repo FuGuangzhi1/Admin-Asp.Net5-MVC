@@ -1,0 +1,52 @@
+﻿2021-08-25 17:33:06,826| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-25 17:33:06,832| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Production
+--------------------------------
+2021-08-25 17:33:06,832| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication\bin\Release\net5.0\publish
+--------------------------------
+2021-08-25 17:39:27,363| WARN Microsoft.AspNetCore.Session.SessionMiddleware 
+Error unprotecting the session cookie.
+--------------------------------
+System.Security.Cryptography.CryptographicException: The key {9e130fda-59b2-4ad7-b9ae-d8b07f839374} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-08-25 17:39:27,432| WARN Microsoft.AspNetCore.Session.SessionMiddleware 
+Error unprotecting the session cookie.
+--------------------------------
+System.Security.Cryptography.CryptographicException: The key {9e130fda-59b2-4ad7-b9ae-d8b07f839374} was not found in the key ring.
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-08-25 17:40:02,016| INFO Microsoft.Hosting.Lifetime 
+Application is shutting down...
+--------------------------------
+2021-08-25 17:40:10,390| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-25 17:40:10,399| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Production
+--------------------------------
+2021-08-25 17:40:10,399| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication\bin\Release\net5.0\publish
+--------------------------------
+2021-08-25 17:41:07,748| INFO Microsoft.Hosting.Lifetime 
+Application is shutting down...
+--------------------------------
+2021-08-25 17:44:13,871| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-08-25 17:44:13,880| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Production
+--------------------------------
+2021-08-25 17:44:13,880| INFO Microsoft.Hosting.Lifetime 
+Content root path: G:\WebApplication\WebApplication\bin\Release\net5.0\publish
+--------------------------------
+2021-08-25 18:05:07,816| INFO Microsoft.Hosting.Lifetime 
+Application is shutting down...
+--------------------------------

@@ -2,14 +2,14 @@
     {
         el: '#app',
         data: {
-            T_Name: this.T_Name, //模糊查询，模糊筛选
+            SearchStudyknowledgeName: this.SearchStudyknowledgeName, //模糊查询，模糊筛选
             tableData: [],  //数据绑定
             currentPage: 1, //初始页
             pagesize: 2,//每页的数据
             total: 0,   //总记录数
             //模态框
             dialogFormVisible: false,
-            student_select: {},
+            StudyType: [],
             form: {
                 StudyknowledgeName: '求Star',
                 StudyknowledgeNameType: '求Star',
@@ -19,20 +19,37 @@
                 StudyTypeId: ''
             }/*,formLabelWidth:'120px'*/
             , rules: {
-                Name: [
-                    { required: true, message: '请输入学生姓名', trigger: 'blur' },
-                    { min: 2, max: 5, message: '名字不能太长或者太短', trigger: 'blur' }
-                ], Sex: [
-                    { required: true, message: '请选性别', trigger: 'change' }
-                ], CuorseId: [
-                    { required: true, message: '请选择科目', trigger: 'change' }
+                StudyknowledgeName: [
+                    { required: true, message: '请输入知识姓名', trigger: 'blur' },
+                    { min: 2, max: 10, message: '名字不能太长或者太短', trigger: 'blur' }
+                ], StudyknowledgeContent: [
+                    { required: true, message: '请输入内容', trigger: 'change' },
+                    { min: 2, max: 200, message: '内容不能太长或者太短', trigger: 'blur' }
+                ], StudyknowledgeContent: [
+                    { required: true, message: '请选择类型', trigger: 'change' }
                 ]
             }
         }, mounted() {
             this.load();  //列表加载
-            this.Getselect(); //下拉数据绑定 学生
+            this.GetStudyType(); //下拉数据绑定 类型
         }, methods: {
-
+            load() {
+                //axios.post(url, this.form).then(result => { }).catch(error => { })
+                axios.get("/Study/StudyknowledgeData").then(result => {
+                    console.log(result)
+                    this.tableData = result.data;
+                }).catch(error => {
+                    console.log(error)
+                })
+            }, GetStudyType()
+            {
+                axios.get("/Study/StudyTypeData").then(result => {
+                    console.log(result)
+                    this.StudyType = result.data;
+                }).catch(error => {
+                    console.log(error)
+                })
+            }
         }
         
     }

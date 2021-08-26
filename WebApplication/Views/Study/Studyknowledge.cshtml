@@ -17,22 +17,27 @@
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <style>
         * {
-            margin:0px;
-            padding:0px;
+            margin: 0px;
+            padding: 0px;
         }
+
         #pagination {
-            position:absolute;
-            right:0px;
-            bottom:0px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
         }
+
         #from {
-            
+            padding: 10px;
+            margin-left: 6px;
         }
+
         #buttonCss {
-            float:right;
+            float: right;
         }
-        .el-table{
-            text-align:center;
+
+        .el-table {
+            text-align: center;
         }
     </style>
 </head>
@@ -45,17 +50,17 @@
                     <el-input placeholder="请输入需要查询知识....." v-model="SearchStudyknowledgeName"></el-input>
                 </el-form-item>
                 <el-form-item label="知识类别:">
-                    <el-select v-model="form.CuorseId" placeholder="请选择" style="width:240px">
-                        <el-option v-for="item in student_select"
-                                   :key="item.CuorseId"
-                                   :label="item.CuorseName"
-                                   :value="item.CuorseId">
+                    <el-select v-model="form.StudyType" placeholder="请选择" style="width:240px">
+                        <el-option v-for="item in StudyType"
+                                   :key="item.studyTypeId"
+                                   :label="item.studyTypeName"
+                                   :value="item.studyTypeId">
                         </el-option>
                     </el-select>
                 </el-form-item>
                 <div id="buttonCss">
                     <el-form-item>
-                        <el-button type="success" size="small" v-on:click="Search"> Search</el-button>
+                        <el-button type="success" size="small" @*v-on:click="Search"*@> Search</el-button>
                         <el-button type="danger" size="small" v-on:click="dialogFormVisible = true"> Add</el-button>
                     </el-form-item>
                 </div>
@@ -88,16 +93,16 @@
                                  width="180">
                     <!--自定义列-->
                     <template slot-scope="scope">
-                        <el-button type="primary" size="mini" v-on:click="Edit(scope.row)" class="el-icon-edit" circle>   </el-button> &nbsp;
-                        <el-button type="danger" size="mini" v-on:click="Delete(scope.row)" class="el-icon-delete" circle> </el-button>
+                        <el-button type="primary" size="mini" @*v-on:click="Edit(scope.row)"*@ class="el-icon-edit" circle>   </el-button> &nbsp;
+                        <el-button type="danger" size="mini" @*v-on:click="Delete(scope.row)"*@ class="el-icon-delete" circle> </el-button>
                     </template>
                 </el-table-column>
             </el-table>
             <div id="pagination">
                 <!--分页控件-->
-                <el-pagination v-on:size-change="handleSizeChange"
+                <el-pagination @*v-on:size-change="handleSizeChange"
                                v-on:current-change="handleCurrentChange"
-                               :page-sizes="[2,3,5,10]"
+                               :page-sizes="[2,3,5,10]"*@
                                :page-size=2
                                layout="total,sizes,prev,pager,next,jumper"
                                :total="total">
@@ -109,13 +114,13 @@
         <el-dialog title="提示"
                    :visible.sync="dialogFormVisible"
                    width="500px"
-                   :before-close="handleClose">
+                   @*:before-close="handleClose"*@>
             <el-form :inline="false"
                      class="demo-form-inline"
                      :model="form"
                      :rules="rules"
                      ref="form">
-                <el-form-item prop="Name">
+                <el-form-item prop="StudyknowledgeName">
                     <el-col :span="8">
                         &nbsp; &nbsp;  知识名称:
                     </el-col>
@@ -123,7 +128,7 @@
                         <el-input placeholder="请输入知识名称....." v-model="form.StudyknowledgeName" style="width:240px"></el-input>
                     </el-col>
                 </el-form-item>
-                <el-form-item prop="Sex">
+                <el-form-item prop="StudyknowledgeContent">
                     <el-col :span="8">
                         &nbsp; &nbsp;   知识内容:
                     </el-col>
@@ -131,25 +136,25 @@
                         <el-input placeholder="请输入知识内容....." v-model="form.StudyknowledgeContent" style="width:240px"></el-input>
                     </el-col>
                 </el-form-item>
-                <el-form-item prop="CuorseId">
+                <el-form-item prop="StudyknowledgeNameType">
                     <el-col :span="8">
                         &nbsp; &nbsp;   知识类型:
                     </el-col>
                     <el-col :span="12">
-                        <el-select v-model="form.StudyknowledgeNameType" placeholder="请选择" style="width:240px">
-                            <el-option v-for="item in student_select"
-                                       :key="item.CuorseId"
-                                       :label="item.CuorseName"
-                                       :value="item.CuorseId">
+                        <el-select v-model="form.StudyType" placeholder="请选择" style="width:240px">
+                            <el-option v-for="item in StudyType"
+                                       :key="item.studyTypeId"
+                                       :label="item.studyTypeName"
+                                       :value="item.studyTypeId">
                             </el-option>
                         </el-select>
                     </el-col>
                 </el-form-item>
-                <input id="Hidden1" v-model="form.StudentId" type="hidden" />
+                <input id="Hidden1" v-model="form.StudyknowledgeNameId" type="hidden" />
             </el-form>
             <span slot="footer" class="dialog-footer">
-                <el-button v-on:click="handleClose ">取 消</el-button>
-                <el-button type="primary" v-on:click="ConfirmAdd">确 定</el-button>
+                <el-button @*v-on:click="handleClose "*@>取 消</el-button>
+                <el-button type="primary" @*v-on:click="ConfirmAdd"*@>确 定</el-button>
             </span>
         </el-dialog>
     </div>

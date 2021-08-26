@@ -17,3 +17,5 @@ G:\WebApplication\MvcStudyFu.Services\obj\Release\net5.0\MvcStudyFu.Services.csp
 G:\WebApplication\MvcStudyFu.Services\obj\Release\net5.0\MvcStudyFu.Services.dll
 G:\WebApplication\MvcStudyFu.Services\obj\Release\net5.0\ref\MvcStudyFu.Services.dll
 G:\WebApplication\MvcStudyFu.Services\obj\Release\net5.0\MvcStudyFu.Services.pdb
+G:\WebApplication\MvcStudyFu.Services\bin\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.Services\bin\Release\net5.0\StudyMVCFu.Model.pdb

@@ -17,7 +17,7 @@ namespace WebApplication.Controllers
     //[ApiController]
     public class AccountControllers : Controller
     {
-        private const string V = "OK";
+        private const string V = "操作成功";
         private readonly ILoginDomain _iloginDomain;
 
         public AccountControllers(ILoginDomain iloginDomain)
@@ -34,10 +34,7 @@ namespace WebApplication.Controllers
         [CustomAllownonymous]
         public async Task<ActionResult> Login([FromBody] Login login)
         {
-            //Login login1 = null;
-            //login1.CheckCode = "";  //错误效果测试
-            string stringResult;
-            ActionResult result;
+            AjaxResult ajaxResult=new() {  Success=false,Data=string.Empty,Message=string.Empty};
             string checkCode = HttpContext.Session.GetString("CaptchaCode");
             if (ModelState.IsValid)
             {
@@ -47,16 +44,16 @@ namespace WebApplication.Controllers
                     (bool, Guid?) isUser = await _iloginDomain.GetUserasync(login.Name, login.Password);
                     if (isUser.Item1)
                     {
-                        stringResult = V;
+                        ajaxResult.Success = true;
+                        ajaxResult.Message = V;
                         HttpContext.Session.SetString("Id", isUser.Item2.ToString());
                     }
-                    else stringResult = "账号或者密码错误";
+                    else ajaxResult.Message = "账号或者密码错误";
                 }
-                else stringResult = "验证码错误";
+                else ajaxResult.Message = "验证码错误";
             }
-            else stringResult = "数据格式不对！！！";
-            result = Content(stringResult);
-            return result;
+            else ajaxResult.Message = "数据格式不对！！！";
+            return Json(data:ajaxResult);
         }
         [HttpGet]
         [CustomAllownonymous]

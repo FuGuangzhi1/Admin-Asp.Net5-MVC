@@ -5,6 +5,7 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.i
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\images\小新.jpg
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Home.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Login.js
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Studyknowledge.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\vue.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -339,6 +340,7 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Autofac.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Autofac.Configuration.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Autofac.Extensions.DependencyInjection.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Humanizer.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\linq2db.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\log4net.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
@@ -395,6 +397,9 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.Drawing.Co
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.Runtime.Caching.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Z.EntityFramework.Extensions.EFCore.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Z.EntityFramework.Plus.EFCore.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Z.Expressions.Eval.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\cs\Microsoft.CodeAnalysis.resources.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\de\Microsoft.CodeAnalysis.resources.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\es\Microsoft.CodeAnalysis.resources.dll
@@ -467,9 +472,11 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.Common
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.EFCore.SQLSever.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.Interface.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.Services.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\StudyMVCFu.Model.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.Common.pdb
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.EFCore.SQLSever.pdb
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.Interface.pdb
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\MvcStudyFu.Services.pdb
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\StudyMVCFu.Model.pdb
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\WebApplication.Views.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\WebApplication.Views.pdb

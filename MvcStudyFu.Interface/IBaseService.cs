@@ -26,7 +26,9 @@ namespace MvcStudyFu.Interface
 
         IQueryable<T> Query<T>(Expression<Func<T, bool>> funWhere) where T : class;
 
-        PageResult<T> QueryPage<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc = true) where T : class;
+        PageResult<T> QueryPage<T, S>
+         (Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) 
+            where T : class;
 
 
         IQueryable<T> ExcuteQuery<T>(string sql, SqlParameter[] parameter) where T : class;
@@ -35,17 +37,17 @@ namespace MvcStudyFu.Interface
         Task<T> FindAsync<T>(int id) where T : class;
         Task<IQueryable<T>> SetAsync<T>() where T : class;
         Task<IQueryable<T>> QueryAsync<T>(Expression<Func<T, bool>> funWhere) where T : class;
-        Task<PageResult<T>> QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby, bool isAsc = true) where T : class;
+        Task<PageResult<T>> QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class;
         Task<IQueryable<T>> ExcuteQueryAsync<T>(string sql, SqlParameter[] parameter) where T : class;
         #endregion
 
         #region 新增
-        T Insert<T>(T t) where T : class;
+        void Insert<T>(T t) where T : class;
 
-        IEnumerable<T> Insert<T>(IEnumerable<T> tList) where T : class;
+        void Insert<T>(IEnumerable<T> tList) where T : class;
 
-        Task<T> InsertAsync<T>(T t) where T : class;
-        Task<IEnumerable<T>> InsertAsync<T>(IEnumerable<T> tList) where T : class;
+        Task InsertAsync<T>(T t) where T : class;
+        Task InsertAsync<T>(IEnumerable<T> tList) where T : class;
 
         #endregion
 
@@ -58,7 +60,7 @@ namespace MvcStudyFu.Interface
         Task UpdateAsync<T>(IEnumerable<T> tList) where T : class;
 
         #endregion
-        
+
         #region 删除（删除前要查询）
         void Delete<T>(Guid id) where T : class;
         void Delete<T>(IEnumerable<T> tList) where T : class;
@@ -72,10 +74,10 @@ namespace MvcStudyFu.Interface
 
         Task ExcuteAsync<T>(string sql, SqlParameter[] parameter) where T : class;
         #endregion
-       
+
         #region 提交
-        void Commit();
-        Task CommitAsync();
+        bool Commit();
+        Task<bool> CommitAsync();
         #endregion
     }
 }

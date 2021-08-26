@@ -9,11 +9,44 @@
       "MvcStudyFu.Interface/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.8",
-          "MvcStudyFu.Common": "1.0.0",
           "MvcStudyFu.EFCore.SQLSever": "1.0.0"
         },
         "runtime": {
           "MvcStudyFu.Interface.dll": {}
+        }
+      },
+      "linq2db/3.4.3": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/linq2db.dll": {
+            "assemblyVersion": "3.4.3.0",
+            "fileVersion": "3.4.3.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
         }
       },
       "Microsoft.CSharp/4.5.0": {},
@@ -579,28 +612,28 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Drawing.Common/5.0.0": {
+      "System.Drawing.Common/5.0.2": {
         "dependencies": {
           "Microsoft.Win32.SystemEvents": "5.0.0"
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.421.11614"
           }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
             "rid": "unix",
             "assetType": "runtime",
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.421.11614"
           },
           "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.20.51904"
+            "assemblyVersion": "5.0.0.2",
+            "fileVersion": "5.0.421.11614"
           }
         }
       },
@@ -999,6 +1032,7 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
+      "System.Text.Encodings.Web/4.5.0": {},
       "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1026,7 +1060,7 @@
       },
       "System.Windows.Extensions/5.0.0": {
         "dependencies": {
-          "System.Drawing.Common": "5.0.0"
+          "System.Drawing.Common": "5.0.2"
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
@@ -1115,8 +1149,11 @@
       },
       "MvcStudyFu.Common/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration": "5.0.0",
-          "Microsoft.Extensions.Configuration.Json": "5.0.0"
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
+          "StudyMVCFu.Model": "1.0.0",
+          "System.Drawing.Common": "5.0.2"
         },
         "runtime": {
           "MvcStudyFu.Common.dll": {}
@@ -1127,10 +1164,17 @@
           "Microsoft.EntityFrameworkCore": "5.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "MvcStudyFu.Common": "1.0.0",
-          "System.Configuration.ConfigurationManager": "5.0.0"
+          "StudyMVCFu.Model": "1.0.0",
+          "System.Configuration.ConfigurationManager": "5.0.0",
+          "linq2db": "3.4.3"
         },
         "runtime": {
           "MvcStudyFu.EFCore.SQLSever.dll": {}
+        }
+      },
+      "StudyMVCFu.Model/1.0.0": {
+        "runtime": {
+          "StudyMVCFu.Model.dll": {}
         }
       }
     }
@@ -1140,6 +1184,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "linq2db/3.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GG/OrivD/86O0EsxpTts9n7gWPNEMQV+gZsKVXO3db+3x4M+Wa0gf3d9KLQxMcnU+SXoBTcaAtOiq5TANExkDA==",
+      "path": "linq2db/3.4.3",
+      "hashPath": "linq2db.3.4.3.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -1484,12 +1549,12 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
-    "System.Drawing.Common/5.0.0": {
+    "System.Drawing.Common/5.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SztFwAnpfKC8+sEKXAFxCBWhKQaEd97EiOL7oZJZP56zbqnLpmxACWA8aGseaUExciuEAUuR9dY8f7HkTRAdnw==",
-      "path": "system.drawing.common/5.0.0",
-      "hashPath": "system.drawing.common.5.0.0.nupkg.sha512"
+      "sha512": "sha512-rvr/M1WPf24ljpvvrVd74+NdjRUJu1bBkspkZcnzSZnmAUQWSvanlQ0k/hVHk+cHufZbZfu7vOh/vYc0q5Uu/A==",
+      "path": "system.drawing.common/5.0.2",
+      "hashPath": "system.drawing.common.5.0.2.nupkg.sha512"
     },
     "System.Dynamic.Runtime/4.3.0": {
       "type": "package",
@@ -1778,6 +1843,13 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
     },
+    "System.Text.Encodings.Web/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "path": "system.text.encodings.web/4.5.0",
+      "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
     "System.Text.RegularExpressions/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1847,6 +1919,11 @@
       "sha512": ""
     },
     "MvcStudyFu.EFCore.SQLSever/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StudyMVCFu.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

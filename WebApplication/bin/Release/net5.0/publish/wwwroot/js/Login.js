@@ -1,6 +1,7 @@
 ﻿const VM = new Vue({
     el: "#app",
     data: {
+        loading: false,
         login: {
             name: '小杰',
             password: '123456',
@@ -10,7 +11,7 @@
         rules: {
             name: [
                 { required: true, message: '请输入账号', trigger: 'blur' },
-                { min: 2, max: 5, message: '长度在 2 到 5 个字符', trigger: 'blur' }
+                { min: 2, max: 18, message: '长度在 2 到 18 个字符', trigger: 'blur' }
             ],
             password: [
                 { required: true, message: '请输入密码', trigger: 'blur' },
@@ -42,12 +43,12 @@
         captchaChange() {
             this.captcha();
         },
-        captcha: function () {
+        captcha: function() {
             var captcha = document.getElementById("img-captcha");
             d = new Date();
             captcha.src = "/AccountControllers/GetCaptchaImage?" + d.getTime();
         },
-        randomHexColor: function () {
+        randomHexColor: function() {
             //随机生成十六进制颜色
             var hex = Math.floor(Math.random() * 16777216).toString(16); //生成ffffff以内16进制数
             while (hex.length < 6) { //while循环判断hex位数，少于6位前面加0凑够6位
@@ -55,12 +56,15 @@
             }
             return '#' + hex; //返回‘#'开头16进制颜色
         },
-        loginForm: async function (url) {
-            await axios.post(url, this.login).then(async result => {
+        //登录按钮
+        loginForm: function(url) {
+            this.loading = true;
+            axios.post(url, this.login).then(result => {
                 console.log(result)
                 if (result.status >= 200 && result.status <= 299) {
+                    this.timeOut();
                     if (result.data == "OK") {
-                        await this.$message({
+                        this.$message({
                             showClose: true,
                             message: "登录成功",
                             type: 'success'
@@ -80,7 +84,7 @@
                         this.captcha();
                         window.open("/HomePage/index");
                     } else {
-                        await this.$message({
+                        this.$message({
                             showClose: true,
                             message: result.data,
                             type: 'warning'
@@ -88,12 +92,14 @@
                         this.captcha();
                     }
                 } else {
-                    await this.$message.error('数据请求失败！！！');
+                    this.timeOut();
+                    this.$message.error('数据请求失败！！！');
                     this.captcha();
                 }
-            }).catch(async error => {
+            }).catch(error => {
+                this.timeOut();
                 console.log(error);
-                await this.$message.error('请求地址错误，或者没有网络，或者服务器爆炸！！！');
+                this.$message.error('请求地址错误，或者没有网络，或者服务器爆炸！！！');
                 this.captcha();
             })
         },
@@ -109,8 +115,12 @@
                 }
             });
         },
-         resetForm(formname) {
-            this.$refs[formname].resetFields();
+        async resetForm(formname) {
+            console.log(formname);
+            await this.$refs[formname].resetFields();
+        },
+        timeOut() {
+            setTimeout(() => this.loading = false, 1000);
         },
         Create() {
             window.open("/AccountControllers/CreateUser");

@@ -16,3 +16,5 @@ G:\WebApplication\MvcStudyFu.EFCore.SQLSever\obj\Release\net5.0\MvcStudyFu.EFCor
 G:\WebApplication\MvcStudyFu.EFCore.SQLSever\obj\Release\net5.0\ref\MvcStudyFu.EFCore.SQLSever.dll
 G:\WebApplication\MvcStudyFu.EFCore.SQLSever\obj\Release\net5.0\MvcStudyFu.EFCore.SQLSever.pdb
 G:\WebApplication\MvcStudyFu.EFCore.SQLSever\obj\Release\net5.0\MvcStudyFu.EFCore.SQLSever.genruntimeconfig.cache
+G:\WebApplication\MvcStudyFu.EFCore.SQLSever\bin\Release\net5.0\StudyMVCFu.Model.dll
+G:\WebApplication\MvcStudyFu.EFCore.SQLSever\bin\Release\net5.0\StudyMVCFu.Model.pdb

@@ -1,0 +1,31 @@
+﻿using StudyMVCFu.Model;
+using StudyMVCFu.Model.DomainModel;
+using StudyMVCFu.Model.ViewModel;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MvcStudyFu.Interface.DomainInterface
+{
+    public interface IStudy
+    {
+        /// <summary>
+        /// 学习知识获取
+        /// </summary>
+        /// <param name="StudyKnowledgeName">知识·名称</param>
+        /// <param name="stydyTypeId">知识类型ID</param>
+        /// <param name="pageSize">显示页数</param>
+        /// <param name="pageIndex">当前页</param>
+        /// <returns></returns>
+        public Task<PageResult<StudyKnowledgeView>>
+            GetStudyKnowledge(String StudyKnowledgeName,int stydyTypeId, int pageSize, int pageIndex);
+        /// <summary>
+        /// 学习类型获取
+        /// </summary>
+        /// <returns></returns>
+        public Task<List<StudyType>> GetStudyType();
+
+    }
+}
