@@ -1,0 +1,33 @@
+﻿2021-08-29 05:04:38,821| ERROR 
+Nullable object must have a value.
+--------------------------------
+2021-08-29 05:18:51,294| ERROR 
+The key value at position 0 of the call to 'DbSet<Studyknowledge>.Find' was of type 'decimal', which does not match the property type of 'Guid'.
+--------------------------------
+2021-08-29 05:24:47,343| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:25:05,428| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:25:13,727| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:25:16,317| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:25:23,639| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:25:25,836| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:26:42,762| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:28:29,853| ERROR 
+不存在这个，不用删
+--------------------------------
+2021-08-29 05:33:53,104| ERROR 
+An attempt was made to use the context while it is being configured. A DbContext instance cannot be used inside 'OnConfiguring' since it is still being configured at this point. This can happen if a second operation is started on this context before a previous operation completed. Any instance members are not guaranteed to be thread safe.
+--------------------------------

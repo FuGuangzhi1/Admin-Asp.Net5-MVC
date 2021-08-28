@@ -102,19 +102,6 @@ namespace MvcStudyFu.Services
             _DBContext.Set<T>().Remove(t);
         }
         /// <summary>
-        /// 删除异步版
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public async virtual Task DeleteAsync<T>(dynamic id) where T : class
-        {
-            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
-            T t = await _DBContext.Set<T>().FindAsync(id);
-            if (t == null) throw new Exception("不存在这个，不用删");
-            _DBContext.Set<T>().Remove(t);
-        }
-        /// <summary>
         /// 批量删除异步
         /// </summary>
         /// <typeparam name="T"></typeparam>

@@ -43,13 +43,13 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Task<AjaxResult> DeleteStudyTypeData(decimal? id);
+        public Task<AjaxResult> DeleteStudyTypeData(Guid id);
         /// <summary>
         /// 批量 删除
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Task<AjaxResult> DeleteStudyTypeData(IList<decimal> id);
+        public Task<AjaxResult> DeleteStudyTypeData(IList<Guid> id);
 
     }
 }

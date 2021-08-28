@@ -16,7 +16,7 @@ namespace WebApplication.AOP
         {
             if (!context.ModelState.IsValid)
             {
-                List<string> sb = new List<string>();
+                List<string> sb = new ();
                 // 获取所有错误的Key
                 List<string> Keys = context.ModelState.Keys.ToList();
                 // 获取每一个key对应的ModelStateDictionary

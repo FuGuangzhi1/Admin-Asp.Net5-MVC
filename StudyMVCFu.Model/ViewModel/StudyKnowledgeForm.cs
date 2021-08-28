@@ -8,10 +8,10 @@ namespace StudyMVCFu.Model.ViewModel
 {
     public class StudyKnowledgeForm
     {
-        public Guid studyknowledgeId { get; set; } = Guid.Empty;
-        public int studyTypeId { get; set; }
-        public string studyknowledgeName { get; set; }
-        public string studyknowledgeContent { get; set; }
+        public Guid? StudyknowledgeId { get; set; } = Guid.Empty;
+        public int StudyTypeId { get; set; }
+        public string StudyknowledgeName { get; set; }
+        public string StudyknowledgeContent { get; set; }
         public DateTime? CreateDateTime { get; set; }
     }
 }

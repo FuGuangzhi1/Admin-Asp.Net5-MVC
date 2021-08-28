@@ -17,6 +17,7 @@
     <script src="~/js/index.js"></script>
     <script src="~/js/qs.js"></script>
     <link href="~/css/Studyknowledge.css" rel="stylesheet" />
+
 </head>
 <body>
     <div id="app">
@@ -27,7 +28,7 @@
                     <el-input placeholder="请输入需要查询知识....." v-model="SearchStudyknowledgeName"></el-input>
                 </el-form-item>
                 <el-form-item label="知识类别:">
-                    <el-select v-model="StudyTypeId" clearable  placeholder="请选择" style="width:240px">
+                    <el-select v-model="StudyTypeId" clearable placeholder="请选择" style="width:240px">
                         <el-option v-for="item in StudyType"
                                    :key="item.studyTypeId"
                                    :label="item.studyTypeName"
@@ -39,6 +40,9 @@
                     <el-form-item>
                         <el-button type="success" size="small" v-on:click="Search"> Search</el-button>
                         <el-button type="danger" size="small" v-on:click="dialogFormVisible = true"> Add</el-button>
+                        <el-button type="warning" size="small" @*v-on:click="Search"*@ > MassDeletion</el-button>
+                        <el-button type="info" size="small" @*v-on:click="Search"*@ > Leading-in</el-button>
+                        <el-button type="primary" size="small" @*v-on:click="Search"*@> Derive</el-button>
                     </el-form-item>
                 </div>
             </el-form>
@@ -46,17 +50,22 @@
         <!--table表格-->
         <template>
             <el-table :data="tableData"
-                      style="width:100%">
-                <el-table-column type="index" width:"50">
+                      style="width:100%"
+                      height="520"
+                      max-height="500">
+                <el-table-column type="selection"
+                                 width="80"
+                                 align='center'>
                 </el-table-column>
-
                 <el-table-column property="studyknowledgeName"
                                  label="知识名称"
-                                 width="180">
+                                 width="180"
+                                 align='center'>
                 </el-table-column>
                 <el-table-column property="studyknowledgeNameType"
                                  label="知识类型"
-                                 width="180">
+                                 width="180"
+                                 align='center'>
                 </el-table-column>
                 <el-table-column property="studyknowledgeContent"
                                  label="知识内容"
@@ -64,11 +73,14 @@
                 </el-table-column>
                 <el-table-column property="createDateTime"
                                  label="创建时间"
-                                 width="180">
+                                 width="180"
+                                 :formatter="dateFormat"
+                                 align='center'>
                 </el-table-column>
                 <input id="Hidden1" v-model="form.studyknowledgeId" type="hidden" />
                 <el-table-column label="操作"
-                                 width="180">
+                                 width="180"
+                                 fixed="right">
                     <!--自定义列-->
                     <template slot-scope="scope">
                         <el-button type="primary" size="mini" v-on:click="Edit(scope.row)" class="el-icon-edit" circle>   </el-button> &nbsp;
@@ -80,7 +92,7 @@
                 <!--分页控件-->
                 <el-pagination v-on:size-change="handleSizeChange"
                                v-on:current-change="handleCurrentChange"
-                               :page-sizes="[2,3,5,6]"
+                               :page-sizes="[2,3,5,10]"
                                :page-size=5
                                layout="total,sizes,prev,pager,next,jumper"
                                :total="total">

@@ -117,20 +117,34 @@
                 this.form = data
             }, Delete(data) {
                 this.$confirm('真的要删除吗？')
-                    .then(_ => {
+                    .then(async _ => {
                         //删除事件
-                        axios.post("/Study/DeleteStudyTypeData", data.studyknowledgeId)
-                            .then(response => {
-                                debugger
-                                this.$message(response.data);
-                                this.load();
-                            }).cath(_error => {
-                                this.$message('！！！！问题很大');
-                            })
+                        var f = new FormData();
+                        f.append("id", data.studyknowledgeId);
+                        const { data: res } = await axios.post("/Study/DeleteStudyTypeData", f);
+                        if (res.success) {
+                            this.$message(res.message);
+                            this.load();
+                        }
+                        else this.$message.error(res.message);
                     })
-                    .catch(_ => {
-                        this.$message('不删点什么点');
-                    });
+            }, dateFormat(row, colum, cellValue, index) {
+                return this.formatDateTime(row.createDateTime,1);
+            }//时间戳转换成日期
+            , formatDateTime(inputTime, mode) {
+                var date = new Date(inputTime);
+                var y = date.getFullYear();
+                var m = date.getMonth() + 1;
+                m = m < 10 ? ('0' + m) : m;
+                var d = date.getDate();
+                d = d < 10 ? ('0' + d) : d;
+                var h = date.getHours();
+                h = h < 10 ? ('0' + h) : h;
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                minute = minute < 10 ? ('0' + minute) : minute;
+                //second = second < 10 ? ('0' + second) : second;
+                return mode == undefined ? y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second : y + '-' + m + '-' + d + ' ' + h + ':' + minute;
             }
         }
 

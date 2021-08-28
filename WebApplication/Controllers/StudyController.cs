@@ -48,21 +48,21 @@ namespace WebApplication.Controllers
         {
             AjaxResult result = new();
             if (studyKnowledgeForm == null) return Json(data: result);
-            Studyknowledge studyknowledge = new Studyknowledge()
+            Studyknowledge studyknowledge = new()
             {
-                StudyknowledgeContent = studyKnowledgeForm.studyknowledgeContent,
-                StudyknowledgeId = studyKnowledgeForm.studyknowledgeId,
-                StudyTypeId = studyKnowledgeForm.studyTypeId,
-                StudyknowledgeName = studyKnowledgeForm.studyknowledgeName,
+                StudyknowledgeContent = studyKnowledgeForm.StudyknowledgeContent,
+                StudyTypeId = studyKnowledgeForm.StudyTypeId,
+                StudyknowledgeName = studyKnowledgeForm.StudyknowledgeName,
                 UpdateDateTime = DateTime.Now,
                 CreateDateTime = studyKnowledgeForm.CreateDateTime
-
             };
+            if (studyKnowledgeForm.StudyknowledgeId != null && studyKnowledgeForm.StudyknowledgeId != Guid.Empty)
+                studyknowledge.StudyknowledgeId = (Guid)studyKnowledgeForm.StudyknowledgeId;
             result = await this._study.UpdateOrInsertStudyTypeData(studyknowledge);
             return Json(data: result);
         }
         [HttpPost]
-        public async Task<IActionResult> DeleteStudyTypeData([FromBody] decimal id)
+        public async Task<IActionResult> DeleteStudyTypeData([FromForm] Guid id)
         {
             AjaxResult result = new();
             result = await _study.DeleteStudyTypeData(id);

@@ -4,7 +4,7 @@
 }
 
 #pagination {
-    float:right;
+    float: right;
 }
 
 #from {
@@ -19,3 +19,11 @@
 .el-table {
     text-align: center;
 }
+
+    .el-table .warning-row {
+        background: oldlace;
+    }
+
+    .el-table .success-row {
+        background: #f0f9eb;
+    }

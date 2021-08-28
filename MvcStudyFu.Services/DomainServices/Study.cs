@@ -24,7 +24,7 @@ namespace MvcStudyFu.Services.DomainServices
             this._dBContextFactory = dBContextFactory;
         }
 
-        public async Task<AjaxResult> DeleteStudyTypeData(decimal? id)
+        public async Task<AjaxResult> DeleteStudyTypeData(Guid id)
         {
             AjaxResult ajaxResult = new();
             await this.DeleteAsync<Studyknowledge>(id);
@@ -33,7 +33,7 @@ namespace MvcStudyFu.Services.DomainServices
             return ajaxResult;
         }
 
-        public Task<AjaxResult> DeleteStudyTypeData(IList<decimal> id)
+        public Task<AjaxResult> DeleteStudyTypeData(IList<Guid> id)
         {
             throw new NotImplementedException();
         }
