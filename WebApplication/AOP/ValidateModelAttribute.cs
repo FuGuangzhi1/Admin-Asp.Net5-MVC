@@ -29,10 +29,12 @@ namespace WebApplication.AOP
                         sb.Add(error.ErrorMessage);
                     }
                 }
+                var errorResult = string.Join(' ',sb.ToArray());
+                if(sb.Count>0) 
                 context.Result = new JsonResult(new AjaxResult
                 {
                     Success = false,
-                    Message = string.Format("错误：{0}", sb)
+                    Message = string.Format("错误：{0}", errorResult)
                 });
             }
         }

@@ -15,9 +15,8 @@
             form: {
                 studyknowledgeName: '求Star',
                 studyknowledgeContent: '求Star',
-                createDateTime: '',
-                StudyknowledgeViewId: '',
-                sktudyTypeId: ""
+                studyknowledgeId: '',
+                studyTypeId: ''
             }/*,formLabelWidth:'120px'*/
             , rules: {
                 studyknowledgeName: [
@@ -35,7 +34,6 @@
             this.GetStudyType(); //下拉数据绑定 类型
         }, methods: {
             async load() {
-                //axios.post(url, this.form).then(result => { }).catch(error => { })
                 const { data: res } = await axios.get
                     (`/Study/StudyknowledgeData?Name=${this.SearchStudyknowledgeName} &StydyTypeId=${this.StudyTypeId} &PageSize=${this.pagesize} &PageIndex=${this.currentPage}`);
                 console.log(res);
@@ -77,12 +75,10 @@
                     .then(_ => {
                         this.dialogFormVisible = false;
                         this.form = {
-                            StudyknowledgeName: '求Star',
-                            StudyknowledgeNameType: '求Star',
-                            StudyknowledgeContent: '求Star',
-                            CreateDateTime: '',
-                            StudyknowledgeNameId: '',
-                            StudyTypeId: ''
+                            studyknowledgeName: '求Star',
+                            studyknowledgeContent: '求Star',
+                            studyknowledgeId: '',
+                            studyTypeId: ''
                         };
                     })
                     .catch(_ => {
@@ -123,7 +119,7 @@
                 this.$confirm('真的要删除吗？')
                     .then(_ => {
                         //删除事件
-                        axios.post("/Student/Delete", data)
+                        axios.post("/Study/DeleteStudyTypeData", data.studyknowledgeId)
                             .then(response => {
                                 debugger
                                 this.$message(response.data);
@@ -133,7 +129,7 @@
                             })
                     })
                     .catch(_ => {
-                        //this.$message('不删点什么点');
+                        this.$message('不删点什么点');
                     });
             }
         }

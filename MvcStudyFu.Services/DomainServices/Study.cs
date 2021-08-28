@@ -102,7 +102,10 @@ namespace MvcStudyFu.Services.DomainServices
                 data = await this.QueryAsync<Studyknowledge>
                     (x => x.StudyknowledgeName == studyknowledge.StudyknowledgeName);
                 if (data == null || !data.Any())
+                {
+                    studyknowledge.CreateDateTime = DateTime.Now;
                     await this.InsertAsync<Studyknowledge>(studyknowledge);
+                }
                 else ajaxResult.Message = "添加失败，数据已存在";
             }
             else

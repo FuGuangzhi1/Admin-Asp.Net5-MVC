@@ -44,11 +44,20 @@ namespace WebApplication.Controllers
         [HttpPost]
         [ValidateModel]
         public async Task<IActionResult> UpdateOrInsertStudyTypeData
-               ([FromForm] StudyKnowledgeView studyknowledge)
+               ([FromForm] StudyKnowledgeForm studyKnowledgeForm)
         {
             AjaxResult result = new();
-            studyknowledge.CreateDateTime = DateTime.Now;
-            studyknowledge.UpdateDateTime = DateTime.Now;
+            if (studyKnowledgeForm == null) return Json(data: result);
+            Studyknowledge studyknowledge = new Studyknowledge()
+            {
+                StudyknowledgeContent = studyKnowledgeForm.studyknowledgeContent,
+                StudyknowledgeId = studyKnowledgeForm.studyknowledgeId,
+                StudyTypeId = studyKnowledgeForm.studyTypeId,
+                StudyknowledgeName = studyKnowledgeForm.studyknowledgeName,
+                UpdateDateTime = DateTime.Now,
+                CreateDateTime = studyKnowledgeForm.CreateDateTime
+
+            };
             result = await this._study.UpdateOrInsertStudyTypeData(studyknowledge);
             return Json(data: result);
         }
