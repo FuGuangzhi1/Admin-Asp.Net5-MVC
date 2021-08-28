@@ -20,6 +20,11 @@ namespace WebApplication
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+           // .ConfigureAppConfiguration((context,config)=> {
+           //     config.AddJsonFile("database.json");
+           //     string env = context.HostingEnvironment.EnvironmentName;
+           //     config.AddJsonFile($"database.{env}.json");
+           // })
            .ConfigureLogging(loggingBuilder =>
            {
                //这种注册方式有问题，采用下面的放方式

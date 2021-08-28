@@ -7,3 +7,55 @@ An attempt was made to use the context while it is being configured. A DbContext
 2021-08-27 02:15:54,420| ERROR 
 为 FETCH 子句提供的行数必须大于零。
 --------------------------------
+2021-08-27 12:25:22,893| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 12:26:25,421| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 12:27:29,500| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 12:28:15,244| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 12:29:01,363| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 12:29:24,763| ERROR 
+A second operation was started on this context before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+--------------------------------
+2021-08-27 12:30:54,530| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 12:39:01,197| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-27 15:19:03,109| FATAL 
+Application startup exception
+--------------------------------
+System.ArgumentNullException: Value cannot be null. (Parameter 'context')
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveNamed[TService](IComponentContext context, String serviceName, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.ResolveNamed[TService](IComponentContext context, String serviceName)
+   at MvcStudyFu.EFCore.SQLSever.StudyMVCDBContext.GetStr() in G:\WebApplication\MvcStudyFu.EFCore.SQLSever\StudyMVCDBContext.cs:line 37
+   at MvcStudyFu.EFCore.SQLSever.StudyMVCDBContext.OnConfiguring(DbContextOptionsBuilder optionsBuilder) in G:\WebApplication\MvcStudyFu.EFCore.SQLSever\StudyMVCDBContext.cs:line 47
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<System.IServiceProvider>.get_Instance()
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.InfrastructureExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.AccessorExtensions.GetService[TService](IInfrastructure`1 accessor)
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.get_Dependencies()
+   at Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade.EnsureCreated()
+   at WebApplication.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in G:\WebApplication\WebApplication\Startup.cs:line 67
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-08-27 15:42:45,610| ERROR 
+A second operation was started on this context before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+--------------------------------

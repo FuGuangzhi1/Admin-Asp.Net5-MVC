@@ -9,14 +9,14 @@
             total: 0,   //总记录数
             //模态框
             dialogFormVisible: false,
-            StudyType: [],
+            StudyType: [{ studyTypeId: null, studyTypeName: null}],
+            handleClose: false,
             form: {
                 StudyknowledgeName: '求Star',
-                StudyknowledgeNameType: '求Star',
                 StudyknowledgeContent: '求Star',
-                CreateDateTime: '2001-04-22',
-                StudyknowledgeNameId: '',
-                StudyTypeId: ''
+                CreateDateTime: '',
+                StudyknowledgeId: '',
+                StudyTypeId:""
             }/*,formLabelWidth:'120px'*/
             , rules: {
                 StudyknowledgeName: [
@@ -33,24 +33,51 @@
             this.load();  //列表加载
             this.GetStudyType(); //下拉数据绑定 类型
         }, methods: {
-            load() {
+            async load() {
                 //axios.post(url, this.form).then(result => { }).catch(error => { })
-                axios.get("/Study/StudyknowledgeData").then(result => {
-                    console.log(result)
-                    this.tableData = result.data;
-                }).catch(error => {
-                    console.log(error)
-                })
-            }, GetStudyType()
-            {
-                axios.get("/Study/StudyTypeData").then(result => {
-                    console.log(result)
-                    this.StudyType = result.data;
-                }).catch(error => {
-                    console.log(error)
-                })
+                const { data: res } = await axios.get("/Study/StudyknowledgeData");
+                console.log(res);
+                this.tableData = res.rows;
+            }, async GetStudyType() {
+                const { data: res } = await axios.get("/Study/StudyTypeData");
+                console.log(res);
+                this.StudyType = res;
+            }, Confirm: function (formValid) {
+                this.$refs[formValid].validate(async (valid) => {
+                    if (valid) {
+                        console.log("格式正确");
+                        var f = new FormData();
+                        //f.append('StudyknowledgeName', this.form.StudyknowledgeName);
+                        for (let key in this.form) {
+                            f.append(key, this.form[key]);
+                        }
+                        const { data: res } = await axios.post
+                            ("/Study/UpdateOrInsertStudyTypeData",f);
+                        console.log(res);
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
+            },//模态框开关提示
+            Close() {
+                this.$confirm('确认关闭？')
+                    .then(_ => {
+                        this.dialogFormVisible = false;
+                        this.form = {
+                            StudyknowledgeName: '求Star',
+                            StudyknowledgeNameType: '求Star',
+                            StudyknowledgeContent: '求Star',
+                            CreateDateTime: '',
+                            StudyknowledgeNameId: '',
+                            StudyTypeId: ''
+                        };
+                    })
+                    .catch(_ => {
+                        //this.$message('教我做事？');
+                    });
             }
         }
-        
+
     }
 );

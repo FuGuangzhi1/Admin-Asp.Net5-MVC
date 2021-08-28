@@ -36,8 +36,16 @@ namespace MvcStudyFu.Services
         /// </summary>
         public bool Commit()
         {
-            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
-            return _DBContext.SaveChanges() > 0;
+            bool result = true;
+            try
+            {
+                result = _DBContext.SaveChanges() > 0;
+            }
+            catch (DbUpdateException)
+            {
+                result = false;
+            }
+            return result;
         }
         /// <summary>
         /// 异步提交
@@ -45,7 +53,17 @@ namespace MvcStudyFu.Services
         /// <returns></returns>
         public async virtual Task<bool> CommitAsync()
         {
-            return await _DBContext.SaveChangesAsync() > 0;
+            bool result = true;
+            try
+            {
+                result = await _DBContext.SaveChangesAsync() > 0;
+            }
+            catch (DbUpdateException)
+            {
+                result = false;
+            }
+            catch (Exception) { result = false; }
+            return result;
         }
         /// <summary>
         /// 根据主键删除实体
@@ -77,6 +95,19 @@ namespace MvcStudyFu.Services
         /// <param name="id"></param>
         /// <returns></returns>
         public async virtual Task DeleteAsync<T>(Guid id) where T : class
+        {
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            T t = await _DBContext.Set<T>().FindAsync(id);
+            if (t == null) throw new Exception("不存在这个，不用删");
+            _DBContext.Set<T>().Remove(t);
+        }
+        /// <summary>
+        /// 删除异步版
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async virtual Task DeleteAsync<T>(dynamic id) where T : class
         {
             this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             T t = await _DBContext.Set<T>().FindAsync(id);
@@ -356,9 +387,18 @@ namespace MvcStudyFu.Services
         {
             PageResult<T> PageResult = new();
             this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
-
             int offset = (pageIndex - 1) * pageSize; //当前页面
-            PageResult.Rows =  _DBContext.Set<T>().Where(funWhere).OrderBy(funcOderby).Skip(offset).Take(pageSize).ToList();
+            var data = _DBContext.Set<T>();
+            if (data != null && data.Any())
+            {
+                var datawhere = data.Where(funWhere);
+                if (datawhere != null && datawhere.Any())
+                {
+                    var datapage = datawhere.OrderBy(funcOderby).Skip(offset).Take(pageSize);
+                    PageResult.Rows = datapage.ToList();
+                }
+            }
+            PageResult.Total = _DBContext.Set<T>().Count();
             return PageResult;
         }
 
@@ -367,9 +407,35 @@ namespace MvcStudyFu.Services
             PageResult<T> PageResult = new();
             this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             int offset = (pageIndex - 1) * pageSize; //当前页面
-            PageResult.Rows = await _DBContext.Set<T>()
-                .Where(funWhere).OrderBy(funcOderby).Skip(offset).Take(pageSize).ToListAsync();
-            PageResult.Total = _DBContext.Set<T>().Count();
+            var data = _DBContext.Set<T>();
+            if (data != null && data.Any())
+            {
+                var datawhere = data.Where(funWhere);
+                if (datawhere != null && datawhere.Any())
+                {
+                    var datapage = datawhere.OrderBy(funcOderby).Skip(offset).Take(pageSize);
+                    PageResult.Rows = await datapage.ToListAsync();
+                }
+            }
+            PageResult.Total = await _DBContext.Set<T>().CountAsync();
+            return PageResult;
+        }
+
+        public async Task<PageResult<T>> QueryPageAsync<T, S>(IQueryable<T> tList, Expression<Func<T, bool>> funWhere, Expression<Func<T, bool>> funWhere1, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
+        {
+            PageResult<T> PageResult = new();
+            int offset = (pageIndex - 1) * pageSize; //当前页面
+            var data = tList;
+            if (data != null && data.Any())
+            {
+                var datawhere = data.Where(funWhere).Where(funWhere1);
+                if (datawhere != null && datawhere.Any())
+                {
+                    var datapage = datawhere.OrderBy(funcOderby).Skip(offset).Take(pageSize);
+                    PageResult.Rows = await datapage.ToListAsync();
+                }
+            }
+            PageResult.Total = await tList.CountAsync();
             return PageResult;
         }
     }

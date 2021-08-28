@@ -27,7 +27,7 @@ namespace MvcStudyFu.Interface
         IQueryable<T> Query<T>(Expression<Func<T, bool>> funWhere) where T : class;
 
         PageResult<T> QueryPage<T, S>
-         (Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) 
+         (Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby)
             where T : class;
 
 
@@ -39,6 +39,7 @@ namespace MvcStudyFu.Interface
         Task<IQueryable<T>> QueryAsync<T>(Expression<Func<T, bool>> funWhere) where T : class;
         Task<PageResult<T>> QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class;
         Task<IQueryable<T>> ExcuteQueryAsync<T>(string sql, SqlParameter[] parameter) where T : class;
+        Task<PageResult<T>> QueryPageAsync<T, S>(IQueryable<T> tList, Expression<Func<T, bool>> funWhere, Expression<Func<T, bool>> funWhere1, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class;
         #endregion
 
         #region 新增

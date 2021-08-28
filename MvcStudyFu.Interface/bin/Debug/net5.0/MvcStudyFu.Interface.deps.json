@@ -15,6 +15,17 @@
           "MvcStudyFu.Interface.dll": {}
         }
       },
+      "Autofac/6.2.0": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "5.0.1"
+        },
+        "runtime": {
+          "lib/net5.0/Autofac.dll": {
+            "assemblyVersion": "6.2.0.0",
+            "fileVersion": "6.2.0.0"
+          }
+        }
+      },
       "linq2db/3.4.3": {
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
@@ -1161,6 +1172,7 @@
       },
       "MvcStudyFu.EFCore.SQLSever/1.0.0": {
         "dependencies": {
+          "Autofac": "6.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "MvcStudyFu.Common": "1.0.0",
@@ -1184,6 +1196,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BX8IM0GANE38uSr4QwXL4PgA8vWWYt2P5cZzipn/vDnf0fDbPSGKSHEroJ09rB7ANxdyf7MdEgVs+pvL8kwYCg==",
+      "path": "autofac/6.2.0",
+      "hashPath": "autofac.6.2.0.nupkg.sha512"
     },
     "linq2db/3.4.3": {
       "type": "package",

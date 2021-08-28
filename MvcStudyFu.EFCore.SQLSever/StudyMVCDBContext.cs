@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Autofac;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using MvcStudyFu.Common;
 using StudyMVCFu.Model;
@@ -13,13 +14,12 @@ namespace MvcStudyFu.EFCore.SQLSever
     //Update-Database CodeFirst
     public class StudyMVCDBContext : DbContext
     {
-        private  string _strConn;
+        private string _strConn;
         public StudyMVCDBContext()
         {
         }
         public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
         {
-        
         }
         public StudyMVCDBContext(string strConn)
         {
@@ -30,14 +30,8 @@ namespace MvcStudyFu.EFCore.SQLSever
         public virtual DbSet<StudyType> StudyType { get; set; }
         public virtual DbSet<Studyknowledge> Studyknowledge { get; set; }
 
-        internal string GetStr()
-        {
-            return "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258";
-        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
-            if (string.IsNullOrEmpty(_strConn)) _strConn = GetStr();
             optionsBuilder.UseSqlServer(_strConn);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -51,7 +45,7 @@ namespace MvcStudyFu.EFCore.SQLSever
             #region  学习表和学习类型表外键设置  一对多
             modelBuilder.Entity<Studyknowledge>()
                 .HasOne(x => x.StudyType)
-                .WithMany(y=>y.Studyknowledge)
+                .WithMany(y => y.Studyknowledge)
                 .HasForeignKey(x => x.StudyTypeId);
             #endregion
 

@@ -2590,6 +2590,7 @@
       },
       "MvcStudyFu.EFCore.SQLSever/1.0.0": {
         "dependencies": {
+          "Autofac": "6.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
           "MvcStudyFu.Common": "1.0.0",

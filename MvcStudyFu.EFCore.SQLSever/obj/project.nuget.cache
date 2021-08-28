@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nGywmf7lGfxHhVqrFdImGESTd01u/wbUGMZG03b/R9Zrr1ETa5ZsjkvbFSIfmXCo554yeCyFJbPEo8NZyW1Qdw==",
+  "dgSpecHash": "wlVDthA04J9FAkvKA9G8XGv3u7ayzEwgik4tEH5SwqEdnjbeYwlCRSX6/kman+I8WuUYlbjHmOm41MVh/vDtDQ==",
   "success": true,
   "projectFilePath": "G:\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\付广志\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\linq2db\\3.4.3\\linq2db.3.4.3.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

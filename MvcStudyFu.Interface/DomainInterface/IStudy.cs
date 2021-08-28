@@ -26,6 +26,30 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// </summary>
         /// <returns></returns>
         public Task<List<StudyType>> GetStudyType();
+        /// <summary>
+        /// 添加或者修改
+        /// </summary>
+        /// <param name="studyknowledge"></param>
+        /// <returns></returns>
+        public Task<AjaxResult> UpdateOrInsertStudyTypeData(Studyknowledge studyknowledge);
+        /// <summary>
+        ///  批量添加或者批量修改
+        /// </summary>
+        /// <param name="studyknowledge"></param>
+        /// <returns></returns>
+        public Task<AjaxResult> UpdateOrInsertStudyTypeData(IList<Studyknowledge> studyknowledge);
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Task<AjaxResult> DeleteStudyTypeData(decimal? id);
+        /// <summary>
+        /// 批量 删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Task<AjaxResult> DeleteStudyTypeData(IList<decimal> id);
 
     }
 }

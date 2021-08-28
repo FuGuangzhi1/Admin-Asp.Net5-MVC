@@ -10,36 +10,13 @@
     <meta name="viewport" content="width=device-width" />
     <title>Studyknowledge</title>
     <script src="~/js/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="~/js/axios.min.js"></script>
     <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link href="~/css/index.css" rel="stylesheet" />
     <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        #pagination {
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
-        }
-
-        #from {
-            padding: 10px;
-            margin-left: 6px;
-        }
-
-        #buttonCss {
-            float: right;
-        }
-
-        .el-table {
-            text-align: center;
-        }
-    </style>
+    <script src="~/js/index.js"></script>
+    <script src="~/js/qs.js"></script>
+    <link href="~/css/Studyknowledge.css" rel="stylesheet" />
 </head>
 <body>
     <div id="app">
@@ -50,7 +27,7 @@
                     <el-input placeholder="请输入需要查询知识....." v-model="SearchStudyknowledgeName"></el-input>
                 </el-form-item>
                 <el-form-item label="知识类别:">
-                    <el-select v-model="form.StudyType" placeholder="请选择" style="width:240px">
+                    <el-select v-model="form.studyTypeId" placeholder="请选择" style="width:240px">
                         <el-option v-for="item in StudyType"
                                    :key="item.studyTypeId"
                                    :label="item.studyTypeName"
@@ -101,8 +78,8 @@
             <div id="pagination">
                 <!--分页控件-->
                 <el-pagination @*v-on:size-change="handleSizeChange"
-                               v-on:current-change="handleCurrentChange"
-                               :page-sizes="[2,3,5,10]"*@
+                               v-on:current-change="handleCurrentChange"*@
+                               :page-sizes="[2,3,5,10]"
                                :page-size=2
                                layout="total,sizes,prev,pager,next,jumper"
                                :total="total">
@@ -114,7 +91,7 @@
         <el-dialog title="提示"
                    :visible.sync="dialogFormVisible"
                    width="500px"
-                   @*:before-close="handleClose"*@>
+                   :before-close=Close>
             <el-form :inline="false"
                      class="demo-form-inline"
                      :model="form"
@@ -141,7 +118,7 @@
                         &nbsp; &nbsp;   知识类型:
                     </el-col>
                     <el-col :span="12">
-                        <el-select v-model="form.StudyType" placeholder="请选择" style="width:240px">
+                        <el-select v-model="form.StudyTypeId" placeholder="求Star（请选择)" style="width:240px">
                             <el-option v-for="item in StudyType"
                                        :key="item.studyTypeId"
                                        :label="item.studyTypeName"
@@ -153,8 +130,8 @@
                 <input id="Hidden1" v-model="form.StudyknowledgeNameId" type="hidden" />
             </el-form>
             <span slot="footer" class="dialog-footer">
-                <el-button @*v-on:click="handleClose "*@>取 消</el-button>
-                <el-button type="primary" @*v-on:click="ConfirmAdd"*@>确 定</el-button>
+                <el-button v-on:click="Close">取 消</el-button>
+                <el-button type="primary" v-on:click="Confirm('form')">确 定</el-button>
             </span>
         </el-dialog>
     </div>

@@ -61,10 +61,9 @@ namespace WebApplication
         {
             //数据库创建
             if (CreatDatabase)
-                using (var scope = app.ApplicationServices.CreateScope())
+                using (var StudyMVCDBContext = new EFCoreContextFactory(Configuration).CreateDbContext())
                 {
-                    var dc = scope.ServiceProvider.GetService<StudyMVCDBContext>();
-                    dc.Database.EnsureCreated();
+                    StudyMVCDBContext.Database.EnsureCreated();
                     CreatDatabase = false;
                 }
             if (env.IsDevelopment())

@@ -8,6 +8,7 @@ using StudyMVCFu.Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using static LinqToDB.Reflection.Methods.LinqToDB.Insert;
@@ -22,39 +23,55 @@ namespace MvcStudyFu.Services.DomainServices
         {
             this._dBContextFactory = dBContextFactory;
         }
+
+        public async Task<AjaxResult> DeleteStudyTypeData(decimal? id)
+        {
+            AjaxResult ajaxResult = new();
+            await this.DeleteAsync<Studyknowledge>(id);
+            ajaxResult.Success = await this.CommitAsync();
+            ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+            return ajaxResult;
+        }
+
+        public Task<AjaxResult> DeleteStudyTypeData(IList<decimal> id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<PageResult<StudyKnowledgeView>> GetStudyKnowledge
-            (String StudyKnowledgeName, int stydyTypeId, int pageSize, int pageIndex)
+            (string StudyKnowledgeName, int stydyTypeId, int pageSize, int pageIndex)
         {
             var DBCotent = _dBContextFactory.CreateDbContext(ReadWriteEnum.Read);
-            PageResult<StudyKnowledgeView> pageResult = new();       
-            IQueryable<StudyKnowledgeView> noPage = from a in DBCotent.Set<Studyknowledge>()
-                                                    join b in DBCotent.Set<StudyType>()
-                                                    on a.StudyTypeId equals b.StudyTypeId
-                                                    select new StudyKnowledgeView()
-                                                    {
-                                                        StudyknowledgeContent = a.StudyknowledgeContent,
-                                                        StudyknowledgeName = a.StudyknowledgeName,
-                                                        StudyknowledgeId = a.StudyknowledgeId,
-                                                        CreateDateTime = a.CreateDateTime,
-                                                        UpdateDateTime = a.UpdateDateTime,
-                                                        StudyTypeId = b.StudyTypeId,
-                                                        StudyknowledgeNameType = b.StudyTypeName,
-                                                    };
+            PageResult<StudyKnowledgeView> pageResult = new();
+            IQueryable<StudyKnowledgeView> data = from a in DBCotent.Set<Studyknowledge>()
+                                                  join b in DBCotent.Set<StudyType>()
+                                                  on a.StudyTypeId equals b.StudyTypeId
+                                                  select new StudyKnowledgeView()
+                                                  {
+                                                      StudyknowledgeContent = a.StudyknowledgeContent,
+                                                      StudyknowledgeName = a.StudyknowledgeName,
+                                                      StudyknowledgeId = a.StudyknowledgeId,
+                                                      CreateDateTime = a.CreateDateTime,
+                                                      UpdateDateTime = a.UpdateDateTime,
+                                                      StudyTypeId = b.StudyTypeId,
+                                                      StudyknowledgeNameType = b.StudyTypeName,
+
+                                                  };
+            Expression<Func<StudyKnowledgeView, bool>> StudyKnowledgeNameWhere = x => true;  //条件表达式
+            Expression<Func<StudyKnowledgeView, bool>> stydyTypeIdWhere = x => true;
             if (!string.IsNullOrEmpty(StudyKnowledgeName))
             {
-                noPage = noPage.Where(x => x.StudyknowledgeName == StudyKnowledgeName);
+                StudyKnowledgeNameWhere = x => x.StudyknowledgeName == StudyKnowledgeName;
             }
-            if (stydyTypeId != 0)
+            if (stydyTypeId > 0)
             {
-                noPage = noPage.Where(x => x.StudyTypeId == stydyTypeId);
+                stydyTypeIdWhere = x => x.StudyTypeId == stydyTypeId;
             }
-            if (noPage != null)
-            {
-                pageResult.Total = noPage.Count();
-                int offset = (pageIndex - 1) * pageSize; //当前页面
-                pageResult.Rows = await noPage.OrderByDescending(x => x.CreateDateTime).Skip(offset).Take(pageSize).ToListAsync();
-            }
+            pageResult = await base.QueryPageAsync<StudyKnowledgeView, DateTime?>
+               (tList: data, funWhere: StudyKnowledgeNameWhere, funWhere1: stydyTypeIdWhere, pageSize: pageSize,
+               pageIndex: pageIndex, funcOderby: x => x.CreateDateTime);
             return pageResult;
+
         }
 
         public async Task<List<StudyType>> GetStudyType()
@@ -64,6 +81,34 @@ namespace MvcStudyFu.Services.DomainServices
             if (StudyType != null)
                 data = await StudyType.ToListAsync();
             return data;
+        }
+
+        public async Task<AjaxResult> UpdateOrInsertStudyTypeData(Studyknowledge studyknowledge)
+        {
+            AjaxResult ajaxResult = new();
+            IQueryable<Studyknowledge> data;
+            //区分更新和添加
+            if (studyknowledge.StudyknowledgeId == Guid.Empty)
+            {
+                data = await this.QueryAsync<Studyknowledge>
+                    (x => x.StudyknowledgeName == studyknowledge.StudyknowledgeName);
+                if (data == null && !data.Any())
+                    await this.InsertAsync<Studyknowledge>(studyknowledge);
+            }
+            else
+            {
+                data = await this.QueryAsync<Studyknowledge>
+                  (x => x.StudyknowledgeName == studyknowledge.StudyknowledgeName && x.StudyknowledgeId != studyknowledge.StudyknowledgeId);
+                if (data == null && !data.Any())
+                    await this.UpdateAsync<Studyknowledge>(studyknowledge);
+            }
+            ajaxResult.Success = await this.CommitAsync();
+            ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+            return ajaxResult;
+        }
+        public Task<AjaxResult> UpdateOrInsertStudyTypeData(IList<Studyknowledge> studyknowledge)
+        {
+            throw new NotImplementedException();
         }
     }
 }

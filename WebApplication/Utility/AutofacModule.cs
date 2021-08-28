@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
+using Microsoft.Extensions.Configuration;
 using MvcStudyFu.EFCore.SQLSever;
 using MvcStudyFu.Interface.DomainInterface;
 using MvcStudyFu.Services.DomainServices;

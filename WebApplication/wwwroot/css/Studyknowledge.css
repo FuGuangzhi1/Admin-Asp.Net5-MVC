@@ -1,0 +1,23 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#pagination {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#from {
+    padding: 10px;
+    margin-left: 6px;
+}
+
+#buttonCss {
+    float: right;
+}
+
+.el-table {
+    text-align: center;
+}

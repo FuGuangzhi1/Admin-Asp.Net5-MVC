@@ -1,0 +1,47 @@
+﻿2021-08-28 05:38:33,399| ERROR 
+A second operation was started on this context before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+--------------------------------
+2021-08-28 06:15:28,646| ERROR 
+Object reference not set to an instance of an object.
+--------------------------------
+2021-08-28 06:20:16,761| ERROR 
+Object reference not set to an instance of an object.
+--------------------------------
+2021-08-28 06:26:26,942| ERROR 
+Object reference not set to an instance of an object.
+--------------------------------
+2021-08-28 06:40:17,121| ERROR 
+Object reference not set to an instance of an object.
+--------------------------------
+2021-08-28 06:44:39,495| ERROR 
+An unhandled exception has occurred while executing the request.
+--------------------------------
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+WebApplication.Controllers.StudyController.StudyknowledgeData (WebApplication)
+WebApplication.Controllers.StudyController.StudyTypeData (WebApplication)
+WebApplication.Controllers.StudyController.Studyknowledge (WebApplication)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-28 06:44:39,495| ERROR 
+An unhandled exception has occurred while executing the request.
+--------------------------------
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+WebApplication.Controllers.StudyController.StudyknowledgeData (WebApplication)
+WebApplication.Controllers.StudyController.StudyTypeData (WebApplication)
+WebApplication.Controllers.StudyController.Studyknowledge (WebApplication)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

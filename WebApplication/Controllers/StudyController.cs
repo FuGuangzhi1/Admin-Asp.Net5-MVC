@@ -25,19 +25,37 @@ namespace WebApplication.Controllers
             return View();
         }
         [HttpGet]
-        public async Task<IActionResult> StudyknowledgeData(String name,int stydyTypeId, int pageSize, int pageIndex)
+        public async Task<IActionResult> StudyknowledgeData(String name, int stydyTypeId, int pageSize, int pageIndex)
         {
             PageResult<StudyKnowledgeView> data = new();
-            data = await _study.GetStudyKnowledge
-                (StudyKnowledgeName: name,stydyTypeId: stydyTypeId, pageSize: pageSize, pageIndex:pageIndex);
+            data = await this._study.GetStudyKnowledge
+                (StudyKnowledgeName: name, stydyTypeId: stydyTypeId, pageSize: pageSize, pageIndex: pageIndex);
+            if (data.Rows.Any())
+                data.Success = true;
             return Json(data: data);
         }
         [HttpGet]
         public async Task<IActionResult> StudyTypeData()
         {
             List<StudyType> data = new();
-            data = await _study.GetStudyType();
+            data = await this._study.GetStudyType();
             return Json(data: data);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateOrInsertStudyTypeData
+               ([FromForm] Studyknowledge studyknowledge)
+        {
+            AjaxResult result = new();
+            if (ModelState.IsValid)
+                result = await this._study.UpdateOrInsertStudyTypeData(studyknowledge);
+            return Json(data: result);
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeleteStudyTypeData([FromBody] decimal id)
+        {
+            AjaxResult result = new();
+            result = await _study.DeleteStudyTypeData(id);
+            return Json(data: result);
         }
     }
 }
