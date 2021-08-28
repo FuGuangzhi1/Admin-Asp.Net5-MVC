@@ -386,6 +386,7 @@ namespace MvcStudyFu.Services
         public PageResult<T> QueryPage<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
         {
             PageResult<T> PageResult = new();
+            if (pageSize == 0) return PageResult;
             this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             int offset = (pageIndex - 1) * pageSize; //当前页面
             var data = _DBContext.Set<T>();
@@ -405,6 +406,7 @@ namespace MvcStudyFu.Services
         public async Task<PageResult<T>> QueryPageAsync<T, S>(Expression<Func<T, bool>> funWhere, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
         {
             PageResult<T> PageResult = new();
+            if (pageSize == 0) return PageResult;
             this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             int offset = (pageIndex - 1) * pageSize; //当前页面
             var data = _DBContext.Set<T>();
@@ -424,6 +426,7 @@ namespace MvcStudyFu.Services
         public async Task<PageResult<T>> QueryPageAsync<T, S>(IQueryable<T> tList, Expression<Func<T, bool>> funWhere, Expression<Func<T, bool>> funWhere1, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
         {
             PageResult<T> PageResult = new();
+            if (pageSize == 0) return PageResult;
             int offset = (pageIndex - 1) * pageSize; //当前页面
             var data = tList;
             if (data != null && data.Any())

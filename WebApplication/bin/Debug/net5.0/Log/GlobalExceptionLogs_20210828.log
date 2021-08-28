@@ -45,3 +45,9 @@ WebApplication.Controllers.StudyController.Studyknowledge (WebApplication)
    at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-28 19:19:03,423| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------
+2021-08-28 19:22:09,244| ERROR 
+为 FETCH 子句提供的行数必须大于零。
+--------------------------------

@@ -42,7 +42,7 @@ namespace MvcStudyFu.Interface
         Task<PageResult<T>> QueryPageAsync<T, S>(IQueryable<T> tList, Expression<Func<T, bool>> funWhere, Expression<Func<T, bool>> funWhere1, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class;
         #endregion
 
-        #region 新增
+            #region 新增
         void Insert<T>(T t) where T : class;
 
         void Insert<T>(IEnumerable<T> tList) where T : class;

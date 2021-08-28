@@ -67,11 +67,19 @@ namespace MvcStudyFu.Services.DomainServices
             {
                 stydyTypeIdWhere = x => x.StudyTypeId == stydyTypeId;
             }
-            pageResult = await base.QueryPageAsync<StudyKnowledgeView, DateTime?>
-               (tList: data, funWhere: StudyKnowledgeNameWhere, funWhere1: stydyTypeIdWhere, pageSize: pageSize,
-               pageIndex: pageIndex, funcOderby: x => x.CreateDateTime);
+            try
+            {
+                pageResult = await base.QueryPageAsync<StudyKnowledgeView, DateTime?>
+                   (tList: data, funWhere: StudyKnowledgeNameWhere, funWhere1: stydyTypeIdWhere, pageSize: pageSize,
+                   pageIndex: pageIndex, funcOderby: x => x.CreateDateTime);
+                pageResult.Success = true;
+                pageResult.Message = "操作成功";
+            }
+            catch (Exception ex)
+            {
+                pageResult.Message = ex.Message;
+            }
             return pageResult;
-
         }
 
         public async Task<List<StudyType>> GetStudyType()
@@ -86,24 +94,30 @@ namespace MvcStudyFu.Services.DomainServices
         public async Task<AjaxResult> UpdateOrInsertStudyTypeData(Studyknowledge studyknowledge)
         {
             AjaxResult ajaxResult = new();
+            if (studyknowledge == null) return ajaxResult;
             IQueryable<Studyknowledge> data;
             //区分更新和添加
             if (studyknowledge.StudyknowledgeId == Guid.Empty)
             {
                 data = await this.QueryAsync<Studyknowledge>
                     (x => x.StudyknowledgeName == studyknowledge.StudyknowledgeName);
-                if (data == null && !data.Any())
+                if (data == null || !data.Any())
                     await this.InsertAsync<Studyknowledge>(studyknowledge);
+                else ajaxResult.Message = "添加失败，数据已存在";
             }
             else
             {
                 data = await this.QueryAsync<Studyknowledge>
                   (x => x.StudyknowledgeName == studyknowledge.StudyknowledgeName && x.StudyknowledgeId != studyknowledge.StudyknowledgeId);
-                if (data == null && !data.Any())
+                if (data == null || !data.Any())
                     await this.UpdateAsync<Studyknowledge>(studyknowledge);
+                else ajaxResult.Message = "修改失败，数据已存在";
             }
-            ajaxResult.Success = await this.CommitAsync();
-            ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+            if (ajaxResult.Message == "操作失败")
+            {
+                ajaxResult.Success = await this.CommitAsync();
+                ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+            }
             return ajaxResult;
         }
         public Task<AjaxResult> UpdateOrInsertStudyTypeData(IList<Studyknowledge> studyknowledge)

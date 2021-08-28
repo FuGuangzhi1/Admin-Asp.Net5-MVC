@@ -8,6 +8,7 @@ using MvcStudyFu.Interface.DomainInterface;
 using StudyMVCFu.Model.ViewModel;
 using StudyMVCFu.Model.DomainModel;
 using StudyMVCFu.Model;
+using WebApplication.AOP;
 
 namespace WebApplication.Controllers
 {
@@ -25,13 +26,12 @@ namespace WebApplication.Controllers
             return View();
         }
         [HttpGet]
-        public async Task<IActionResult> StudyknowledgeData(String name, int stydyTypeId, int pageSize, int pageIndex)
+        public async Task<IActionResult> StudyknowledgeData
+            ([FromQuery] string name, [FromQuery] int stydyTypeId, [FromQuery] int pageSize, [FromQuery] int pageIndex)
         {
             PageResult<StudyKnowledgeView> data = new();
             data = await this._study.GetStudyKnowledge
                 (StudyKnowledgeName: name, stydyTypeId: stydyTypeId, pageSize: pageSize, pageIndex: pageIndex);
-            if (data.Rows.Any())
-                data.Success = true;
             return Json(data: data);
         }
         [HttpGet]
@@ -42,12 +42,14 @@ namespace WebApplication.Controllers
             return Json(data: data);
         }
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> UpdateOrInsertStudyTypeData
-               ([FromForm] Studyknowledge studyknowledge)
+               ([FromForm] StudyKnowledgeView studyknowledge)
         {
             AjaxResult result = new();
-            if (ModelState.IsValid)
-                result = await this._study.UpdateOrInsertStudyTypeData(studyknowledge);
+            studyknowledge.CreateDateTime = DateTime.Now;
+            studyknowledge.UpdateDateTime = DateTime.Now;
+            result = await this._study.UpdateOrInsertStudyTypeData(studyknowledge);
             return Json(data: result);
         }
         [HttpPost]
