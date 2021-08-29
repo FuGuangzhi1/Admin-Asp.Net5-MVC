@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StudyMVCFu.Model.DomainModel
 {
+    /// <summary>
+    /// 学习知识内容具体表
+    /// </summary>
+    [Table("Studyknowledge")]
     public class Studyknowledge
     {
         [Key]

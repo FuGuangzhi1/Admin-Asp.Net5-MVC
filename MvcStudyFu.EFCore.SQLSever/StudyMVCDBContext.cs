@@ -29,6 +29,8 @@ namespace MvcStudyFu.EFCore.SQLSever
         public virtual DbSet<UserPassword> UserPassword { get; set; }
         public virtual DbSet<StudyType> StudyType { get; set; }
         public virtual DbSet<Studyknowledge> Studyknowledge { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<Resource> Resources { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -49,8 +51,8 @@ namespace MvcStudyFu.EFCore.SQLSever
                 .HasForeignKey(x => x.StudyTypeId);
             #endregion
 
-            List<User> users = new();
-            List<UserPassword> userPassword = new();
+            List<User> users = new(); //初始用户拥有一切权限
+            List<UserPassword> userPassword = new();//初始用户密码
             List<StudyType> studyTypes = new()
             {
                 new StudyType() { StudyTypeId = 1, StudyTypeName = "前端" },
@@ -82,5 +84,6 @@ namespace MvcStudyFu.EFCore.SQLSever
             modelBuilder.Entity<UserPassword>().HasData(userPassword);
             modelBuilder.Entity<StudyType>().HasData(studyTypes);
         }
+
     }
 }

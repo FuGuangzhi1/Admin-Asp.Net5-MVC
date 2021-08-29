@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace StudyMVCFu.Model
 {
+    /// <summary>
+    /// 用户密码表
+    /// </summary>
     [Table("UserPassword")]
     public class UserPassword
     {

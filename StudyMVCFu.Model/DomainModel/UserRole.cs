@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,15 @@ using System.Threading.Tasks;
 namespace StudyMVCFu.Model.DomainModel
 {
     /// <summary>
-    /// 学习类型表
+    /// 用户角色表
     /// </summary>
-    public class StudyType
+    [Table("UserRole")]
+    public class UserRole
     {
         [Key]
-        public int StudyTypeId { get; set;  }
-        public string StudyTypeName { get; set; }
-        public  List<Studyknowledge> Studyknowledge { get; set; }
+        public Guid UserRoleId { get; set; }
+        public User User { get; set; }
+
+        public Role Role { get; set; }
     }
 }
