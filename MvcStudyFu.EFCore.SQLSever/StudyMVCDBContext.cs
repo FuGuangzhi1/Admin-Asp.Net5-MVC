@@ -17,6 +17,7 @@ namespace MvcStudyFu.EFCore.SQLSever
         private string _strConn;
         public StudyMVCDBContext()
         {
+            //_strConn = "Data Source=127.0.0.1;Initial Catalog=StudyMVC;User ID=sa;password=jkl147258;";
         }
         public StudyMVCDBContext(DbContextOptions<StudyMVCDBContext> options) : base(options)
         {
@@ -38,6 +39,10 @@ namespace MvcStudyFu.EFCore.SQLSever
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region  角色和用户 角色和角色权限 多对多
+            modelBuilder.Entity<UserRole>().HasKey(x=>new { x.RoleId,x.UserId });
+            modelBuilder.Entity<RoleResouce>().HasKey(x=>new { x.RoleId,x.ResourceId });
+            #endregion
             #region  用户表和用户密码表外键设置  一对一
             modelBuilder.Entity<User>()
                 .HasOne(x => x.UserPassword)

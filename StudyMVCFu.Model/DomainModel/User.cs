@@ -39,5 +39,9 @@ namespace StudyMVCFu.Model
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? UpdateDateTime { get; set; }
         public UserPassword UserPassword { get; set; }
+        /// <summary>
+        /// 逻辑删除
+        /// </summary>
+        public Nullable<bool> IsDel { get; set; }
     }
 }

@@ -29,69 +29,27 @@
             </el-header>
             <el-container>
                 <el-aside width="200px">
-                    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-                        <el-radio-button :label="false">Open</el-radio-button>
-                        <el-radio-button :label="true">Close</el-radio-button>
-                    </el-radio-group>
-                    <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @@open="handleOpen"
-                             @@close="handleClose" :collapse="isCollapse">
+                    <el-menu default-active="2"
+                             class="el-menu-vertical-demo"
+                             @@open="handleOpen"
+                             @@close="handleClose"
+                             background-color="#494e8f"
+                             text-color="#fff"
+                             active-text-color="#afb4db">
                         <el-submenu index="1">
 
                             <template slot="title">
                                 <i class="el-icon-location"></i>
-                                <span slot="title">菜单管理</span>
+                                <span>导航一</span>
                             </template>
 
-                            <el-submenu index="1-4">
-                                <span slot="title">选项4</span>
-                                <el-menu-item index="1-4-1">选项1</el-menu-item>
-                            </el-submenu>
+                            <el-menu-item-group>
+                                <el-menu-item index="1-1">选项1</el-menu-item>
+                            </el-menu-item-group>
 
                         </el-submenu>
 
-                        <el-submenu index="1">
-
-                            <template slot="title">
-                                <i class="el-icon-location"></i>
-                                <span slot="title">菜单管理</span>
-                            </template>
-
-                            <el-submenu index="1-4">
-                                <span slot="title">选项4</span>
-                                <el-menu-item index="1-4-1">选项1</el-menu-item>
-                            </el-submenu>
-
-                        </el-submenu>
-
-                        <el-submenu index="1">
-
-                            <template slot="title">
-                                <i class="el-icon-location"></i>
-                                <span slot="title">菜单管理</span>
-                            </template>
-
-                            <el-submenu index="1-4">
-                                <span slot="title">选项4</span>
-                                <el-menu-item index="1-4-1">选项1</el-menu-item>
-                            </el-submenu>
-
-                        </el-submenu>
-
-                        <el-submenu index="1">
-
-                            <template slot="title">
-                                <i class="el-icon-location"></i>
-                                <span slot="title">菜单管理</span>
-                            </template>
-
-                            <el-submenu index="1-4">
-                                <span slot="title">选项4</span>
-                                <el-menu-item index="1-4-1">选项1</el-menu-item>
-                            </el-submenu>
-
-                        </el-submenu>
-
-                    </el-menu>
+                        <button style="background-color: #494e8f; color: white; font-size:12px;height:18px;line-height:18px;float:right;">Open/Close</button>
 
                 </el-aside>
                 <el-container>

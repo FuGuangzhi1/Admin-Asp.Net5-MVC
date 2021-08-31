@@ -30,6 +30,7 @@ body {
 
 .el-aside {
     border-right: solid #DCDFE6 1px;
+    background-color: #585eaa;
 }
 
 .el-footer {
@@ -44,7 +45,4 @@ body {
 .el-main {
     padding:0px;
     margin:0px;
-}
-.el-radio-button {
-    width:50%;
 }

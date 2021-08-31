@@ -100,7 +100,6 @@
                         type: 'warning'
                     });
                 }
-
             }, handleSizeChange(val) {
                 this.StudyTypeId = "";
                 this.SearchStudyknowledgeName = "";

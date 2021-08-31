@@ -16,6 +16,8 @@ namespace StudyMVCFu.Model.DomainModel
     {
         [Key]
         public Guid RoleResouceId { get; set; }
+        public Guid RoleId { get; set; }
+        public Guid ResourceId { get; set; }
         public Role Role { get; set; }
         public Resource Resource { get; set; }
     }
