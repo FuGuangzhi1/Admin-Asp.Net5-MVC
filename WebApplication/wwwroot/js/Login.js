@@ -79,11 +79,6 @@
                     console.log(data);
                     this.timeOut();
                     if (data.success) {
-                        this.$message({
-                            showClose: true,
-                            message: data.message,
-                            type: 'success'
-                        });
                         this.remember();  
                         this.captcha();
                         window.open("/HomePage/index");

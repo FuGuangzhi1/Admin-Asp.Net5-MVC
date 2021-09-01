@@ -9,6 +9,9 @@ namespace StudyMVCFu.Model.ViewModel
 {
     public class MenuDto
     {
+        public MenuDto() {
+            Children = new List<MenuDto>();
+        }
         public Guid MenuId { get; set; }
         public string MenuName { get; set; }
         public Nullable<Guid> ParentId { get; set; }

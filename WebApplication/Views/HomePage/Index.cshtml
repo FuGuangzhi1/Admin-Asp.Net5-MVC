@@ -21,13 +21,19 @@
 <body>
     <div id="app">
         <el-container>
+            @* 头部 *@
             <el-header>
                 <div class="demo-image__preview">
                     <el-image style="width: 60px; height: 50px;  margin-top:5px;border-radius: 30px" :src="url" :preview-src-list="srcList">
                     </el-image>
+                    <div class="role">
+                        <el-tag type="danger" @@click="message">{{this.role}}</el-tag>
+                    </div>
                 </div>
+              
             </el-header>
             <el-container>
+                @* 左侧菜单 *@
                 <el-aside width="200px">
                     <el-menu default-active="2"
                              class="el-menu-vertical-demo"
@@ -35,33 +41,50 @@
                              @@close="handleClose"
                              background-color="#494e8f"
                              text-color="#fff"
-                             active-text-color="#afb4db">
-                        <el-submenu index="1">
+                             active-text-color="#afb4db"
+                             unique-opened>
+                        <el-submenu :index="item.menuId +'' "
+                                    v-for="item in menuList"
+                                    :key="item.menuId">
 
                             <template slot="title">
-                                <i class="el-icon-location"></i>
-                                <span>导航一</span>
+                                <i :class="item.icon"></i>
+                                <span>{{item.menuName}}</span>
                             </template>
-
-                            <el-menu-item-group>
-                                <el-menu-item index="1-1">选项1</el-menu-item>
-                            </el-menu-item-group>
+                            <el-menu-item :index="subItem.menuId +'' "
+                                          v-for="subItem in item.children"
+                                          :key="subItem.menuId">
+                                <template slot="title">
+                                    <i :class="subItem.icon"></i>
+                                    <span>{{subItem.menuName}}</span>
+                                </template>
+                            </el-menu-item>
 
                         </el-submenu>
 
-                        <button style="background-color: #494e8f; color: white; font-size:12px;height:18px;line-height:18px;float:right;">Open/Close</button>
-
+                    </el-menu>
                 </el-aside>
-                <el-container>
-                    <el-main>
-                        <iframe src="~/Study/Studyknowledge" style="width:100%;height:95%; border:0px;"></iframe>
-                    </el-main>
-                    <el-footer>
-                        <div id="copyright">
-                            ©2021 QQ:31159950559 E-mail:FuGuangzhi1@outlook.com. GitHUb:FuGuangzhi 有问题可用以上方式留言
-                        </div>
-                    </el-footer>
-                </el-container>
+                @* 中间 *@
+            <el-container>
+                <el-main>
+                    <iframe src="" style="width:100%;height:95%; border:0px;"></iframe>
+                </el-main>
+                @* 底部 *@
+                <el-footer>
+                    <div id="copyright">
+                        ©2021
+                        <el-divider direction="vertical"></el-divider>
+                        QQ:31159950559
+                        <el-divider direction="vertical"></el-divider>
+                        E-mail:FuGuangzhi1@outlook.com.
+                        <el-divider direction="vertical"></el-divider>
+                        <el-link type="success" href="https://github.com/FuGuangzhi1/WebApplication"> GitHUb:FuGuangzhi</el-link>
+                        <el-divider direction="vertical"></el-divider>
+                        有问题可用以上方式留言
+                    </div>
+                </el-footer>
+
+            </el-container>
             </el-container>
         </el-container>
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
+using StudyMVCFu.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,10 @@ namespace WebApplication
             {
                 var error = context.Exception.Message;
                 _logger.LogError(message: error);
-                context.Result = new JsonResult(new
+                context.Result = new JsonResult(new AjaxResult
                 {
-                    res = false,
-                    msg = string.Format("错误：{0}", context.Exception.Message)
+                    Success = false,
+                    Message = string.Format("错误：{0} 请联系管理员，错误时间：{1}", context.Exception.Message,DateTime.Now)
                 }
                 );
             }

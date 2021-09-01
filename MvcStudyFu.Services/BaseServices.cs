@@ -324,7 +324,7 @@ namespace MvcStudyFu.Services
 
         public async virtual Task<IQueryable<T>> SetAsync<T>() where T : class
         {
-            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
             return await Task.Run(() => _DBContext.Set<T>());
         }
         /// <summary>

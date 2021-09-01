@@ -18,6 +18,7 @@ namespace WebApplication.Utility
             builder.RegisterType<EFCoreContextFactory>().As<IDBContextFactory>().SingleInstance();
             builder.RegisterType<LoginDomain>().As<ILoginDomain>().SingleInstance();
             builder.RegisterType<Study>().As<IStudy>().SingleInstance();
+            builder.RegisterType<HomePage>().As<IHomePage>().SingleInstance();
         }
     }
 }

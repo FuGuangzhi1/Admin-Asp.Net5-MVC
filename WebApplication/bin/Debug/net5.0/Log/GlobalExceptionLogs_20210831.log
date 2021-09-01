@@ -33,3 +33,42 @@ G:\WebApplication\WebApplication\Views\HomePage\Index.cshtml(37,35): error CS010
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-31 20:57:01,873| ERROR 
+The method or operation is not implemented.
+--------------------------------
+2021-08-31 20:57:51,438| ERROR 
+The method or operation is not implemented.
+--------------------------------
+2021-08-31 20:59:21,478| ERROR 
+The method or operation is not implemented.
+--------------------------------
+2021-08-31 21:02:27,311| ERROR 
+Object reference not set to an instance of an object.
+--------------------------------
+2021-08-31 22:57:58,239| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 22:58:28,603| ERROR 
+A second operation was started on this context before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+--------------------------------
+2021-08-31 23:08:33,574| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 23:08:42,207| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 23:09:00,976| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 23:09:17,543| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 23:09:31,915| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 23:09:40,846| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
+2021-08-31 23:10:13,645| ERROR 
+对象名 'Resource' 无效。
+--------------------------------
