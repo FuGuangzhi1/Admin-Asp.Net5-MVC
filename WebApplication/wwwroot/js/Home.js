@@ -32,6 +32,10 @@
                 message: this.role,
                 position: 'bottom-right'
             });
+        }, skip(text)
+        {
+            document.getElementById('ifPage').src = text;
+          /*  console.log(text);*/
         }
     }
 });

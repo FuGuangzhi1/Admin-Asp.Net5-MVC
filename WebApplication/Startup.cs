@@ -92,7 +92,7 @@ namespace WebApplication
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=AccountControllers}/{action=Login}");
+                    pattern: "{controller=Account}/{action=Login}");
             });
         }
     }

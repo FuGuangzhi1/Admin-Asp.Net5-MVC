@@ -33,7 +33,6 @@ G:\WebApplication\WebApplication\obj\Debug\net5.0\WebApplication.csproj.CopyComp
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Newtonsoft.Json.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\MvcStudyFu.Common.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\MvcStudyFu.Common.pdb
-G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\AccountControllers\login.cshtml.g.cs
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -431,7 +430,6 @@ G:\WebApplication\WebApplication\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\
 G:\WebApplication\WebApplication\bin\Debug\net5.0\MvcStudyFu.Interface.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\MvcStudyFu.Interface.pdb
 G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\HomePage\Index.cshtml.g.cs
-G:\WebApplication\webapplication\obj\Debug\net5.0\Razor\Views\AccountControllers\CreateUser.cshtml.g.cs
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Azure.KeyVault.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Azure.KeyVault.WebKey.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.Azure.Management.AppService.Fluent.dll
@@ -909,3 +907,10 @@ G:\WebApplication\WebApplication\bin\Debug\net5.0\StudyMVCFu.Model.dll
 G:\WebApplication\WebApplication\bin\Debug\net5.0\StudyMVCFu.Model.pdb
 G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Study\Studyknowledge.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Role\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Journal\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Permissions\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\UserManage\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\PersonalInfo\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Account\CreateUser.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs

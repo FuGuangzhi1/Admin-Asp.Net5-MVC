@@ -12,6 +12,9 @@ using WebApplication.AOP;
 
 namespace WebApplication.Controllers
 {
+    /// <summary>
+    /// 学习知识记录
+    /// </summary>
     public class StudyController : Controller
     {
         private readonly IStudy _study;

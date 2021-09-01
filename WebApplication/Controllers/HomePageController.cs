@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace WebApplication.Controllers
 {
+    /// <summary>
+    /// 主页面
+    /// </summary>
     public class HomePageController : Controller
     {
         private readonly IHomePage _homePage;

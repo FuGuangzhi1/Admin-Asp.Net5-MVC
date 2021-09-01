@@ -15,12 +15,15 @@ namespace WebApplication.Controllers
 {
     //[Route("[controller]")]
     //[ApiController]
-    public class AccountControllers : Controller
+    /// <summary>
+    /// 登录页
+    /// </summary>
+    public class AccountController : Controller
     {
         private const string V = "操作成功";
         private readonly ILoginDomain _iloginDomain;
 
-        public AccountControllers(ILoginDomain iloginDomain)
+        public AccountController(ILoginDomain iloginDomain)
         {
             this._iloginDomain = iloginDomain;
         }

@@ -60,7 +60,7 @@
         captcha: function () { 
             var captcha = document.getElementById("img-captcha");
             d = new Date();
-            captcha.src = "/AccountControllers/GetCaptchaImage?" + d.getTime();
+            captcha.src = "/Account/GetCaptchaImage?" + d.getTime();
         },
         randomHexColor: function () {
             //随机生成十六进制颜色
@@ -106,7 +106,7 @@
             this.$refs[formname].validate((valid) => {
                 if (valid) {
                     console.log("格式正确");
-                    let url = "/AccountControllers/Login";
+                    let url = "/Account/Login";
                     this.loginForm(url);
                 } else {
                     console.log('error submit!!');
@@ -122,7 +122,7 @@
             setTimeout(() => this.loading = false, 1000);
         },
         Create() {
-            window.open("/AccountControllers/CreateUser");
+            window.open("/Account/CreateUser");
         }
     }
 });
