@@ -15,9 +15,9 @@ namespace WebApplication
             if (context.ActionDescriptor.EndpointMetadata.Any(item => item is CustomAllownonymousAttribute))
                 return;
 
-            string Id = context.HttpContext.Session.GetString("Id");
+            string id = context.HttpContext.Session.GetString("Id");
 
-            if (Id == null || Id == Guid.Empty.ToString())
+            if (id == null || id == Guid.Empty.ToString())
             {
                 context.HttpContext.Response.Redirect("/AccountControllers/login");
             }

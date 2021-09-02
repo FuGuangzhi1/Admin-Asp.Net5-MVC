@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using MvcStudyFu.EFCore.SQLSever;
 using MvcStudyFu.Interface.DomainInterface;
@@ -14,13 +15,24 @@ namespace MvcStudyFu.Services.DomainServices
 {
     public class HomePage : BaseService, IHomePage
     {
-        public HomePage(IDBContextFactory dBContextFactory) : base(dBContextFactory) { }
-        public async Task<List<MenuDto>> GetmenuList()
+
+        public HomePage(IDBContextFactory dBContextFactory) : base(dBContextFactory)
         {
-            IQueryable<Resource> resourceable = await base.SetAsync<Resource>();
-            List<Resource> resourcesList =await resourceable.ToListAsync();
-            List<MenuDto> menuDtos=new();
-            return GetMenuDto(resourcesList, null,menuDtos);
+        }
+        public async Task<List<MenuDto>> GetmenuList(string id)
+        {
+            Guid userid;
+
+            List<MenuDto> menuDtos = new();
+            if (Guid.TryParse(id, out userid))
+            {
+                List<Guid> roles = (await base.QueryAsync<UserRole>(x => x.UserId == userid)).Select(x => x.RoleId).ToList();
+                List<Guid> roleResouces = (await base.QueryAsync<RoleResouce>(x => roles.Contains(x.RoleId))).Select(x => x.ResourceId).ToList();
+                IQueryable<Resource> resourceable = await base.QueryAsync<Resource>(x => roleResouces.Contains(x.ResourceId));
+                List<Resource> resourcesList = await resourceable.ToListAsync();
+                return GetMenuDto(resourcesList, null, menuDtos);
+            }
+            return menuDtos;
         }
 
         private List<MenuDto> GetMenuDto(IEnumerable<Resource> Resources, Guid? parentId, List<MenuDto> menuDtos)
@@ -40,7 +52,7 @@ namespace MvcStudyFu.Services.DomainServices
                     Sort = menu.Sort
                 };
                 //当前的下一级菜单
-                List<Resource> resources = Resources.Where(m => m.ParentId != parentId).ToList(); 
+                List<Resource> resources = Resources.Where(m => m.ParentId != parentId).ToList();
                 GetMenuDto(resources, menu.ResourceId, currentMenuDto.Children);
                 menuDtos.Add(currentMenuDto);
             }

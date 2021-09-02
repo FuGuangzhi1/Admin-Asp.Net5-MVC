@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YRjKl8W7XbnLz3OghQwqfc8qFV+Xdy26A9NpHS/QNQJ+8LlJB6FAB/VjJ8N7vz3tKWRrIWHP5/507TqAbZdyKg==",
+  "dgSpecHash": "OCQiGDcHf3/2l0uqGjN14QgrvxGMXcvsEqTM1UPo32MrqSFG8CG1V3LHKFb0T/xBQH0lmOA6yweVb/dlZ4MYsQ==",
   "success": true,
   "projectFilePath": "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
   "expectedPackageFiles": [
@@ -22,8 +22,8 @@
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.9\\microsoft.entityframeworkcore.5.0.9.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.9\\microsoft.entityframeworkcore.abstractions.5.0.9.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.9\\microsoft.entityframeworkcore.analyzers.5.0.9.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.8\\microsoft.entityframeworkcore.relational.5.0.8.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.8\\microsoft.entityframeworkcore.sqlserver.5.0.8.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.9\\microsoft.entityframeworkcore.relational.5.0.9.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.9\\microsoft.entityframeworkcore.sqlserver.5.0.9.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
@@ -55,7 +55,8 @@
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\protobuf-net.core\\3.0.101\\protobuf-net.core.3.0.101.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
@@ -151,9 +152,9 @@
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\付广志\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.7\\z.entityframework.extensions.efcore.5.2.7.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.7\\z.entityframework.plus.efcore.5.2.7.nupkg.sha512",
-    "C:\\Users\\付广志\\.nuget\\packages\\z.expressions.eval\\4.0.50\\z.expressions.eval.4.0.50.nupkg.sha512"
+    "C:\\Users\\付广志\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.9\\z.entityframework.extensions.efcore.5.2.9.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.9\\z.entityframework.plus.efcore.5.2.9.nupkg.sha512",
+    "C:\\Users\\付广志\\.nuget\\packages\\z.expressions.eval\\4.0.52\\z.expressions.eval.4.0.52.nupkg.sha512"
   ],
   "logs": []
 }

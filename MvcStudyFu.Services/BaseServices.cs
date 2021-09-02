@@ -219,7 +219,7 @@ namespace MvcStudyFu.Services
         /// <param name="id"></param>
         public virtual T Find<T>(int id) where T : class
         {
-            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             return _DBContext.Set<T>().Find(id);
         }
         /// <summary>
@@ -229,7 +229,7 @@ namespace MvcStudyFu.Services
         /// <param name="id"></param>
         public virtual T Find<T>(Guid? id) where T : class
         {
-            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             return _DBContext.Set<T>().Find(id);
         }
         /// <summary>
@@ -324,7 +324,7 @@ namespace MvcStudyFu.Services
 
         public async virtual Task<IQueryable<T>> SetAsync<T>() where T : class
         {
-            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
+            this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Read);
             return await Task.Run(() => _DBContext.Set<T>());
         }
         /// <summary>

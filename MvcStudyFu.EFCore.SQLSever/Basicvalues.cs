@@ -103,45 +103,104 @@ namespace MvcStudyFu.EFCore.SQLSever
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["systemGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["personalInfomGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["studyknowledgeGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["journalGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["userManageGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["roleGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
                 new RoleResouce
                 {
                     RoleResouceId = Guid.NewGuid(),
-                    ResourceId = keyValues["personalGuid"],
+                    ResourceId = keyValues["permissionsGuid"],
                     RoleId = keyValues["goverorGuid"]
                 },
+
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["systemGuid"],
+                    RoleId = keyValues["generalGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["personalInfomGuid"],
+                    RoleId = keyValues["generalGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["studyknowledgeGuid"],
+                    RoleId = keyValues["generalGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["journalGuid"],
+                    RoleId = keyValues["generalGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["userManageGuid"],
+                    RoleId = keyValues["generalGuid"]
+                },
+
+
+
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["personalGuid"],
+                    RoleId = keyValues["bitPartGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["systemGuid"],
+                    RoleId = keyValues["bitPartGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["personalInfomGuid"],
+                    RoleId = keyValues["bitPartGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["studyknowledgeGuid"],
+                    RoleId = keyValues["bitPartGuid"]
+                },
+
 
             }; //不同角色对应的权限
 

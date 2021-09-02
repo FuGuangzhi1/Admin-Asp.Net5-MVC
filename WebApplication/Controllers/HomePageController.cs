@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MvcStudyFu.Interface.DomainInterface;
 using MvcStudyFu.Services.DomainServices;
@@ -30,7 +31,9 @@ namespace WebApplication.Controllers
         public async Task<IActionResult> GetmenuList()
         {
             AjaxResult ajaxResult = new AjaxResult();
-            ajaxResult.Data = await _homePage.GetmenuList();
+            string id = base.HttpContext.Session.GetString("Id");
+            if(id==null) base.HttpContext.Response.Redirect("/AccountControllers/login");
+            ajaxResult.Data = await _homePage.GetmenuList(id);
             if (ajaxResult.Data != null)
             {
                 ajaxResult.Message = "操作成功"; ajaxResult.Success = true;

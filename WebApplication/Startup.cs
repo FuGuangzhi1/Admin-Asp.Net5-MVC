@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,9 +32,12 @@ namespace WebApplication
                 options.Filters.Add(typeof(CustomExceptionAttribute));
             });
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            //services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
             services.AddControllersWithViews();
-            services.AddSession();
+            services.AddSession(options=> {
+                options.IdleTimeout = System.TimeSpan.FromMinutes(120); //Session过期时间
+                options.Cookie.IsEssential = true;
+            });
             services.AddDbContext<StudyMVCDBContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:Write"]);

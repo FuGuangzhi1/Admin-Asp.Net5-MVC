@@ -17,11 +17,9 @@ namespace MvcStudyFu.Services.DomainServices
 {
     public class Study : BaseService, IStudy
     {
-        private readonly IDBContextFactory _dBContextFactory;
 
         public Study(IDBContextFactory dBContextFactory) : base(dBContextFactory)
         {
-            this._dBContextFactory = dBContextFactory;
         }
 
         public async Task<AjaxResult> DeleteStudyTypeData(Guid id)
@@ -41,10 +39,10 @@ namespace MvcStudyFu.Services.DomainServices
         public async Task<PageResult<StudyKnowledgeView>> GetStudyKnowledge
             (string StudyKnowledgeName, int stydyTypeId, int pageSize, int pageIndex)
         {
-            var DBCotent = _dBContextFactory.CreateDbContext(ReadWriteEnum.Read);
+            //var DBCotent = _dBContextFactory.CreateDbContext(ReadWriteEnum.Read);
             PageResult<StudyKnowledgeView> pageResult = new();
-            IQueryable<StudyKnowledgeView> data = from a in DBCotent.Set<Studyknowledge>()
-                                                  join b in DBCotent.Set<StudyType>()
+            IQueryable<StudyKnowledgeView> data = from a in base.Set<Studyknowledge>()
+                                                  join b in base.Set<StudyType>()
                                                   on a.StudyTypeId equals b.StudyTypeId
                                                   select new StudyKnowledgeView()
                                                   {

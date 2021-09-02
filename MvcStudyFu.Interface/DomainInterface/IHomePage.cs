@@ -9,6 +9,6 @@ namespace MvcStudyFu.Interface.DomainInterface
 {
     public interface IHomePage
     {
-        public Task<List<MenuDto>> GetmenuList();
+        public Task<List<MenuDto>> GetmenuList(string id);
     }
 }

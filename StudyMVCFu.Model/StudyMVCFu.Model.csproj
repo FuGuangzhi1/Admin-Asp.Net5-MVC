@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="protobuf-net.Core" Version="3.0.101" />
+  </ItemGroup>
+
 </Project>

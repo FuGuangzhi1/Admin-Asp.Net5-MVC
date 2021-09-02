@@ -75,7 +75,6 @@ namespace MvcStudyFu.EFCore.SQLSever
             modelBuilder.Entity<Role>().HasData((List<Role>)Guidvalues["roles"]);
             modelBuilder.Entity<UserRole>().HasData((List<UserRole>)Guidvalues["userRoles"]);
             modelBuilder.Entity<RoleResouce>().HasData((List<RoleResouce>)Guidvalues["roleResouces"]);
-
         }
 
     }

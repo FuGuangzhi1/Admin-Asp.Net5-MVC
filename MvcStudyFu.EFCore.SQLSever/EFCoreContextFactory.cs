@@ -13,14 +13,14 @@ namespace MvcStudyFu.EFCore.SQLSever
 {
     public class EFCoreContextFactory : IDBContextFactory
     {
-        private readonly IConfiguration _configuration=null;
-        private static DBConnectionOption _dBConnectionOption=null;
+        private readonly IConfiguration _configuration = null;
+        private static DBConnectionOption _dBConnectionOption = null;
         private static StudyMVCDBContext _context = null;
         public EFCoreContextFactory(IConfiguration configuration)
         {
-            if (this._configuration==null)
-            this._configuration = configuration;
-            if (_configuration["ConnectionStrings:Write"]==null)
+            if (this._configuration == null)
+                this._configuration = configuration;
+            if (_configuration["ConnectionStrings:Write"] == null)
             {
                 throw new Exception("请设置配置文件");
             }
@@ -35,20 +35,16 @@ namespace MvcStudyFu.EFCore.SQLSever
                 };
             }
         }
-        public  StudyMVCDBContext CreateDbContext()
+        public StudyMVCDBContext CreateDbContext()
         {
             return new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
         }
         public StudyMVCDBContext CreateDbContext(ReadWriteEnum writeOrRead)
         {
             var whetherToSeparateReadingAndWriting = _configuration.GetSection("WhetherToSeparateReadingAndWriting");
-            if (!whetherToSeparateReadingAndWriting.Exists())
-            {
-                if (whetherToSeparateReadingAndWriting.ToBool())
-                {
+
+            if (!whetherToSeparateReadingAndWriting.ToBool())
                 return new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
-                }
-            }
             try
             {
                 switch (writeOrRead)

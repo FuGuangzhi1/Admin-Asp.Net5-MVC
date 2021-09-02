@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "protobuf-net.Core/3.0.101": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/protobuf-net.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/protobuf-net.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "protobuf-net.Core/3.0.101": {
+      "sha512": "gf9QIF0RlctfjmOjbE6eOyMulkNEsH7tHncjKj/4BTu9tkuTyrH3fv5I+35GnolJqKJ6fh9kYaezvNRL3t75+Q==",
+      "type": "package",
+      "path": "protobuf-net.core/3.0.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/protobuf-net.Core.dll",
+        "lib/net461/protobuf-net.Core.xml",
+        "lib/net5.0/protobuf-net.Core.dll",
+        "lib/net5.0/protobuf-net.Core.xml",
+        "lib/netcoreapp3.1/protobuf-net.Core.dll",
+        "lib/netcoreapp3.1/protobuf-net.Core.xml",
+        "lib/netstandard2.0/protobuf-net.Core.dll",
+        "lib/netstandard2.0/protobuf-net.Core.xml",
+        "lib/netstandard2.1/protobuf-net.Core.dll",
+        "lib/netstandard2.1/protobuf-net.Core.xml",
+        "protobuf-net.core.3.0.101.nupkg.sha512",
+        "protobuf-net.core.nuspec",
+        "protobuf-net.png"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "protobuf-net.Core >= 3.0.101"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\付广志\\.nuget\\packages\\": {}
@@ -45,6 +80,12 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "protobuf-net.Core": {
+            "target": "Package",
+            "version": "[3.0.101, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
