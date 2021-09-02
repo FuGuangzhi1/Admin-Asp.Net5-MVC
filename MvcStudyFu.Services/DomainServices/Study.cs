@@ -17,9 +17,11 @@ namespace MvcStudyFu.Services.DomainServices
 {
     public class Study : BaseService, IStudy
     {
+        private readonly IDBContextFactory _dBContextFactory;
 
         public Study(IDBContextFactory dBContextFactory) : base(dBContextFactory)
         {
+            this._dBContextFactory = dBContextFactory;
         }
 
         public async Task<AjaxResult> DeleteStudyTypeData(Guid id)
@@ -28,6 +30,7 @@ namespace MvcStudyFu.Services.DomainServices
             await this.DeleteAsync<Studyknowledge>(id);
             ajaxResult.Success = await this.CommitAsync();
             ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+            await base.DisposeAsync();
             return ajaxResult;
         }
 
@@ -39,10 +42,10 @@ namespace MvcStudyFu.Services.DomainServices
         public async Task<PageResult<StudyKnowledgeView>> GetStudyKnowledge
             (string StudyKnowledgeName, int stydyTypeId, int pageSize, int pageIndex)
         {
-            //var DBCotent = _dBContextFactory.CreateDbContext(ReadWriteEnum.Read);
+            var DBCotent = _dBContextFactory.CreateDbContext(ReadWriteEnum.Read);
             PageResult<StudyKnowledgeView> pageResult = new();
-            IQueryable<StudyKnowledgeView> data = from a in base.Set<Studyknowledge>()
-                                                  join b in base.Set<StudyType>()
+            IQueryable<StudyKnowledgeView> data = from a in DBCotent.Set<Studyknowledge>()
+                                                  join b in DBCotent.Set<StudyType>()
                                                   on a.StudyTypeId equals b.StudyTypeId
                                                   select new StudyKnowledgeView()
                                                   {
@@ -77,6 +80,7 @@ namespace MvcStudyFu.Services.DomainServices
             {
                 pageResult.Message = ex.Message;
             }
+            await DBCotent.DisposeAsync();
             return pageResult;
         }
 
@@ -119,6 +123,7 @@ namespace MvcStudyFu.Services.DomainServices
                 ajaxResult.Success = await this.CommitAsync();
                 ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
             }
+            await base.DisposeAsync();
             return ajaxResult;
         }
         public Task<AjaxResult> UpdateOrInsertStudyTypeData(IList<Studyknowledge> studyknowledge)

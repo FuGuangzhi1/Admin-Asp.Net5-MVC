@@ -14,11 +14,6 @@ namespace MvcStudyFu.Common
     //以及一个Captcha类来生成并验证验证码
     public static class Captcha
     {
-        //private readonly IHttpContextAccessor _httpContextAccessor;
-        //public Captcha(IHttpContextAccessor httpContextAccessor)
-        //{
-        //    this._httpContextAccessor = httpContextAccessor;
-        //}
 
         const string Letters = "2346789ABCDEFGHJKLMNPRTUVWXYZ";
 

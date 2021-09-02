@@ -32,6 +32,7 @@ namespace MvcStudyFu.Services.DomainServices
                 List<Resource> resourcesList = await resourceable.ToListAsync();
                 return GetMenuDto(resourcesList, null, menuDtos);
             }
+            await base.DisposeAsync();
             return menuDtos;
         }
 
