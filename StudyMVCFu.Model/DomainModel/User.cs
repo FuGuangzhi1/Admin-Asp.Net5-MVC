@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using StudyMVCFu.Model.DomainModel;
+using System.Collections.Generic;
 
 namespace StudyMVCFu.Model
 {
@@ -43,5 +45,6 @@ namespace StudyMVCFu.Model
         /// 逻辑删除
         /// </summary>
         public Nullable<bool> IsDel { get; set; }
+        public List<LogRecord> LogRecord { get; set; }
     }
 }

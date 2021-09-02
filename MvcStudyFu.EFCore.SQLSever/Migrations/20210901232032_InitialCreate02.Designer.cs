@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcStudyFu.EFCore.SQLSever;
 
 namespace MvcStudyFu.EFCore.SQLSever.Migrations
 {
     [DbContext(typeof(StudyMVCDBContext))]
-    partial class StudyMVCDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210901232032_InitialCreate02")]
+    partial class InitialCreate02
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
