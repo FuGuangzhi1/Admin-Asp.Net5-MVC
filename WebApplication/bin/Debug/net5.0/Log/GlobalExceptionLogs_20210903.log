@@ -13,3 +13,48 @@ Object name: 'StudyMVCDBContext'.
 2021-09-03 04:06:37,041| ERROR 
 An attempt was made to use the context while it is being configured. A DbContext instance cannot be used inside 'OnConfiguring' since it is still being configured at this point. This can happen if a second operation is started on this context before a previous operation completed. Any instance members are not guaranteed to be thread safe.
 --------------------------------
+2021-09-03 22:09:52,933| ERROR 
+An unhandled exception has occurred while executing the request.
+--------------------------------
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-03 22:10:32,016| ERROR 
+SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.
+--------------------------------
+2021-09-03 22:13:25,857| ERROR 
+SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.
+--------------------------------
+2021-09-03 22:15:53,588| ERROR 
+SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.
+--------------------------------
+2021-09-03 22:16:36,067| ERROR 
+SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.
+--------------------------------
+2021-09-03 22:16:50,324| ERROR 
+SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.
+--------------------------------
+2021-09-03 22:21:42,492| ERROR 
+One or more errors occurred. (SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.)
+--------------------------------
+2021-09-03 22:34:08,732| ERROR 
+One or more errors occurred. (SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.)
+--------------------------------
+2021-09-03 22:34:53,310| ERROR 
+One or more errors occurred. (SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.)
+--------------------------------
+2021-09-03 22:38:00,012| ERROR 
+One or more errors occurred. (SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.)
+--------------------------------
+2021-09-03 22:40:15,620| ERROR 
+One or more errors occurred. (SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.)
+--------------------------------
+2021-09-03 22:41:19,354| ERROR 
+One or more errors occurred. (SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.)
+--------------------------------
+2021-09-03 22:42:58,569| ERROR 
+SignInAsync when principal.Identity.IsAuthenticated is false is not allowed when AuthenticationOptions.RequireAuthenticatedSignIn is true.
+--------------------------------

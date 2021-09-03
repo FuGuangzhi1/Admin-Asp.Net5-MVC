@@ -212,6 +212,10 @@ namespace MvcStudyFu.EFCore.SQLSever
                 Name = "小杰",
                 Birthday = new DateTime(2001, 11, 18),
                 Hobby = "Do Love",
+                IsDel = true,
+                QQ = 1328703932,
+                Moblie = "15014080506",
+                Email = "1328703932@qq.com"
             };
             var emptyUserPassword = new UserPassword()
             {

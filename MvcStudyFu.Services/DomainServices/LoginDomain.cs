@@ -4,7 +4,9 @@ using MvcStudyFu.Common.ConvertTpye;
 using MvcStudyFu.EFCore.SQLSever;
 using MvcStudyFu.Interface.DomainInterface;
 using StudyMVCFu.Model;
+using StudyMVCFu.Model.DomainModel;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,6 +15,14 @@ namespace MvcStudyFu.Services.DomainServices
     public class LoginDomain : BaseService, ILoginDomain
     {
         public LoginDomain(IDBContextFactory dBContextFactory) : base(dBContextFactory) { }
+
+        public async Task<List<string>> GetRole(Guid? id)
+        {
+            List<Guid> roleIds = await (await base.QueryAsync<UserRole>(x=>x.UserId==id)).Select(x=>x.RoleId).ToListAsync();
+            List<string> roleNames =await (await base.QueryAsync<Role>(x => roleIds.Contains(x.RoleId))).Select(x => x.RoleName).ToListAsync();
+            return roleNames;
+        }
+
         public async Task<(bool, Guid?)> GetUserasync(string name, string password)
         {
             int account = name.ToInt32();

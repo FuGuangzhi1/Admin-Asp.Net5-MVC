@@ -7,6 +7,7 @@ using StudyMVCFu.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace WebApplication.Controllers
@@ -22,7 +23,6 @@ namespace WebApplication.Controllers
         {
             this._homePage = homePage;
         }
-        //[Authorize]
         public IActionResult Index()
         {
             return View();
@@ -32,7 +32,7 @@ namespace WebApplication.Controllers
         {
             AjaxResult ajaxResult = new AjaxResult();
             string id = base.HttpContext.Session.GetString("Id");
-            if(id==null) base.HttpContext.Response.Redirect("/AccountControllers/login");
+            if (id == null) base.HttpContext.Response.Redirect("/AccountControllers/login");
             ajaxResult.Data = await _homePage.GetmenuList(id);
             if (ajaxResult.Data != null)
             {

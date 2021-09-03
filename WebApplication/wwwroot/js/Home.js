@@ -6,7 +6,7 @@
         srcList: [
             '../images/小新.jpg'
         ], menuList: []
-        , role:"统治者"
+        , role:["统治者","大将"]
     }
     , mounted() {
         this.$message({
@@ -29,7 +29,7 @@
         {
             this.$notify({
                 title: '您的身份是',
-                message: this.role,
+                message: this.role.join('-'),
                 position: 'bottom-right'
             });
         }, skip(text)

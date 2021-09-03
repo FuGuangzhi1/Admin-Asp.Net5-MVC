@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -8,7 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using MvcStudyFu.EFCore.SQLSever;
+using System;
 using System.IO;
+using WebApplication.AOP;
 using WebApplication.Utility;
 
 namespace WebApplication
@@ -34,7 +38,8 @@ namespace WebApplication
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
             services.AddControllersWithViews();
-            services.AddSession(options=> {
+            services.AddSession(options =>
+            {
                 options.IdleTimeout = System.TimeSpan.FromMinutes(120); //Session过期时间
                 options.Cookie.IsEssential = true;
             });
@@ -42,6 +47,12 @@ namespace WebApplication
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:Write"]);
             });
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option =>
+            {
+                option.LoginPath = new PathString("/Special/Index");
+            });
+            services.AddAuthorization();
+
         }
         public void ConfigureContainer(ContainerBuilder builder)
         {
@@ -78,7 +89,6 @@ namespace WebApplication
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            //app.UseStaticFiles();
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider
@@ -87,10 +97,11 @@ namespace WebApplication
 
             app.UseRouting();
 
-
             app.UseSession();
 
-            app.UseAuthorization();
+            app.UseAuthentication(); //鉴权 
+
+            app.UseAuthorization();  //授权
 
             app.UseEndpoints(endpoints =>
             {

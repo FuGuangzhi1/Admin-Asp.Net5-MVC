@@ -1,4 +1,5 @@
 ﻿using MvcStudyFu.EFCore;
+using StudyMVCFu.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,10 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// <param name="password"></param>
         /// <returns></returns>
         public Task<(bool, Guid?)> GetUserasync(string name, string password);
+        /// <summary>
+        /// 获得角色
+        /// </summary>
+        /// <returns></returns>
+        public Task<List<string>> GetRole(Guid? id);
     }
 }

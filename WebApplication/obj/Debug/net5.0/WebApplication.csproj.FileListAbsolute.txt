@@ -915,3 +915,4 @@ G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\PersonalInfo\Index
 G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Account\CreateUser.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 G:\WebApplication\WebApplication\bin\Debug\net5.0\protobuf-net.Core.dll
+G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Special\Index.cshtml.g.cs

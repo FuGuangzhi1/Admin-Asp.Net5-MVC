@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MvcStudyFu.Common;
@@ -9,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace WebApplication.Controllers
@@ -37,7 +40,7 @@ namespace WebApplication.Controllers
         [CustomAllownonymous]
         public async Task<ActionResult> Login([FromBody] Login login)
         {
-            AjaxResult ajaxResult=new() {  Success=false,Data=string.Empty,Message=string.Empty};
+            AjaxResult ajaxResult = new() { Success = false, Data = string.Empty, Message = string.Empty };
             string checkCode = HttpContext.Session.GetString("CaptchaCode");
             if (ModelState.IsValid)
             {
@@ -49,14 +52,29 @@ namespace WebApplication.Controllers
                     {
                         ajaxResult.Success = true;
                         ajaxResult.Message = V;
-                        HttpContext.Session.SetString("Id", isUser.Item2.ToString());
+                        base.HttpContext.Session.SetString("Id", isUser.Item2.ToString());
+
+                        var roleList =await _iloginDomain.GetRole(isUser.Item2);
+                        var claims = new List<Claim>();
+                        foreach (var item in roleList)
+                        {
+                            claims.Add(new Claim(ClaimTypes.Role, item));
+                        }
+                        ClaimsPrincipal userPrincipal = new ClaimsPrincipal(new ClaimsIdentity(claims, "Customer"));
+
+                        base.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, new AuthenticationProperties
+                        {
+                            ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
+                        }).Wait() ;
+
+                        var user = HttpContext.User;
                     }
                     else ajaxResult.Message = "账号或者密码错误";
                 }
                 else ajaxResult.Message = "验证码错误";
             }
             else ajaxResult.Message = "数据格式不对！！！";
-            return Json(data:ajaxResult);
+            return Json(data: ajaxResult);
         }
         [HttpGet]
         [CustomAllownonymous]

@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+  
+</head>
+<body>
+    <h1>没有权限，不要瞎几把尝试</h1> <br />
+    <button id="Login" style="height:100px;width:200px;font-size:40px;background-color:blue;color:white;">回到登录</button>
+    <script>
+        document.getElementById('Login').addEventListener('click', () => {
+            window.location = "/Account/Login";
+        })
+    </script>
+</body>
+</html>

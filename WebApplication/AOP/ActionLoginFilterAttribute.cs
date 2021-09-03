@@ -19,7 +19,7 @@ namespace WebApplication
 
             if (id == null || id == Guid.Empty.ToString())
             {
-                context.HttpContext.Response.Redirect("/AccountControllers/login");
+                context.HttpContext.Response.Redirect("/Account/login");
             }
         }
     }
