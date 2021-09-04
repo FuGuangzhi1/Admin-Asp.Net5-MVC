@@ -216,6 +216,7 @@ namespace MvcStudyFu.EFCore.SQLSever
                 QQ = 1328703932,
                 Moblie = "15014080506",
                 Email = "1328703932@qq.com"
+                ,Sex=true
             };
             var emptyUserPassword = new UserPassword()
             {

@@ -19,12 +19,15 @@ namespace StudyMVCFu.Model
         [Required(ErrorMessage = "plaese input UserName")]
         [StringLength(20, ErrorMessage = "It's too long ,please be less than 20")]
         public string Name { get; set; }
+        public bool? Sex { get; set; }
         [Required(ErrorMessage = "plaese input Account")]
         [StringLength(20, ErrorMessage = "It's too long ,please be less than 20")]
         public ulong? Account { get; set; }
         [StringLength(20)]
+        [Phone]
         public string Moblie { get; set; }
         [StringLength(100)]
+        [EmailAddress]
         public string Email { get; set; }
         public ulong? QQ { get; set; }
         [StringLength(400)]

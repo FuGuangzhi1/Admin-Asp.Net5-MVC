@@ -12,10 +12,125 @@
     <link href="~/css/index.css" rel="stylesheet" />
     <!-- 引入组件库 -->
     <script src="~/js/index.js"></script>
+
+    <style type="text/css">
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(-90deg, #29bdd9 0%, #276ace 100%);
+        }
+
+        .main {
+            /*border:1px solid black;*/
+            /*    text-align: center;*/
+            opacity: 0.9;
+            background-color: white;
+            border-radius: 20px;
+            width: 630px;
+            height: 350px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 10px 10px 10px #808080;
+        }
+
+        .el-input {
+            width: 200px;
+        }
+
+        .el-form-item {
+            float: left;
+        }
+
+        .radioWhdth {
+            width: 200px;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="app">
+        <div class="main">
+            <br />
+            <el-form ref="form" :model="form" label-width="80px">
 
+                <el-form-item label="Name:" prop="name">
+                    <el-input v-model="form.name" placeholder="请输入姓名"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="moblie " label="Phone:">
+                    <el-input v-model="form.moblie" placeholder="请输入电话号码"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="sex" label="Sex:">
+                    <div class="radioWhdth">
+                        <el-radio v-model="form.sex" label="1">男</el-radio>
+                        <el-radio v-model="form.sex" label="0">女</el-radio>
+                    </div>
+                </el-form-item>
+
+                <el-form-item prop="hobby" label="Hobby:">
+                    <el-input v-model="form.hobby" placeholder="请输入兴趣爱好"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="email " label="Email">
+                    <el-input v-model="form.email" placeholder="请输入邮箱"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="qq" label="QQ">
+                    <el-input v-model="form.qq" placeholder="请输入QQ"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="birthday">
+                    <el-input v-model="form.birthday" placeholder="请选择您的生日"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="password">
+                    <el-input v-model="form.password" placeholder="请输入密码"></el-input>
+                </el-form-item>
+
+                <el-form-item prop="password1">
+                    <el-input v-model="form.password1" placeholder="请确认您的密码"></el-input>
+                </el-form-item>
+
+                <el-form-item>
+                    <el-button type="primary" @@click="onSubmit">立即创建</el-button>
+                    <el-button @@click="resetForm('form')">清空</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </div>
+    <script>
+        const VM = new Vue({
+            el: '#app',
+            data: {
+                form: {
+                    name: '',
+                    moblie: '',
+                    sex: 1,
+                    hobby: '',
+                    email: '',
+                    qq:'',
+                    birthday: '',
+                    password: '',
+                    password1: ''
+                }
+            }, methods: {
+                onSubmit() {
+                    console.log(this.form);
+                }, async resetForm(formname) {
+                    await this.$refs[formname].resetFields();
+                }
+            }
+
+        })
+    </script>
 </body>
 
 </html>
