@@ -32,23 +32,37 @@
         }
     },
     methods: {
-        colorRemoval() {
+        remember() { //记住密码
+            if (this.value1 == false) {
+                this.login.name = "";
+                this.login.password = "";
+                this.login.checkCode = "";
+                localStorage.removeItem("name");
+                localStorage.removeItem("password");
+
+            } else {
+                localStorage.setItem('name', this.login.name);
+                localStorage.setItem('password', this.login.password);
+                this.login.checkCode = "";
+            }
+        },
+        colorRemoval() { //背景颜色变白
             let mainDiv = document.getElementById("app");
             mainDiv.style.background = "white";
         },
-        colorChange() {
+        colorChange() { //背景颜色随机颜色
             let mainDiv = document.getElementById("app");
             mainDiv.style.background = this.randomHexColor();
         },
-        captchaChange() {
+        captchaChange() { //验证码改变
             this.captcha();
         },
-        captcha: function() {
+        captcha: function () { 
             var captcha = document.getElementById("img-captcha");
             d = new Date();
-            captcha.src = "/AccountControllers/GetCaptchaImage?" + d.getTime();
+            captcha.src = "/Account/GetCaptchaImage?" + d.getTime();
         },
-        randomHexColor: function() {
+        randomHexColor: function () {
             //随机生成十六进制颜色
             var hex = Math.floor(Math.random() * 16777216).toString(16); //生成ffffff以内16进制数
             while (hex.length < 6) { //while循环判断hex位数，少于6位前面加0凑够6位
@@ -57,36 +71,21 @@
             return '#' + hex; //返回‘#'开头16进制颜色
         },
         //登录按钮
-        loginForm: function(url) {
-            this.loading = true;
+        loginForm: function (url) {
+            this.loading = true; //加载动画
             axios.post(url, this.login).then(result => {
-                console.log(result)
+                let data = result.data; //成功数据
                 if (result.status >= 200 && result.status <= 299) {
+                    console.log(data);
                     this.timeOut();
-                    if (result.data == "OK") {
-                        this.$message({
-                            showClose: true,
-                            message: "登录成功",
-                            type: 'success'
-                        });
-                        if (this.value1 == false) {
-                            this.login.name = "";
-                            this.login.password = "";
-                            this.login.checkCode = "";
-                            localStorage.removeItem("name");
-                            localStorage.removeItem("password");
-
-                        } else {
-                            localStorage.setItem('name', this.login.name);
-                            localStorage.setItem('password', this.login.password);
-                            this.login.checkCode = "";
-                        }
+                    if (data.success) {
+                        this.remember();  
                         this.captcha();
                         window.open("/HomePage/index");
                     } else {
                         this.$message({
                             showClose: true,
-                            message: result.data,
+                            message: data.message,
                             type: 'warning'
                         });
                         this.captcha();
@@ -96,9 +95,9 @@
                     this.$message.error('数据请求失败！！！');
                     this.captcha();
                 }
-            }).catch(error => {
-                this.timeOut();
+            }).catch(error => {       
                 console.log(error);
+                this.timeOut();
                 this.$message.error('请求地址错误，或者没有网络，或者服务器爆炸！！！');
                 this.captcha();
             })
@@ -107,7 +106,7 @@
             this.$refs[formname].validate((valid) => {
                 if (valid) {
                     console.log("格式正确");
-                    let url = "/AccountControllers/Login";
+                    let url = "/Account/Login";
                     this.loginForm(url);
                 } else {
                     console.log('error submit!!');
@@ -123,7 +122,7 @@
             setTimeout(() => this.loading = false, 1000);
         },
         Create() {
-            window.open("/AccountControllers/CreateUser");
+            window.open("/Account/CreateUser");
         }
     }
 });

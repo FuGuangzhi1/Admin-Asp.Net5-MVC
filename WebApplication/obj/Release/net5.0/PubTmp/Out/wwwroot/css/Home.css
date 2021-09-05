@@ -30,14 +30,31 @@ body {
 
 .el-aside {
     border-right: solid #DCDFE6 1px;
+    background-color: #585eaa;
 }
 
 .el-footer {
-    background-color: #AAAAAA;
+    background-color: #63434f;
     color: white;
 }
 
 #copyright {
     text-align: center;
     padding-top: 20px;
+}
+.el-main {
+    padding:0px;
+    margin:0px;
+}
+.el-aside :first-child .el-button {
+    float:right;
+}
+.iconfont {
+    margin-right:10px;
+}
+.role {
+    float: right;
+    height:100%;
+    line-height:60px;
+    margin-left:10px;
 }

@@ -78,7 +78,7 @@ namespace MvcStudyFu.Interface
 
         #region 提交
         bool Commit();
-        Task<bool> CommitAsync();
+        Task<(bool,string)> CommitAsync();
         #endregion
     }
 }

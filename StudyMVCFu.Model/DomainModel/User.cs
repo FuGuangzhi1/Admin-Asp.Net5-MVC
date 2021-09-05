@@ -20,8 +20,6 @@ namespace StudyMVCFu.Model
         [StringLength(20, ErrorMessage = "It's too long ,please be less than 20")]
         public string Name { get; set; }
         public bool? Sex { get; set; }
-        [Required(ErrorMessage = "plaese input Account")]
-        [StringLength(20, ErrorMessage = "It's too long ,please be less than 20")]
         public ulong? Account { get; set; }
         [StringLength(20)]
         [Phone]

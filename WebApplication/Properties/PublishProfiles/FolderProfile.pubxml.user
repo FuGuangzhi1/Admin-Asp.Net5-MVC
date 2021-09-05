@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>G:\WebApplication\WebApplication\bin\Release\net5.0\publish\</_PublishTargetUrl>
-    <History>True|2021-08-25T09:43:33.7583412Z;True|2021-08-20T15:18:26.9712678+08:00;</History>
+    <History>True|2021-09-05T15:44:22.2044491Z;True|2021-09-05T23:14:25.6914026+08:00;True|2021-09-05T23:12:23.0915883+08:00;False|2021-09-05T23:12:05.9839468+08:00;True|2021-09-05T23:09:14.5506180+08:00;True|2021-08-25T17:43:33.7583412+08:00;True|2021-08-20T15:18:26.9712678+08:00;</History>
   </PropertyGroup>
 </Project>

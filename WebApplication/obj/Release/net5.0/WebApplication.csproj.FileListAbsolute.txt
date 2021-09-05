@@ -442,8 +442,6 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\scopedcss\bundle\WebApplicat
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.TagHelpers.input.cache
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.TagHelpers.output.cache
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.RazorCoreGenerate.cache
-G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\AccountControllers\CreateUser.cshtml.g.cs
-G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\AccountControllers\Login.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\HomePage\Index.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.RazorTargetAssemblyInfo.cache
 G:\WebApplication\WebApplication\obj\Release\net5.0\WebApplication.RazorTargetAssemblyInfo.cs
@@ -460,3 +458,12 @@ G:\WebApplication\WebApplication\bin\Release\net5.0\Z.Expressions.Eval.dll
 G:\WebApplication\WebApplication\bin\Release\net5.0\StudyMVCFu.Model.dll
 G:\WebApplication\WebApplication\bin\Release\net5.0\StudyMVCFu.Model.pdb
 G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Study\Studyknowledge.cshtml.g.cs
+G:\WebApplication\WebApplication\bin\Release\net5.0\protobuf-net.Core.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Account\CreateUser.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Journal\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Permissions\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\PersonalInfo\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Role\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Special\Index.cshtml.g.cs
+G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\UserManage\Index.cshtml.g.cs

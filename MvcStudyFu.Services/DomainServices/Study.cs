@@ -28,8 +28,9 @@ namespace MvcStudyFu.Services.DomainServices
         {
             AjaxResult ajaxResult = new();
             await this.DeleteAsync<Studyknowledge>(id);
-            ajaxResult.Success = await this.CommitAsync();
-            ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+            var res = await base.CommitAsync();
+            ajaxResult.Success = res.Item1;
+            ajaxResult.Message = res.Item2;
             await base.DisposeAsync();
             return ajaxResult;
         }
@@ -120,8 +121,9 @@ namespace MvcStudyFu.Services.DomainServices
             }
             if (ajaxResult.Message == "操作失败")
             {
-                ajaxResult.Success = await this.CommitAsync();
-                ajaxResult.Message = ajaxResult.Success ? "操作成功" : "操作失败";
+                var res = await base.CommitAsync();
+                ajaxResult.Success = res.Item1;
+                ajaxResult.Message = res.Item2;
             }
             await base.DisposeAsync();
             return ajaxResult;

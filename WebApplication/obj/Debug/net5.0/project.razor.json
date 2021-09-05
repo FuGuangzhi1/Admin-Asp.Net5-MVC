@@ -15619,23 +15619,53 @@
   "RootNamespace": "WebApplication",
   "Documents": [
     {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Special\\Index.cshtml",
+      "TargetPath": "Views\\Special\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\UserManage\\Index.cshtml",
+      "TargetPath": "Views\\UserManage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\PersonalInfo\\Index.cshtml",
+      "TargetPath": "Views\\PersonalInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Study\\Studyknowledge.cshtml",
       "TargetPath": "Views\\Study\\Studyknowledge.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\AccountControllers\\CreateUser.cshtml",
-      "TargetPath": "Views\\AccountControllers\\CreateUser.cshtml",
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Account\\CreateUser.cshtml",
+      "TargetPath": "Views\\Account\\CreateUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Journal\\Index.cshtml",
+      "TargetPath": "Views\\Journal\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Permissions\\Index.cshtml",
+      "TargetPath": "Views\\Permissions\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Role\\Index.cshtml",
+      "TargetPath": "Views\\Role\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "g:\\WebApplication\\WebApplication\\Views\\HomePage\\Index.cshtml",
       "TargetPath": "Views\\HomePage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\AccountControllers\\Login.cshtml",
-      "TargetPath": "Views\\AccountControllers\\Login.cshtml",
       "FileKind": "mvc"
     }
   ],

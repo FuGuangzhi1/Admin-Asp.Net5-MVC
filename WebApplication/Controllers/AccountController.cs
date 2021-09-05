@@ -2,17 +2,16 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using MvcStudyFu.Common;
-using MvcStudyFu.Interface;
 using MvcStudyFu.Interface.DomainInterface;
 using StudyMVCFu.Model;
+using StudyMVCFu.Model.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using WebApplication.AOP;
 
 namespace WebApplication.Controllers
 {
@@ -54,20 +53,20 @@ namespace WebApplication.Controllers
                         ajaxResult.Message = V;
                         base.HttpContext.Session.SetString("Id", isUser.Item2.ToString());
 
-                        var roleList =await _iloginDomain.GetRole(isUser.Item2);
+                        var roleList = await _iloginDomain.GetRole(isUser.Item2);
                         var claims = new List<Claim>();
                         foreach (var item in roleList)
                         {
                             claims.Add(new Claim(ClaimTypes.Role, item));
                         }
-                        ClaimsPrincipal userPrincipal = new ClaimsPrincipal(new ClaimsIdentity(claims, "Customer"));
+                        ClaimsPrincipal userPrincipal = new(new ClaimsIdentity(claims, "Customer"));
 
                         base.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, new AuthenticationProperties
                         {
                             ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
-                        }).Wait() ;
+                        }).Wait();
 
-                        var user = HttpContext.User;
+                        //var user = HttpContext.User;
                     }
                     else ajaxResult.Message = "账号或者密码错误";
                 }
@@ -93,6 +92,44 @@ namespace WebApplication.Controllers
         public IActionResult CreateUser()
         {
             return View();
+        }
+        [HttpPost]
+        [CustomAllownonymous]
+        [ValidateModel]
+        public async Task<IActionResult> Create([FromForm] CreateUser createUser)
+        {
+            if (createUser == null) return default;
+            AjaxResult ajaxResult = new();
+            if (createUser.Password != createUser.Password1)
+            {
+                ajaxResult.Message = "两次密码输入不一样";
+                return Json(data: ajaxResult);
+            };
+            var userGuid = Guid.NewGuid();
+            User user = new()
+            {
+                Id = userGuid,
+                Birthday = createUser.Birthday,
+                CreateDateTime = DateTime.Now,
+                Email = createUser.Email,
+                Hobby = createUser.Hobby,
+                QQ = createUser.QQ,
+                Moblie = createUser.Moblie,
+                Name = createUser.Name,
+                UpdateDateTime = DateTime.Now,
+                IsDel = true,
+                Sex = createUser.Sex == 1 ? true : false
+            };
+            UserPassword userPassword = new()
+            {
+                UserId = userGuid,
+                CreateDateTime = DateTime.Now,
+                UpdateDateTime = DateTime.Now,
+                UserPasswordId = Guid.NewGuid(),
+                NewPassword = createUser.Password.ToMD5()
+            };
+            ajaxResult = await _iloginDomain.CeateUser(user, userPassword);
+            return Json(data: ajaxResult);
         }
     }
 }

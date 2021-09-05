@@ -51,18 +51,19 @@ namespace MvcStudyFu.Services
         /// 异步提交
         /// </summary>
         /// <returns></returns>
-        public async virtual Task<bool> CommitAsync()
+        public async virtual Task<(bool, string)> CommitAsync()
         {
-            bool result = true;
+            (bool, string) result = (false, "操作成功");
             try
             {
-                result = await _DBContext.SaveChangesAsync() > 0;
+                result.Item1 = await _DBContext.SaveChangesAsync() > 0;
             }
-            catch (DbUpdateException)
+            catch (DbUpdateException db)
             {
-                result = false;
+                result.Item1 = false;
+                result.Item2 = db.Message;
             }
-            catch (Exception) { result = false; }
+            catch (Exception ex) { result.Item1 = false; result.Item2 = ex.Message; }
             return result;
         }
         /// <summary>
@@ -85,7 +86,7 @@ namespace MvcStudyFu.Services
         public virtual void Delete<T>(IEnumerable<T> tList) where T : class
         {
             this._DBContext = this._contextFactory?.CreateDbContext(ReadWriteEnum.Write);
-            if (tList.Count() < 0) throw new Exception("不存在这个，不用删");
+            if (!tList.Any()) throw new Exception("不存在这个，不用删");
             _DBContext.Set<T>().RemoveRange(tList);
         }
         /// <summary>
@@ -428,5 +429,7 @@ namespace MvcStudyFu.Services
             PageResult.Total = await tList.CountAsync();
             return PageResult;
         }
+
+        
     }
 }

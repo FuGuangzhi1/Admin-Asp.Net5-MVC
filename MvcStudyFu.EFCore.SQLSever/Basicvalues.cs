@@ -173,6 +173,12 @@ namespace MvcStudyFu.EFCore.SQLSever
                     ResourceId = keyValues["userManageGuid"],
                     RoleId = keyValues["generalGuid"]
                 },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["personalGuid"],
+                    RoleId = keyValues["generalGuid"]
+                },
 
 
 
@@ -198,6 +204,12 @@ namespace MvcStudyFu.EFCore.SQLSever
                 {
                     RoleResouceId = Guid.NewGuid(),
                     ResourceId = keyValues["studyknowledgeGuid"],
+                    RoleId = keyValues["bitPartGuid"]
+                },
+                new RoleResouce
+                {
+                    RoleResouceId = Guid.NewGuid(),
+                    ResourceId = keyValues["journalGuid"],
                     RoleId = keyValues["bitPartGuid"]
                 },
 

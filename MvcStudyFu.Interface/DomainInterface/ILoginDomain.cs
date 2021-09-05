@@ -22,5 +22,14 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// </summary>
         /// <returns></returns>
         public Task<List<string>> GetRole(Guid? id);
+        /// <summary>
+        /// 用户创建
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="userPassword"></param>
+        /// <returns></returns>
+        public Task<AjaxResult> CeateUser(User user,UserPassword userPassword);
+
+
     }
 }
