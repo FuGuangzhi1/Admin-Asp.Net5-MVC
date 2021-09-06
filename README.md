@@ -5,7 +5,7 @@
 数据库Sqlsever 暂时没有写支持其他数据库扩展  <br/>
 前端用的Vue.js Element UI  <br/>
 简单的一个登录 成功后界面展示，对应权限给对应的页面  <br/>
-下面各个部分简单描述一下
+下面各个部分简单描述一下(项目里面会有惊喜哦，突然触发的那种)
 # 登录
 ![image](https://user-images.githubusercontent.com/87634542/131846986-3debb16a-d9ce-458c-943f-5cf86f4abefe.png)
 基础账号是：1314520 或者用姓名：小杰 <br/>
