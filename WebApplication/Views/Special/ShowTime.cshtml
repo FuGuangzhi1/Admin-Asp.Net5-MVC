@@ -16,37 +16,51 @@
 
         .right {
             float: right;
-       /*     margin-top: 3%;*/
-            margin-right: 3%;
+            margin-top: -10px;
         }
 
         .left {
             width: 50%;
-           
-            height: 450px;
-            margin-left:3%;
-            margin-top:3%;
+            height: 400px;
+            margin-left: 3%;
+            margin-top: 3%;
         }
 
         span {
             font-size: 18px;
             float: left;
         }
+
         label {
             float: right;
         }
+
         #surprise {
-            width:100%;
-            color:white;
-            transition:all 3s 1s linear;
-            cursor:pointer;
+            width: 100%;
+            color: white;
+            float: left;
+            margin-top: -50px;
+            transition: all 3s 1s linear;
+            cursor: pointer;
         }
+
             #surprise:hover {
                 color: black;
+            }
+
+        .music {
+            float: right;
+            margin-top: -35px;
+            opacity: 0;
+            transition: all 3s 1s linear;
+        }
+            .music:hover {
+                opacity: 1;
             }
     </style>
 </head>
 <body>
+
     <div class="right">
         <canvas id="canvas" width="500"
                 height="500"></canvas>
@@ -69,6 +83,11 @@
         <span>  从不浪费时间的人，没有工夫抱怨时间不够。                 </span>   <label> ——杰弗逊          </label>      <br />
     </div>
     <div id="surprise"><h1>发现了什么，还不速速Star，右下角快速进入Git</h1></div>
+    <div class="music">
+        <audio controls>
+            <source src="/Music/虎二 - 谁在怀念.mp3" type="audio/mp3" />
+        </audio>
+    </div>
     <script>
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
