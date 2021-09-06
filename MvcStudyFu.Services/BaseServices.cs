@@ -7,15 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
-using static LinqToDB.SqlQuery.SqlPredicate;
 using MvcStudyFu.Common.ConvertTpye;
-using static LinqToDB.Reflection.Methods.LinqToDB.Insert;
 using Z.EntityFramework.Plus;
-using System.Collections;
-using Microsoft.Azure.Management.ResourceManager.Fluent;
-using System.Drawing.Printing;
 
 namespace MvcStudyFu.Services
 {

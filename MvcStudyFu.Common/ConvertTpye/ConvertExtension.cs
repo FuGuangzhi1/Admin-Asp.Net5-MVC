@@ -46,7 +46,23 @@ namespace MvcStudyFu.Common.ConvertTpye
 
             return result;
         }
+        /// <summary>
+        /// ulong
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static ulong TouLong32<T>(this T value)
+        {
+            if (value == null) return 0;
 
+            ulong result = 0;
+
+            if (!ulong.TryParse(value.ToStr(), out result))
+                return 0;
+
+            return result;
+        }
         /// <summary>
         /// float
         /// </summary>

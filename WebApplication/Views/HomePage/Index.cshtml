@@ -24,39 +24,30 @@
             @* 头部 *@
             <el-header>
                 <div class="demo-image__preview">
-                    <el-image style="width: 60px; height: 50px;  margin-top:5px;border-radius: 30px" :src="url" :preview-src-list="srcList">
+                    <el-image style="width: 60px; height: 50px;  margin-top:5px;border-radius: 30px" :src="url"
+                        :preview-src-list="srcList">
                     </el-image>
                     <div class="role">
                         <el-tag type="danger" @@click="message">身份</el-tag>
                     </div>
                 </div>
-
             </el-header>
             <el-container>
                 @* 左侧菜单 *@
                 <el-aside width="200px">
-                    <el-menu default-active="2"
-                             class="el-menu-vertical-demo"
-                             @@open="handleOpen"
-                             @@close="handleClose"
-                             background-color="#183152"
-                             text-color="#fff"
-                             active-text-color="#E1E6FA"
-                             unique-opened
-                             :collapse="isCollapse"
-                             :collapse-transition="false">
-                        <div style="width: 100%; height: 20px; text-align: center; background-color: #183152; " @@click="openOrClose"><i class="el-icon-s-unfold"></i></div>
-                        <el-submenu :index="item.menuId +'' "
-                                    v-for="item in menuList"
-                                    :key="item.menuId">
+                    <el-menu default-active="2" class="el-menu-vertical-demo" @@open="handleOpen" @@close="handleClose"
+                        background-color="#183152" text-color="#fff" active-text-color="#E1E6FA" unique-opened
+                        :collapse="isCollapse" :collapse-transition="false">
+                        <div style="width: 100%; height: 20px; text-align: center; background-color: #183152; "
+                            @@click="openOrClose"><i class="el-icon-s-unfold"></i></div>
+                        <el-submenu :index="item.menuId +'' " v-for="item in menuList" :key="item.menuId">
                             <template slot="title">
                                 <i :class="item.icon"></i>
                                 <span>{{item.menuName}}</span>
                             </template>
 
-                            <el-menu-item :index="subItem.menuId +'' "
-                                          v-for="subItem in item.children"
-                                          :key="subItem.menuId">
+                            <el-menu-item :index="subItem.menuId +'' " v-for="subItem in item.children"
+                                :key="subItem.menuId">
                                 <template slot="title">
                                     <i :class="subItem.icon"></i>
                                     <span @@click="skip(subItem.path)">{{subItem.menuName}}</span>
@@ -70,7 +61,7 @@
                 @* 中间 *@
                 <el-container>
                     <el-main>
-                        <iframe id="ifPage" src="" style="width:100%;height:95%; border:0px;"></iframe>
+                        <iframe id="ifPage" src="/Special/ShowTime" style="width:100%;height:95%; border:0px;"></iframe>
                     </el-main>
                     @* 底部 *@
                     <el-footer>
@@ -81,7 +72,8 @@
                             <el-divider direction="vertical"></el-divider>
                             E-mail:FuGuangzhi1@outlook.com.
                             <el-divider direction="vertical"></el-divider>
-                            <el-link type="info" href="https://github.com/FuGuangzhi1/WebApplication"> GitHUb:FuGuangzhi</el-link>
+                            <el-link type="info" href="https://github.com/FuGuangzhi1/WebApplication"> GitHUb:FuGuangzhi
+                            </el-link>
                             <el-divider direction="vertical"></el-divider>
                             有问题可用以上方式留言
                         </div>

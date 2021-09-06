@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowTime</title>
+    <style>
+        body {
+            /*  display: flex;
+            align-items: center;*/
+            /*justify-content: center;*/
+            /* background: #fff;*/
+            width: 100%;
+            height: 100%;
+        }
+
+        .right {
+            float: right;
+       /*     margin-top: 3%;*/
+            margin-right: 3%;
+        }
+
+        .left {
+            width: 50%;
+           
+            height: 450px;
+            margin-left:3%;
+            margin-top:3%;
+        }
+
+        span {
+            font-size: 18px;
+            float: left;
+        }
+        label {
+            float: right;
+        }
+        #surprise {
+            width:100%;
+            color:white;
+            transition:all 3s 1s linear;
+            cursor:pointer;
+        }
+            #surprise:hover {
+                color: black;
+            }
+    </style>
+</head>
+<body>
+    <div class="right">
+        <canvas id="canvas" width="500"
+                height="500"></canvas>
+    </div>
+    <div class="left">
+        <h1>时间名言</h1>
+        <br />
+        <span>  正当利用时间!你要理解什么，不要舍近求远。          </span>          <label> ——歌德    </label>                    <br /> <br />
+
+        <span>  放弃时间的人，时间也放弃他。                            </span>   <label> ——莎士比亚        </label>        <br />
+        <br />
+        <span>  你热爱生命吗?那么别浪费时间，因为时间是组成生命的材料。    </span>  <label>     ——富兰克林    </label>            <br />
+        <br />
+        <span>  时间就是生命，时间就是速度，时间就是力量。               </span>   <label>                   </label>               <br />
+        <br />
+        <span>  忘掉今天的人将被明天忘掉。                               </span>  <label>         ——歌德   </label>             <br />
+        <br />
+        <span>  春光不自留，莫怪东风恶。                                </span>   <label> ——莎士比亚        </label>       <br />
+        <br />
+        <span>  从不浪费时间的人，没有工夫抱怨时间不够。                 </span>   <label> ——杰弗逊          </label>      <br />
+    </div>
+    <div id="surprise"><h1>发现了什么，还不速速Star，右下角快速进入Git</h1></div>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = '#7FFFD4';
+        ctx.lineWidth = 3;
+        ctx.shadowBlur = 5;
+        ctx.shadowColor = '#7FFFD4';
+        var milliseconds = 0;
+        var minutes = 0;
+        var hour = 0;
+        var date = "";
+        var ctxBack = canvas.getContext("2d");
+        var numBack = canvas.getContext("2d");
+        //Number
+        ctxBack.lineWidth = 1;
+        ctxBack.shadowBlur = 0;
+        ctxBack.shadowColor = '#F0F8FF';
+
+        function pageInit() {
+            showTime();
+            showBack();
+            drawSecPin();
+            drawMinPin();
+            drawHouPin();
+            setPoint();
+            setNum();
+        }
+
+        function setNum() {
+            numBack.save();
+            numBack.translate(250, 250);
+            numBack.beginPath();
+            numBack.fillStyle = '#7FFFD4';
+            numBack.font = "30px Helvetica";
+            for (var i = 0; i < 60; i++) {
+                if (i % 5 == 0) {
+                    numBack.lineWidth = 5;
+                    var xPoint = Math.sin(i * 6 * 2 * Math.PI / 360) * 195;
+                    var yPoint = -Math.cos(i * 6 * 2 * Math.PI / 360) * 195;
+                    numBack.fillText(i == 0 ? 12 : i / 5, i == 0 ? -15 : xPoint - 10, i == 0 ? -185 : i <= 30 ? yPoint + 5 : yPoint + 10);
+                }
+            }
+            numBack.stroke();
+            numBack.closePath();
+            numBack.restore();
+        }
+        // 绘制秒针
+        function drawSecPin() {
+            ctxBack.save();
+            ctxBack.translate(250, 250);
+            ctxBack.rotate(milliseconds / 60 * 2 * Math.PI);
+            ctxBack.beginPath();
+            ctxBack.strokeStyle = '#AFEEEE';
+            ctxBack.lineWidth = 1;
+            ctxBack.lineJoin = "bevel";
+            ctxBack.miterLimit = 10;
+            ctxBack.moveTo(0, 30);
+            ctxBack.lineTo(3, -175);
+            ctxBack.lineTo(13, -165);
+            ctxBack.lineTo(0, -210);
+            ctxBack.lineTo(-13, -165);
+            ctxBack.lineTo(-3, -175);
+            ctxBack.lineTo(0, 30);
+            ctxBack.stroke();
+            ctxBack.closePath();
+            ctxBack.restore();
+        }
+        // 绘制分针
+        function drawMinPin() {
+            ctxBack.save();
+            ctxBack.translate(250, 250);
+            ctxBack.rotate(minutes * 6 * Math.PI / 180);
+            ctxBack.beginPath();
+            ctxBack.strokeStyle = '#20B2AA';
+            ctxBack.lineWidth = 1;
+            ctxBack.lineJoin = "bevel";
+            ctxBack.miterLimit = 10;
+            ctxBack.moveTo(0, 20);
+            ctxBack.lineTo(3, -145);
+            ctxBack.lineTo(10, -135);
+            ctxBack.lineTo(0, -180);
+            ctxBack.lineTo(-10, -135);
+            ctxBack.lineTo(-3, -145);
+            ctxBack.lineTo(0, 20);
+            ctxBack.stroke();
+            ctxBack.closePath();
+            ctxBack.restore();
+        }
+        // 绘制时针
+        function drawHouPin() {
+            ctxBack.save();
+            ctxBack.translate(250, 250);
+            ctxBack.rotate(hour * 30 * Math.PI / 180);
+            ctxBack.beginPath();
+            ctxBack.strokeStyle = '#87CEFA';
+            ctxBack.lineWidth = 1;
+            ctxBack.lineJoin = "bevel";
+            ctxBack.miterLimit = 10;
+            ctxBack.moveTo(0, 20);
+            ctxBack.lineTo(3, -110);
+            ctxBack.lineTo(10, -100);
+            ctxBack.lineTo(0, -150);
+            ctxBack.lineTo(-10, -100);
+            ctxBack.lineTo(-3, -110);
+            ctxBack.lineTo(0, 20);
+            ctxBack.stroke();
+            ctxBack.closePath();
+            ctxBack.restore();
+        }
+
+        function setPoint() {
+            ctxBack.beginPath();
+            ctxBack.fillStyle = 'black';
+            ctxBack.arc(250, 250, 3, 0, 2 * Math.PI);
+            ctxBack.stroke();
+        }
+
+        function showBack() {
+            for (var i = 0; i < 60; i++) {
+                ctxBack.save();
+                ctxBack.translate(250, 250);
+                ctxBack.rotate(i / 60 * 2 * Math.PI);
+                ctxBack.beginPath();
+                ctxBack.strokeStyle = '#7FFFD4';
+                ctxBack.moveTo(0, -250);
+                ctxBack.lineWidth = i % 5 == 0 ? 5 : 2;
+                ctxBack.lineTo(0, -230);
+                ctxBack.stroke();
+                ctxBack.closePath();
+                ctxBack.restore();
+            }
+            ctxBack.beginPath();
+            ctxBack.arc(250, 250, 230, 0, 2 * Math.PI);
+            ctxBack.stroke();
+        }
+
+        function degToRad(degree) {
+            var result;
+            var factor = Math.PI / 180;
+            if (degree == 0) {
+                result = 270 * factor;
+            } else {
+                result = degree * factor;
+            }
+            return result;
+        }
+
+        function showTime() {
+            var now = new Date();
+            var today = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            var day = now.getDay();
+            var hrs = now.getHours();
+            var min = now.getMinutes();
+            var sec = now.getSeconds();
+            var mil = now.getMilliseconds();
+            var smoothsec = sec + (mil / 1000);
+            var smoothmin = min + (smoothsec / 60);
+            var hours = hrs + (smoothmin / 60);
+            milliseconds = smoothsec;
+            minutes = smoothmin;
+            hour = hours;
+            switch (day) {
+                case 1:
+                    date = '一'
+                    break;
+                case 2:
+                    date = '二'
+                    break;
+                case 3:
+                    date = '三'
+                    break;
+                case 4:
+                    date = '四'
+                    break;
+                case 5:
+                    date = '五'
+                    break;
+                case 6:
+                    date = '六'
+                    break;
+                case 0:
+                    date = '日'
+                    break;
+            }
+            //Background
+            gradient = ctx.createRadialGradient(250, 250, 5, 250, 250, 300);
+            gradient.addColorStop(0, "#03303a");
+            gradient.addColorStop(1, "black");
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 500, 500);
+            //Hours
+            ctx.beginPath();
+            ctx.strokeStyle = '#87CEFA';
+            ctx.arc(250, 250, 215, degToRad(0), degToRad((hours * 30) - 90));
+            ctx.stroke();
+            //Minutes
+            ctx.beginPath();
+            ctx.strokeStyle = '#20B2AA';
+            ctx.arc(250, 250, 220, degToRad(0), degToRad(smoothmin * 6 - 90));
+            ctx.stroke();
+            //Seconds
+            ctx.beginPath();
+            ctx.strokeStyle = '#AFEEEE';
+            ctx.arc(250, 250, 225, degToRad(0), degToRad(smoothsec * 6 - 90));
+            ctx.stroke();
+            //Date
+            ctx.font = "25px Helvetica Bold";
+            ctx.fillStyle = '#7FFFD4';
+            ctx.fillText(today + "/星期" + date, 150, 230);
+            //Time
+            ctx.font = "23px Helvetica Bold";
+            ctx.fillStyle = '#7FFFD4';
+            //ctx.fillText(time+":"+mil, 160, 280);
+            ctx.fillText(time, 190, 280);
+        }
+        setInterval(pageInit, 60);
+    </script>
+
+</body>
+</html>

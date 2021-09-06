@@ -18,13 +18,12 @@ namespace WebApplication.Controllers
     //[Route("[controller]")]
     //[ApiController]
     /// <summary>
-    /// 登录页
+    /// 用户登录创建
     /// </summary>
     public class AccountController : Controller
     {
         private const string V = "操作成功";
         private readonly ILoginDomain _iloginDomain;
-
         public AccountController(ILoginDomain iloginDomain)
         {
             this._iloginDomain = iloginDomain;
@@ -41,19 +40,21 @@ namespace WebApplication.Controllers
         {
             AjaxResult ajaxResult = new() { Success = false, Data = string.Empty, Message = string.Empty };
             string checkCode = HttpContext.Session.GetString("CaptchaCode");
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //模型验证（写这里给大家看一下原始操作，后面用特性代替[ValidateModel]也可以全局配置）
             {
-                if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase))
+                if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase)) //验证码对比
                 {
                     //账号密码判断用户
                     (bool, Guid?) isUser = await _iloginDomain.GetUserasync(login.Name, login.Password);
-                    if (isUser.Item1)
+                    if (isUser.Item1)   //登录成功
                     {
                         ajaxResult.Success = true;
                         ajaxResult.Message = V;
                         base.HttpContext.Session.SetString("Id", isUser.Item2.ToString());
 
-                        var roleList = await _iloginDomain.GetRole(isUser.Item2);
+                        #region 基于cookie权限验证
+                        var roleList = await _iloginDomain.GetRole(isUser.Item2); //角色获取
+
                         var claims = new List<Claim>();
                         foreach (var item in roleList)
                         {
@@ -65,14 +66,14 @@ namespace WebApplication.Controllers
                         {
                             ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
                         }).Wait();
-
-                        //var user = HttpContext.User;
+                        #endregion
                     }
                     else ajaxResult.Message = "账号或者密码错误";
                 }
                 else ajaxResult.Message = "验证码错误";
             }
             else ajaxResult.Message = "数据格式不对！！！";
+
             return Json(data: ajaxResult);
         }
         [HttpGet]

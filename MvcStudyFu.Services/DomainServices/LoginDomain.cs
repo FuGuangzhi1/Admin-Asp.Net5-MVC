@@ -53,7 +53,7 @@ namespace MvcStudyFu.Services.DomainServices
                         await dBContext.SaveChangesAsync();
                         transaction.Commit();
                         ajaxResult.Success = true;
-                        ajaxResult.Message="创建成功！";
+                        ajaxResult.Message = "创建成功！";
                     }
                     catch (Exception ex)
                     {
@@ -76,21 +76,22 @@ namespace MvcStudyFu.Services.DomainServices
 
         public async Task<(bool, Guid?)> GetUserasync(string name, string password)
         {
-            int account = name.ToInt32();
+            ulong account = name.TouLong32();
             Guid? id = Guid.Empty;
             bool iswater = false;
-            User UserEntity;
-                UserEntity = await base.Query<User>(x => x.Name == name)
-                    .FirstOrDefaultAsync();
-            if (UserEntity == null)
+            id = await base.Query<User>(x => x.Name == name & x.IsDel == true).Select(x => x.Id).FirstOrDefaultAsync();
+            if (id == Guid.Empty)
             {
-                UserEntity = await base.Query<User>(x => x.Account == (ulong)account)
-                    .FirstOrDefaultAsync();
+                id = await base.Query<User>(x => x.Account == account & x.IsDel == true)
+                   .Select(x => x.Id).FirstOrDefaultAsync();
             }
-            if (UserEntity != null)
+            if (id != Guid.Empty)
             {
-                iswater =  base.Set<UserPassword>().Select(x => x.NewPassword == password.ToMD5() & x.UserId == UserEntity.Id).Any();
-                if (iswater) id = UserEntity.Id;
+                iswater = base.Set<UserPassword>().Select(x => x.NewPassword == password.ToMD5() & x.UserId == id).Any();
+            }
+            if (!iswater) 
+            {
+                id = Guid.Empty;
             }
             await base.DisposeAsync();
             return new(iswater, id);

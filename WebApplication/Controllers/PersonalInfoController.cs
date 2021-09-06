@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace WebApplication.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult GetPersonalInfo()
+        {
+            string id =base.HttpContext.Session.GetString("Id");
             return View();
         }
     }

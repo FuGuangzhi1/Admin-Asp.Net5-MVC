@@ -15,5 +15,9 @@ namespace WebApplication.Controllers
         {
             return View();
         }
+        public IActionResult ShowTime()
+        {
+            return View();
+        }
     }
 }
