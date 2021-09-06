@@ -50,7 +50,7 @@ write里面是写库 read里面是读库 我用的轮询策略，读写分离会
 4.一些中间件的使用<br/>
 5.efcore花式封装分页<br/>
 6.efcore事务的使用<br/>
-7.ef优化小技巧
+7.ef优化小技巧<br/>
 8.identitySever基本使用<br/>
 9.权限设计表的设计思路<br/>
 10.vue和element ui的一点小坑<br/>
