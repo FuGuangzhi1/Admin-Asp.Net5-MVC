@@ -39,14 +39,16 @@
                              class="el-menu-vertical-demo"
                              @@open="handleOpen"
                              @@close="handleClose"
-                             background-color="#494e8f"
+                             background-color="#183152"
                              text-color="#fff"
-                             active-text-color="#afb4db"
-                             unique-opened>
+                             active-text-color="#E1E6FA"
+                             unique-opened
+                             :collapse="isCollapse"
+                             :collapse-transition="false">
+                        <div style="width: 100%; height: 20px; text-align: center; background-color: #183152; " @@click="openOrClose"><i class="el-icon-s-unfold"></i></div>
                         <el-submenu :index="item.menuId +'' "
                                     v-for="item in menuList"
                                     :key="item.menuId">
-
                             <template slot="title">
                                 <i :class="item.icon"></i>
                                 <span>{{item.menuName}}</span>
@@ -55,7 +57,7 @@
                             <el-menu-item :index="subItem.menuId +'' "
                                           v-for="subItem in item.children"
                                           :key="subItem.menuId">
-                                <template slot="title" >
+                                <template slot="title">
                                     <i :class="subItem.icon"></i>
                                     <span @@click="skip(subItem.path)">{{subItem.menuName}}</span>
                                 </template>
@@ -79,7 +81,7 @@
                             <el-divider direction="vertical"></el-divider>
                             E-mail:FuGuangzhi1@outlook.com.
                             <el-divider direction="vertical"></el-divider>
-                            <el-link type="success" href="https://github.com/FuGuangzhi1/WebApplication"> GitHUb:FuGuangzhi</el-link>
+                            <el-link type="info" href="https://github.com/FuGuangzhi1/WebApplication"> GitHUb:FuGuangzhi</el-link>
                             <el-divider direction="vertical"></el-divider>
                             有问题可用以上方式留言
                         </div>
