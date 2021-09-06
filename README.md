@@ -49,4 +49,7 @@ write里面是写库 read里面是读库 我用的轮询策略，读写分离会
 3.花式读配置文件<br/>
 4.efcore花式封装分页<br/>
 5.efcore事务的使用<br/>
+6.identitySever基本使用
+7.权限设计表的设计思路
+8.vue和element ui的一点小坑
 ...........<br/>
