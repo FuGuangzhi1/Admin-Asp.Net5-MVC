@@ -47,9 +47,12 @@ write里面是写库 read里面是读库 我用的轮询策略，读写分离会
 1.过滤器怎么用，全局配置 <br/>
 2.core里面的依赖注入，项目用的autofac<br/>
 3.花式读配置文件<br/>
-4.efcore花式封装分页<br/>
-5.efcore事务的使用<br/>
-6.identitySever基本使用<br/>
-7.权限设计表的设计思路<br/>
-8.vue和element ui的一点小坑<br/>
+4.一些中间件的使用
+5.efcore花式封装分页<br/>
+6.efcore事务的使用<br/>
+7.ef优化小技巧
+8.identitySever基本使用<br/>
+9.权限设计表的设计思路<br/>
+10.vue和element ui的一点小坑<br/>
+11.axios各种请求问题<br/>
 ...........<br/>
