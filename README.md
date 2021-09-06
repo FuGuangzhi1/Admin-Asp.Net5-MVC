@@ -16,7 +16,7 @@
 还有一些细节大家项目里面自己看 <br/>
 
 # 主界面
-![image](https://user-images.githubusercontent.com/87634542/131848146-edf99c6a-e5a6-41c9-a44f-cd1ca9b2457c.png)
+![image](https://user-images.githubusercontent.com/87634542/132153432-87819241-0da1-4645-b9c3-4ada6c249aee.png)
 这个配置还不是很看好(审美有限，这个配色可太难了，页面比较简单没搞什么主题了) <br/>
 主界面比较难配置的就是左边的菜单的动态加载了，不同人看到的不一样 <br/>
 （用户表和角色多对多，角色和角色权限多对多）也是用了五张表来完成这个效果 <br/>
