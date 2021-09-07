@@ -5,6 +5,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>G:\WebApplication\WebApplication\bin\Release\net5.0\publish\</_PublishTargetUrl>
-    <History>True|2021-09-05T15:44:22.2044491Z;True|2021-09-05T23:14:25.6914026+08:00;True|2021-09-05T23:12:23.0915883+08:00;False|2021-09-05T23:12:05.9839468+08:00;True|2021-09-05T23:09:14.5506180+08:00;True|2021-08-25T17:43:33.7583412+08:00;True|2021-08-20T15:18:26.9712678+08:00;</History>
+    <History>False|2021-09-07T02:44:41.5857307Z;True|2021-09-07T10:32:20.5788881+08:00;True|2021-09-05T23:44:22.2044491+08:00;True|2021-09-05T23:14:25.6914026+08:00;True|2021-09-05T23:12:23.0915883+08:00;False|2021-09-05T23:12:05.9839468+08:00;True|2021-09-05T23:09:14.5506180+08:00;True|2021-08-25T17:43:33.7583412+08:00;True|2021-08-20T15:18:26.9712678+08:00;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUGfj7Y9REkWqVoMEYaHc8gAAAAACAAAAAAAQZgAAAAEAACAAAAAmcci7ubg6MB8o0DUb1VQw406tEogqot4mUEe+Ua3NNgAAAAAOgAAAAAIAACAAAADf32QEq5n2atAW8Oa/tUVIHhBQUoBDQZl73Lt00ZoOQiAAAABiB1fRNxOnSFLCaf77RyTOnRjKH+ImB/7ySkKQGxDFXEAAAADaRM3wLDS0UF7BIT9yp2mlcckFv0ScJxYSujLPWnBSYZeWGMlyRsjRENav/UjMIYVYIn2IHwrZGU/wfCgoaDgC</EncryptedPassword>
   </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="Write">
+      <Value>Data Source=127.0.0.1%3bInitial Catalog=StudyMVC%3bUser ID=sa%3bpassword=jkl147258%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
 </Project>

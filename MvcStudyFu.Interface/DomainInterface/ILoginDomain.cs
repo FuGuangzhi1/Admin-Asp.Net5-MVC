@@ -16,19 +16,19 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// <param name="name"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public Task<(bool, Guid?)> GetUserasync(string name, string password);
+        public Task<(bool, Guid?)> GetUserAsync(string name, string password);
         /// <summary>
         /// 获得角色
         /// </summary>
         /// <returns></returns>
-        public Task<List<string>> GetRole(Guid? id);
+        public Task<List<string>> GetRoleAsync(Guid? id);
         /// <summary>
         /// 用户创建
         /// </summary>
         /// <param name="user"></param>
         /// <param name="userPassword"></param>
         /// <returns></returns>
-        public Task<AjaxResult> CeateUser(User user,UserPassword userPassword);
+        public Task<AjaxResult> CeateUserAsync(User user,UserPassword userPassword);
 
 
     }

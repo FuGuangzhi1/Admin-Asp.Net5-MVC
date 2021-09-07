@@ -45,7 +45,7 @@ namespace WebApplication.Controllers
                 if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase)) //验证码对比
                 {
                     //账号密码判断用户
-                    (bool, Guid?) isUser = await _iloginDomain.GetUserasync(login.Name, login.Password);
+                    (bool, Guid?) isUser = await _iloginDomain.GetUserAsync(login.Name, login.Password);
                     if (isUser.Item1)   //登录成功
                     {
                         ajaxResult.Success = true;
@@ -53,7 +53,7 @@ namespace WebApplication.Controllers
                         base.HttpContext.Session.SetString("Id", isUser.Item2.ToString());
 
                         #region 基于cookie权限验证
-                        var roleList = await _iloginDomain.GetRole(isUser.Item2); //角色获取
+                        var roleList = await _iloginDomain.GetRoleAsync(isUser.Item2); //角色获取
 
                         var claims = new List<Claim>();
                         foreach (var item in roleList)
@@ -129,7 +129,7 @@ namespace WebApplication.Controllers
                 UserPasswordId = Guid.NewGuid(),
                 NewPassword = createUser.Password.ToMD5()
             };
-            ajaxResult = await _iloginDomain.CeateUser(user, userPassword);
+            ajaxResult = await _iloginDomain.CeateUserAsync(user, userPassword);
             return Json(data: ajaxResult);
         }
     }

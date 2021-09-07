@@ -24,17 +24,17 @@ body {
 }
 
 .el-header {
-    background-color: #409EFF;
+    background-color: #375D81;
     color: black;
 }
 
 .el-aside {
-    border-right: solid #DCDFE6 1px;
-    background-color: #585eaa;
+    /*  border-right: solid #DCDFE6 1px;*/
+    background-color: #183152;
 }
 
 .el-footer {
-    background-color: #63434f;
+    background-color: #375D81;
     color: white;
 }
 

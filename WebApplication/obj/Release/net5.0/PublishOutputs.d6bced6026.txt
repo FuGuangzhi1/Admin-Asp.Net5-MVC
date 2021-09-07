@@ -5,6 +5,7 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\fonts
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\Home.css
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\index.css
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\Login.css
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\PersonalInfo.css
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\Studyknowledge.css
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\images\小新.jpg
@@ -14,6 +15,7 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Create
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Home.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\index.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Login.js
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\PersonalInfo.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\qs.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\Studyknowledge.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\vue.js
@@ -54,6 +56,8 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquer
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\Music\Imagine Dragons - Natural.flac
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\Music\虎二 - 谁在怀念.mp3
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\log4net.config
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\appsettings.json

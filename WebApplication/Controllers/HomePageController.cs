@@ -33,7 +33,7 @@ namespace WebApplication.Controllers
             AjaxResult ajaxResult = new AjaxResult();
             string id = base.HttpContext.Session.GetString("Id");
             if (id == null) base.HttpContext.Response.Redirect("/AccountControllers/login");
-            ajaxResult.Data = await _homePage.GetmenuList(id);
+            ajaxResult.Data = await _homePage.GetmenuListAsync(id);
             if (ajaxResult.Data != null)
             {
                 ajaxResult.Message = "操作成功"; ajaxResult.Success = true;

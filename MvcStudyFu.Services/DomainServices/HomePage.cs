@@ -19,7 +19,7 @@ namespace MvcStudyFu.Services.DomainServices
         public HomePage(IDBContextFactory dBContextFactory) : base(dBContextFactory)
         {
         }
-        public async Task<List<MenuDto>> GetmenuList(string id)
+        public async Task<List<MenuDto>> GetmenuListAsync(string id)
         {
             Guid userid;
 

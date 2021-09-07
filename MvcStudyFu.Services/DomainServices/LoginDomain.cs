@@ -17,7 +17,7 @@ namespace MvcStudyFu.Services.DomainServices
     {
         public LoginDomain(IDBContextFactory dBContextFactory) : base(dBContextFactory) { }
 
-        public async Task<AjaxResult> CeateUser(User user, UserPassword userPassword)
+        public async Task<AjaxResult> CeateUserAsync(User user, UserPassword userPassword)
         {
             AjaxResult ajaxResult = new();
             bool isEmail = (await base.QueryAsync<User>(x => x.Email == user.Email)).Any();
@@ -67,14 +67,14 @@ namespace MvcStudyFu.Services.DomainServices
             return ajaxResult;
         }
 
-        public async Task<List<string>> GetRole(Guid? id)
+        public async Task<List<string>> GetRoleAsync(Guid? id)
         {
             List<Guid> roleIds = await (await base.QueryAsync<UserRole>(x => x.UserId == id)).Select(x => x.RoleId).ToListAsync();
             List<string> roleNames = await (await base.QueryAsync<Role>(x => roleIds.Contains(x.RoleId))).Select(x => x.RoleName).ToListAsync();
             return roleNames;
         }
 
-        public async Task<(bool, Guid?)> GetUserasync(string name, string password)
+        public async Task<(bool, Guid?)> GetUserAsync(string name, string password)
         {
             ulong account = name.TouLong32();
             Guid? id = Guid.Empty;

@@ -24,7 +24,7 @@ namespace MvcStudyFu.Services.DomainServices
             this._dBContextFactory = dBContextFactory;
         }
 
-        public async Task<AjaxResult> DeleteStudyTypeData(Guid id)
+        public async Task<AjaxResult> DeleteStudyTypeDataAsync(Guid id)
         {
             AjaxResult ajaxResult = new();
             await this.DeleteAsync<Studyknowledge>(id);
@@ -35,12 +35,12 @@ namespace MvcStudyFu.Services.DomainServices
             return ajaxResult;
         }
 
-        public Task<AjaxResult> DeleteStudyTypeData(IList<Guid> id)
+        public Task<AjaxResult> DeleteStudyTypeDataAsync(IList<Guid> id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<PageResult<StudyKnowledgeView>> GetStudyKnowledge
+        public async Task<PageResult<StudyKnowledgeView>> GetStudyKnowledgeAsync
             (string StudyKnowledgeName, int stydyTypeId, int pageSize, int pageIndex)
         {
             var DBCotent = _dBContextFactory.CreateDbContext(ReadWriteEnum.Read);
@@ -85,7 +85,7 @@ namespace MvcStudyFu.Services.DomainServices
             return pageResult;
         }
 
-        public async Task<List<StudyType>> GetStudyType()
+        public async Task<List<StudyType>> GetStudyTypeAsync()
         {
             List<StudyType> data = new();
             IQueryable<StudyType> StudyType = base.Set<StudyType>();
@@ -94,7 +94,7 @@ namespace MvcStudyFu.Services.DomainServices
             return data;
         }
 
-        public async Task<AjaxResult> UpdateOrInsertStudyTypeData(Studyknowledge studyknowledge)
+        public async Task<AjaxResult> UpdateOrInsertStudyTypeDataAsync(Studyknowledge studyknowledge)
         {
             AjaxResult ajaxResult = new();
             if (studyknowledge == null) return ajaxResult;
@@ -128,7 +128,7 @@ namespace MvcStudyFu.Services.DomainServices
             await base.DisposeAsync();
             return ajaxResult;
         }
-        public Task<AjaxResult> UpdateOrInsertStudyTypeData(IList<Studyknowledge> studyknowledge)
+        public Task<AjaxResult> UpdateOrInsertStudyTypeDataAsync(IList<Studyknowledge> studyknowledge)
         {
             throw new NotImplementedException();
         }

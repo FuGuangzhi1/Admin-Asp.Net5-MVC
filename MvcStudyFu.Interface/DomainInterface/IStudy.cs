@@ -20,36 +20,36 @@ namespace MvcStudyFu.Interface.DomainInterface
         /// <param name="pageIndex">当前页</param>
         /// <returns></returns>
         public Task<PageResult<StudyKnowledgeView>>
-            GetStudyKnowledge(String StudyKnowledgeName,int stydyTypeId, int pageSize, int pageIndex);
+            GetStudyKnowledgeAsync(String StudyKnowledgeName,int stydyTypeId, int pageSize, int pageIndex);
         /// <summary>
         /// 学习类型获取
         /// </summary>
         /// <returns></returns>
-        public Task<List<StudyType>> GetStudyType();
+        public Task<List<StudyType>> GetStudyTypeAsync();
         /// <summary>
         /// 添加或者修改
         /// </summary>
         /// <param name="studyknowledge"></param>
         /// <returns></returns>
-        public Task<AjaxResult> UpdateOrInsertStudyTypeData(Studyknowledge studyknowledge);
+        public Task<AjaxResult> UpdateOrInsertStudyTypeDataAsync(Studyknowledge studyknowledge);
         /// <summary>
         ///  批量添加或者批量修改
         /// </summary>
         /// <param name="studyknowledge"></param>
         /// <returns></returns>
-        public Task<AjaxResult> UpdateOrInsertStudyTypeData(IList<Studyknowledge> studyknowledge);
+        public Task<AjaxResult> UpdateOrInsertStudyTypeDataAsync(IList<Studyknowledge> studyknowledge);
         /// <summary>
         /// 删除
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Task<AjaxResult> DeleteStudyTypeData(Guid id);
+        public Task<AjaxResult> DeleteStudyTypeDataAsync(Guid id);
         /// <summary>
         /// 批量 删除
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Task<AjaxResult> DeleteStudyTypeData(IList<Guid> id);
+        public Task<AjaxResult> DeleteStudyTypeDataAsync(IList<Guid> id);
 
     }
 }
