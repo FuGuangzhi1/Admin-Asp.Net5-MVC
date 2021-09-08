@@ -36,43 +36,39 @@ namespace WebApplication.Controllers
         }
         [HttpPost]
         [CustomAllownonymous]
+        [ValidateModel]
         public async Task<ActionResult> Login([FromBody] Login login)
         {
-            AjaxResult ajaxResult = new() { Success = false, Data = string.Empty, Message = string.Empty };
+            AjaxResult ajaxResult = new() { Success = false, Data = string.Empty, Message = "账号或密码错误！！！" };
             string checkCode = HttpContext.Session.GetString("CaptchaCode");
-            if (ModelState.IsValid) //模型验证（写这里给大家看一下原始操作，后面用特性代替[ValidateModel]也可以全局配置）
+            if (!login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase)) //验证码对比
             {
-                if (login.CheckCode.Equals(checkCode, StringComparison.InvariantCultureIgnoreCase)) //验证码对比
-                {
-                    //账号密码判断用户
-                    (bool, Guid?) isUser = await _iloginDomain.GetUserAsync(login.Name, login.Password);
-                    if (isUser.Item1)   //登录成功
-                    {
-                        ajaxResult.Success = true;
-                        ajaxResult.Message = V;
-                        base.HttpContext.Session.SetString("Id", isUser.Item2.ToString());
-
-                        #region 基于cookie权限验证
-                        var roleList = await _iloginDomain.GetRoleAsync(isUser.Item2); //角色获取
-
-                        var claims = new List<Claim>();
-                        foreach (var item in roleList)
-                        {
-                            claims.Add(new Claim(ClaimTypes.Role, item));
-                        }
-                        ClaimsPrincipal userPrincipal = new(new ClaimsIdentity(claims, "Customer"));
-
-                        base.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, new AuthenticationProperties
-                        {
-                            ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
-                        }).Wait();
-                        #endregion
-                    }
-                    else ajaxResult.Message = "账号或者密码错误";
-                }
-                else ajaxResult.Message = "验证码错误";
+                ajaxResult.Message = "验证码错误";
+                return Json(data: ajaxResult);
             }
-            else ajaxResult.Message = "数据格式不对！！！";
+            //账号密码判断用户
+            (bool, Guid?) isUser = await _iloginDomain.GetUserAsync(login.Name, login.Password);
+            if (!isUser.Item1) return Json(data: ajaxResult); ;  //登录失败 
+
+            base.HttpContext.Session.SetString("Id", isUser.Item2.ToString());
+
+            #region 基于cookie权限验证
+            var roleList = await _iloginDomain.GetRoleAsync(isUser.Item2); //角色获取
+            var claims = new List<Claim>();
+            foreach (var item in roleList)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, item));
+            }
+            ClaimsPrincipal userPrincipal = new(new ClaimsIdentity(claims, "Customer"));
+
+            await base.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal,
+                new AuthenticationProperties
+                {
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
+                });
+            ajaxResult.Success = true;
+            ajaxResult.Message = V;
+            #endregion
 
             return Json(data: ajaxResult);
         }

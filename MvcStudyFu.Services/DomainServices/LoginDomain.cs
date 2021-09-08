@@ -87,7 +87,8 @@ namespace MvcStudyFu.Services.DomainServices
             }
             if (id != Guid.Empty)
             {
-                iswater = base.Set<UserPassword>().Select(x => x.NewPassword == password.ToMD5() & x.UserId == id).Any();
+                iswater =await base.Set<UserPassword>().Select(x => x.NewPassword == password.ToMD5() & x.UserId == id)
+                    .FirstOrDefaultAsync();
             }
             if (!iswater) 
             {

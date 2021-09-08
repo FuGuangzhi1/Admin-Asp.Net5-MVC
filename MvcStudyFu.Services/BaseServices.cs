@@ -405,7 +405,9 @@ namespace MvcStudyFu.Services
             return PageResult;
         }
 
-        public async Task<PageResult<T>> QueryPageAsync<T, S>(IQueryable<T> tList, Expression<Func<T, bool>> funWhere, Expression<Func<T, bool>> funWhere1, int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
+        public async Task<PageResult<T>> QueryPageAsync<T, S>
+        (IQueryable<T> tList, Expression<Func<T, bool>> funWhere, Expression<Func<T, bool>> funWhere1, 
+        int pageSize, int pageIndex, Expression<Func<T, S>> funcOderby) where T : class
         {
             PageResult<T> PageResult = new();
             if (pageSize == 0) return PageResult;
@@ -424,6 +426,6 @@ namespace MvcStudyFu.Services
             return PageResult;
         }
 
-        
+
     }
 }

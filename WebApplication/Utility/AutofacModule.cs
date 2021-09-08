@@ -19,6 +19,8 @@ namespace WebApplication.Utility
             builder.RegisterType<LoginDomain>().As<ILoginDomain>().SingleInstance();
             builder.RegisterType<Study>().As<IStudy>().SingleInstance();
             builder.RegisterType<HomePage>().As<IHomePage>().SingleInstance();
+            builder.RegisterType<PersonalInfo>().As<IPersonalInfo>().SingleInstance();
+
         }
     }
 }

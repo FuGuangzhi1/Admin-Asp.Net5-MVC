@@ -47,5 +47,7 @@ namespace StudyMVCFu.Model
         /// </summary>
         public Nullable<bool> IsDel { get; set; }
         public List<LogRecord> LogRecord { get; set; }
+
+        public string img { get; set; }
     }
 }
