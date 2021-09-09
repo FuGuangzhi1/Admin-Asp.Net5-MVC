@@ -61,6 +61,8 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\Music\虎
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\log4net.config
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\appsettings.json
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\package-lock.json
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\package.json
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -358,7 +360,9 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\linq2db.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\log4net.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.NodeServices.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.SpaServices.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.Azure.KeyVault.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.Azure.KeyVault.WebKey.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Microsoft.Azure.Management.AppService.Fluent.dll
@@ -412,6 +416,7 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.Drawing.Co
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.Runtime.Caching.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Webpack.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Z.EntityFramework.Extensions.EFCore.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Z.EntityFramework.Plus.EFCore.dll
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\Z.Expressions.Eval.dll

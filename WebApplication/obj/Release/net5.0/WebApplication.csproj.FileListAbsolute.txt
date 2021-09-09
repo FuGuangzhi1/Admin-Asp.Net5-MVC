@@ -468,3 +468,8 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Role\Index.cshtm
 G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Special\Index.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\UserManage\Index.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Release\net5.0\Razor\Views\Special\ShowTime.cshtml.g.cs
+G:\WebApplication\WebApplication\bin\Release\net5.0\package-lock.json
+G:\WebApplication\WebApplication\bin\Release\net5.0\package.json
+G:\WebApplication\WebApplication\bin\Release\net5.0\Microsoft.AspNetCore.NodeServices.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\Microsoft.AspNetCore.SpaServices.dll
+G:\WebApplication\WebApplication\bin\Release\net5.0\Webpack.dll

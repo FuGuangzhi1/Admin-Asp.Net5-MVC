@@ -37,6 +37,7 @@
           "Autofac.Configuration": "6.0.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "5.0.9",
+          "Microsoft.AspNetCore.SpaServices": "3.1.18",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "5.0.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "MvcStudyFu.Common": "1.0.0",
@@ -45,6 +46,8 @@
           "MvcStudyFu.Services": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
           "System.Drawing.Common": "5.0.2",
+          "Webpack": "4.0.0",
+          "vue": "2.6.11",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -71,9 +74,9 @@
           "Microsoft.AspNetCore.Diagnostics.HealthChecks": "5.0.0.0",
           "Microsoft.AspNetCore": "5.0.0.0",
           "Microsoft.AspNetCore.HostFiltering": "5.0.0.0",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "5.0.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Hosting": "5.0.0.0",
-          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "5.0.0.0",
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Html.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Http.Abstractions.Reference": "5.0.0.0",
           "Microsoft.AspNetCore.Http.Connections.Common": "5.0.0.0",
@@ -152,15 +155,15 @@
           "Microsoft.Extensions.Localization.Abstractions": "5.0.0.0",
           "Microsoft.Extensions.Localization": "5.0.0.0",
           "Microsoft.Extensions.Logging.Abstractions.Reference": "5.0.0.0",
-          "Microsoft.Extensions.Logging.Configuration": "5.0.0.0",
-          "Microsoft.Extensions.Logging.Console": "5.0.0.0",
+          "Microsoft.Extensions.Logging.Configuration.Reference": "5.0.0.0",
+          "Microsoft.Extensions.Logging.Console.Reference": "5.0.0.0",
           "Microsoft.Extensions.Logging.Debug": "5.0.0.0",
           "Microsoft.Extensions.Logging.Reference": "5.0.0.0",
           "Microsoft.Extensions.Logging.EventLog": "5.0.0.0",
           "Microsoft.Extensions.Logging.EventSource": "5.0.0.0",
           "Microsoft.Extensions.Logging.TraceSource": "5.0.0.0",
           "Microsoft.Extensions.ObjectPool": "5.0.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "5.0.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions.Reference": "5.0.0.0",
           "Microsoft.Extensions.Options.DataAnnotations": "5.0.0.0",
           "Microsoft.Extensions.Options.Reference": "5.0.0.0",
           "Microsoft.Extensions.Primitives.Reference": "5.0.0.0",
@@ -196,7 +199,7 @@
           "System.Diagnostics.Debug.Reference": "5.0.0.0",
           "System.Diagnostics.EventLog": "5.0.0.0",
           "System.Diagnostics.FileVersionInfo": "5.0.0.0",
-          "System.Diagnostics.Process": "5.0.0.0",
+          "System.Diagnostics.Process.Reference": "5.0.0.0",
           "System.Diagnostics.StackTrace": "5.0.0.0",
           "System.Diagnostics.TextWriterTraceListener": "5.0.0.0",
           "System.Diagnostics.Tools.Reference": "5.0.0.0",
@@ -418,6 +421,24 @@
           "lib/netstandard2.0/log4net.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Hosting.Abstractions/1.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "1.1.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
+          "NETStandard.Library": "2.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions/1.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "NETStandard.Library": "2.0.0"
+        }
+      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "dependencies": {
           "System.Text.Encodings.Web": "4.5.0"
@@ -465,6 +486,21 @@
           "lib/net5.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll": {}
         }
       },
+      "Microsoft.AspNetCore.NodeServices/3.1.18": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Console": "3.1.18",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.NodeServices.dll": {
+            "assemblyVersion": "3.1.18.0",
+            "fileVersion": "3.100.1821.36504"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.NodeServices.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Razor/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0"
@@ -485,6 +521,20 @@
         "dependencies": {
           "Microsoft.AspNetCore.Html.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Razor": "2.2.0"
+        }
+      },
+      "Microsoft.AspNetCore.SpaServices/3.1.18": {
+        "dependencies": {
+          "Microsoft.AspNetCore.NodeServices": "3.1.18"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.SpaServices.dll": {
+            "assemblyVersion": "3.1.18.0",
+            "fileVersion": "3.100.1821.36504"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.SpaServices.dll": {}
         }
       },
       "Microsoft.Azure.KeyVault/3.0.5": {
@@ -1143,6 +1193,19 @@
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/5.0.0": {},
+      "Microsoft.Extensions.Logging.Configuration/3.1.18": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "3.1.18"
+        }
+      },
+      "Microsoft.Extensions.Logging.Console/3.1.18": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Logging": "5.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "3.1.18"
+        }
+      },
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore/5.0.3": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "5.0.0",
@@ -1165,6 +1228,14 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "Microsoft.Extensions.Primitives": "5.0.0"
+        }
+      },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.18": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Microsoft.Extensions.Options": "5.0.0"
         }
       },
       "Microsoft.Extensions.Primitives/5.0.0": {},
@@ -1798,6 +1869,31 @@
         },
         "compile": {
           "lib/net5.0/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
+      "System.Diagnostics.Process/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.7.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
         }
       },
       "System.Diagnostics.Tools/4.3.0": {
@@ -2521,6 +2617,24 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "vue/2.6.11": {},
+      "Webpack/4.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.1",
+          "NETStandard.Library": "2.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Diagnostics.Process": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Webpack.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Webpack.dll": {}
+        }
+      },
       "Z.EntityFramework.Extensions.EFCore/5.2.9": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -2811,7 +2925,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Hosting.Abstractions/5.0.0.0": {
+      "Microsoft.AspNetCore.Hosting.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Hosting.Abstractions.dll": {}
         },
@@ -2823,7 +2937,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Hosting.Server.Abstractions/5.0.0.0": {
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {}
         },
@@ -3297,13 +3411,13 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Logging.Configuration/5.0.0.0": {
+      "Microsoft.Extensions.Logging.Configuration.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Logging.Configuration.dll": {}
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Logging.Console/5.0.0.0": {
+      "Microsoft.Extensions.Logging.Console.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Logging.Console.dll": {}
         },
@@ -3345,7 +3459,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.Extensions.Options.ConfigurationExtensions/5.0.0.0": {
+      "Microsoft.Extensions.Options.ConfigurationExtensions.Reference/5.0.0.0": {
         "compile": {
           "Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
         },
@@ -3561,7 +3675,7 @@
         },
         "compileOnly": true
       },
-      "System.Diagnostics.Process/5.0.0.0": {
+      "System.Diagnostics.Process.Reference/5.0.0.0": {
         "compile": {
           "System.Diagnostics.Process.dll": {}
         },
@@ -4391,6 +4505,20 @@
       "path": "log4net/2.0.12",
       "hashPath": "log4net.2.0.12.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Hosting.Abstractions/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m93r3mNu/igz8YLJ6ra01FeMdKp0s+UKoq5WGqRZ6M9iJJO6TDyLMU+xE9HfsKeSKq6apPJOHDakjRJU2+e+PQ==",
+      "path": "microsoft.aspnetcore.hosting.abstractions/1.1.1",
+      "hashPath": "microsoft.aspnetcore.hosting.abstractions.1.1.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TjpIh4jjzkqnuTyMSwCNaYVqTvklxA8m77E+3KuaIxdgqMsDUs8qlZn6pUOXWIeRAGTDYoDpSpMw9rqbEQnksg==",
+      "path": "microsoft.aspnetcore.hosting.server.abstractions/1.1.1",
+      "hashPath": "microsoft.aspnetcore.hosting.server.abstractions.1.1.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4426,6 +4554,13 @@
       "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/5.0.9",
       "hashPath": "microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.9.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.NodeServices/3.1.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-apg9itjQw0xl5I2GSz/TFLh1yuyk6iyTZj0xHALBmKOHK/N76t8SbUz+UW28/L7WLVM1Yher3MKVawsm6oqKwQ==",
+      "path": "microsoft.aspnetcore.nodeservices/3.1.18",
+      "hashPath": "microsoft.aspnetcore.nodeservices.3.1.18.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4446,6 +4581,13 @@
       "sha512": "sha512-7YqK+H61lN6yj9RiQUko7oaOhKtRR9Q/kBcoWNRemhJdTIWOh1OmdvJKzZrMWOlff3BAjejkPQm+0V0qXk+B1w==",
       "path": "microsoft.aspnetcore.razor.runtime/2.2.0",
       "hashPath": "microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.SpaServices/3.1.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q4kOauUkE7ZzVtqXY5rtmKU5IzKxVaARtKJXKWVTk6Euk7BEEfw7OdmJSF6oVbsEJraErxOTIMqF9heNkrxziw==",
+      "path": "microsoft.aspnetcore.spaservices/3.1.18",
+      "hashPath": "microsoft.aspnetcore.spaservices.3.1.18.nupkg.sha512"
     },
     "Microsoft.Azure.KeyVault/3.0.5": {
       "type": "package",
@@ -4713,6 +4855,20 @@
       "path": "microsoft.extensions.logging.abstractions/5.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Configuration/3.1.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/4oZeiztMcf6EIhRxzA4SbpebPhrgKX8rw0j5AzcRbz0zqeVt4IfLifK9syap5sV9h6kPmckNe5wg/pC65kndw==",
+      "path": "microsoft.extensions.logging.configuration/3.1.18",
+      "hashPath": "microsoft.extensions.logging.configuration.3.1.18.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Console/3.1.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jciot9zewy90a+z9pQqJaqNrtIUdzXMct6EEpq6m7YNaSt2MOnTNJQmenlQZSs8MkkTRvmzh9n7QJe/c72fuWw==",
+      "path": "microsoft.extensions.logging.console/3.1.18",
+      "hashPath": "microsoft.extensions.logging.console.3.1.18.nupkg.sha512"
+    },
     "Microsoft.Extensions.Logging.Log4Net.AspNetCore/5.0.3": {
       "type": "package",
       "serviceable": true,
@@ -4726,6 +4882,13 @@
       "sha512": "sha512-CBvR92TCJ5uBIdd9/HzDSrxYak+0W/3+yxrNg8Qm6Bmrkh5L+nu6m3WeazQehcZ5q1/6dDA7J5YdQjim0165zg==",
       "path": "microsoft.extensions.options/5.0.0",
       "hashPath": "microsoft.extensions.options.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/3.1.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rON4PAqSEQQwr4gObh6j+cDA4FFSt++u9XHuQXlCFjkSfwhJE06xfvsJhZrf7E0mOxxICvM6/vTr5KUvirvXoA==",
+      "path": "microsoft.extensions.options.configurationextensions/3.1.18",
+      "hashPath": "microsoft.extensions.options.configurationextensions.3.1.18.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/5.0.0": {
       "type": "package",
@@ -5153,6 +5316,13 @@
       "sha512": "sha512-uXQEYqav2V3zP6OwkOKtLv+qIi6z3m1hsGyKwXX7ZA7htT4shoVccGxnJ9kVRFPNAsi1ArZTq2oh7WOto6GbkQ==",
       "path": "system.diagnostics.diagnosticsource/5.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    },
+    "System.Diagnostics.Process/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J0wOX07+QASQblsfxmIMFc9Iq7KTXYL3zs2G/Xc704Ylv3NpuVdo6gij6V3PGiptTxqsK0K7CdXenRvKUnkA2g==",
+      "path": "system.diagnostics.process/4.3.0",
+      "hashPath": "system.diagnostics.process.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Tools/4.3.0": {
       "type": "package",
@@ -5644,6 +5814,20 @@
       "path": "system.xml.xpath/4.3.0",
       "hashPath": "system.xml.xpath.4.3.0.nupkg.sha512"
     },
+    "vue/2.6.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QvC2UH8Eaz/aEc6+bf1WpdtZl8iAToPuPxI2To6yDfOyqcTL4fvAlpNix1TXzSVQhPcABmbDcDt49uq/HcNmOQ==",
+      "path": "vue/2.6.11",
+      "hashPath": "vue.2.6.11.nupkg.sha512"
+    },
+    "Webpack/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HPvYUK4I7WZEfIL18oSnFNJkTfpOTFwD6hVrBFgxVqYr/ZczSiU+TuqvkmgTR/J/2emcD/u15oKAsRD9ohGtdA==",
+      "path": "webpack/4.0.0",
+      "hashPath": "webpack.4.0.0.nupkg.sha512"
+    },
     "Z.EntityFramework.Extensions.EFCore/5.2.9": {
       "type": "package",
       "serviceable": true,
@@ -5820,7 +6004,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Hosting.Abstractions/5.0.0.0": {
+    "Microsoft.AspNetCore.Hosting.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5830,7 +6014,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Hosting.Server.Abstractions/5.0.0.0": {
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6225,12 +6409,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Logging.Configuration/5.0.0.0": {
+    "Microsoft.Extensions.Logging.Configuration.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Logging.Console/5.0.0.0": {
+    "Microsoft.Extensions.Logging.Console.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6265,7 +6449,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Extensions.Options.ConfigurationExtensions/5.0.0.0": {
+    "Microsoft.Extensions.Options.ConfigurationExtensions.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6445,7 +6629,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Diagnostics.Process/5.0.0.0": {
+    "System.Diagnostics.Process.Reference/5.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
