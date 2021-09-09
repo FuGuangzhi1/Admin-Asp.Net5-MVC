@@ -443,6 +443,10 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "Microsoft.AspNetCore.SpaServices": {
+              "target": "Package",
+              "version": "[3.1.18, )"
+            },
             "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -458,6 +462,14 @@
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "Webpack": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "vue": {
+              "target": "Package",
+              "version": "[2.6.11, )"
             }
           },
           "imports": [

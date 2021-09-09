@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,7 +11,6 @@ using Microsoft.Extensions.Hosting;
 using MvcStudyFu.EFCore.SQLSever;
 using System;
 using System.IO;
-using WebApplication.AOP;
 using WebApplication.Utility;
 
 namespace WebApplication
@@ -71,18 +69,22 @@ namespace WebApplication
             //builder.RegisterModule(module);
             #endregion
         }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        [Obsolete]
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //数据库创建
+            #region 数据库创建
             if (CreatDatabase)
                 using (var StudyMVCDBContext = new EFCoreContextFactory(Configuration).CreateDbContext())
                 {
                     StudyMVCDBContext.Database.EnsureCreated();
                     CreatDatabase = false;
                 }
+            #endregion
+          
             if (env.IsDevelopment())
-            {
+            {           
                 app.UseDeveloperExceptionPage();
             }
             else

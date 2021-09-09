@@ -917,3 +917,8 @@ G:\WebApplication\WebApplication\obj\Debug\net5.0\WebApplication.pdb
 G:\WebApplication\WebApplication\obj\Debug\net5.0\WebApplication.genruntimeconfig.cache
 G:\WebApplication\WebApplication\obj\Debug\net5.0\Razor\Views\Special\ShowTime.cshtml.g.cs
 G:\WebApplication\WebApplication\obj\Debug\net5.0\staticwebassets\WebApplication.StaticWebAssets.xml
+G:\WebApplication\WebApplication\bin\Debug\net5.0\package.json
+G:\WebApplication\WebApplication\bin\Debug\net5.0\package-lock.json
+G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.AspNetCore.NodeServices.dll
+G:\WebApplication\WebApplication\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.dll
+G:\WebApplication\WebApplication\bin\Debug\net5.0\Webpack.dll
