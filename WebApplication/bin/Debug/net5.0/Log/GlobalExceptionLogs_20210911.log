@@ -1,0 +1,6 @@
+﻿2021-09-11 04:46:41,065| ERROR 
+Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.IActionResult'.
+--------------------------------
+2021-09-11 04:58:54,714| ERROR 
+Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.IActionResult'.
+--------------------------------

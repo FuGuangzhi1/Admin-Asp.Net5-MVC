@@ -23,3 +23,6 @@ System.Security.Cryptography.CryptographicException: The key {9e130fda-59b2-4ad7
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
    at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
    at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-09-10 15:24:52,303| INFO Microsoft.Hosting.Lifetime 
+Application is shutting down...
+--------------------------------
