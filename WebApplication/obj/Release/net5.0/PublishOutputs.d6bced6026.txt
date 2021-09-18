@@ -9,6 +9,7 @@ G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\Perso
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\css\Studyknowledge.css
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\images\小新.jpg
+G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\images\小新1.jpg
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\axios.min.js
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\axios.min.map
 G:\WebApplication\WebApplication\obj\Release\net5.0\PubTmp\Out\wwwroot\js\CreateAccount.js
