@@ -1,0 +1,12 @@
+﻿2021-09-25 00:44:42,626| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-25 00:44:42,634| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Production
+--------------------------------
+2021-09-25 00:44:42,634| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication\bin\Release\net5.0\publish
+--------------------------------
+2021-09-25 01:05:41,063| INFO Microsoft.Hosting.Lifetime 
+Application is shutting down...
+--------------------------------

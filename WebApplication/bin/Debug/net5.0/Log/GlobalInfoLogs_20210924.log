@@ -7,3 +7,12 @@ Hosting environment: Development
 2021-09-24 10:15:58,386| INFO Microsoft.Hosting.Lifetime 
 Content root path: E:\Git仓库\WebApplication\WebApplication
 --------------------------------
+2021-09-24 15:16:24,007| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-24 15:16:24,036| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-24 15:16:24,038| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
