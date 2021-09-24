@@ -14,78 +14,16 @@
     <!-- 引入组件库 -->
     <script src="~/js/index.js"></script>
     <link href="~/css/PersonalInfo.css" rel="stylesheet" />
-    <style>
-        .my-label {
-            background: #E1F3D8;
-        }
-
-        .my-content {
-            background: #FDE2E2;
-        }
-
-        .el-breadcrumb {
-            font-size: 18px;
-        }
-
-        .head {
-            margin-top: 10px;
-        }
-
-        .el-card {
-            margin-top: 10px;
-        }
-
-        .text {
-            font-size: 14px;
-        }
-
-        .item {
-            margin-bottom: 18px;
-        }
-
-        #canv {
-            width: 100%;
-            height: 250px;
-        }
-
-        .avatar-uploader .el-upload {
-            border: 1px dashed #d9d9d9;
-            border-radius: 6px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-            .avatar-uploader .el-upload:hover {
-                border-color: #409EFF;
-            }
-
-        .avatar-uploader-icon {
-            font-size: 12px;
-            color: #8c939d;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            text-align: center;
-        }
-
-        .avatar {
-            width: 60px;
-            height: 60px;
-            display: block;
-        }
-    </style>
 </head>
 
 <body>
     <div id="app">
-        <div class="head">
-            <el-breadcrumb separator-class="el-icon-arrow-right">
-                <el-breadcrumb-item><a href="/Special/Showtime">首页</a></el-breadcrumb-item>
-                <el-breadcrumb-item>个人管理</el-breadcrumb-item>
-                <el-breadcrumb-item>个人信息</el-breadcrumb-item>
-            </el-breadcrumb>
-        </div>
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+            <el-breadcrumb-item><a href="/Special/Showtime">首页</a></el-breadcrumb-item>
+            <el-breadcrumb-item>个人管理</el-breadcrumb-item>
+            <el-breadcrumb-item>个人信息</el-breadcrumb-item>
+        </el-breadcrumb>
+        <br />
         <el-card class="box-card" shadow="hover">
             <div slot="header" class="clearfix">
                 <span>Aubout Me</span>
@@ -122,7 +60,6 @@
                 <el-descriptions-item label="QQ">{{userInfo.qq}}</el-descriptions-item>
             </el-descriptions>
         </el-card>
-
     </div>
     <canvas id='canv'> </canvas>
 

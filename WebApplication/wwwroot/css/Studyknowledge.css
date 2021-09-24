@@ -1,29 +1,35 @@
 ﻿* {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #pagination {
-    float: right;
+  float: right;
 }
 
 #from {
-    padding: 10px;
-    margin-left: 6px;
+  padding: 10px;
+  margin-left: 6px;
 }
 
 #buttonCss {
-    float: right;
+  float: right;
 }
 
 .el-table {
-    text-align: center;
+  text-align: center;
 }
 
-    .el-table .warning-row {
-        background: oldlace;
-    }
+.el-table .warning-row {
+  background: oldlace;
+}
 
-    .el-table .success-row {
-        background: #f0f9eb;
-    }
+.el-table .success-row {
+  background: #f0f9eb;
+}
+.el-breadcrumb {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left:15px;
+}

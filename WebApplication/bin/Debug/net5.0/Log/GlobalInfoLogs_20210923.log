@@ -1,0 +1,90 @@
+﻿2021-09-23 07:50:59,404| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-09-23 07:50:59,412| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 07:50:59,413| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 07:50:59,417| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 07:59:36,198| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-09-23 07:59:36,209| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 07:59:36,211| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 07:59:36,212| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 08:14:44,167| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 08:14:44,190| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 08:14:44,191| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 12:21:49,104| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 12:21:49,130| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 12:21:49,133| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 12:32:28,325| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 12:32:28,346| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 12:32:28,348| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 17:00:33,859| INFO Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000
+--------------------------------
+2021-09-23 17:00:33,865| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 17:00:33,866| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 17:00:33,866| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 22:35:39,028| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 22:35:39,051| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 22:35:39,052| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 22:41:32,908| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 22:41:32,935| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 22:41:32,937| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------
+2021-09-23 22:51:29,670| INFO Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.
+--------------------------------
+2021-09-23 22:51:29,697| INFO Microsoft.Hosting.Lifetime 
+Hosting environment: Development
+--------------------------------
+2021-09-23 22:51:29,699| INFO Microsoft.Hosting.Lifetime 
+Content root path: E:\Git仓库\WebApplication\WebApplication
+--------------------------------

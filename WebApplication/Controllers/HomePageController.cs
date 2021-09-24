@@ -23,10 +23,8 @@ namespace WebApplication.Controllers
         {
             this._homePage = homePage;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        [HttpGet]
+        public IActionResult Index() => View();
         [HttpGet]
         public async Task<IActionResult> GetmenuList()
         {
@@ -36,11 +34,10 @@ namespace WebApplication.Controllers
             ajaxResult.Data = await _homePage.GetmenuListAsync(id);
             if (ajaxResult.Data != null)
             {
-                ajaxResult.Message = "操作成功"; ajaxResult.Success = true;
+                ajaxResult.Message = "操作成功"; 
+                ajaxResult.Success = true;
             }
             return Json(data: ajaxResult);
         }
-
-
     }
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1id0mgwppPngvY3atHLDpM+Hu4ylMXIdBjW2f0rJgggyvFQpMcx+7aVAUNMhEcDoZ7KXVrVEBOdNhO/nYsuuIg==",
+  "dgSpecHash": "S+8G0IoSKMYeM07h79R3b5pJM63CLACQtmWY599eivas/4nrKREeVmdN8COCe7mr2KqTl+oamksp1nMPsP8ylA==",
   "success": true,
-  "projectFilePath": "G:\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+  "projectFilePath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\付广志\\.nuget\\packages\\protobuf-net.core\\3.0.101\\protobuf-net.core.3.0.101.nupkg.sha512"
+    "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\protobuf-net.core\\3.0.101\\protobuf-net.core.3.0.101.nupkg.sha512"
   ],
   "logs": []
 }

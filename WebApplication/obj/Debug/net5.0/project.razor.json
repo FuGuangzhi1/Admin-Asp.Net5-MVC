@@ -1,5 +1,5 @@
 {
-  "FilePath": "g:\\WebApplication\\WebApplication\\WebApplication.csproj",
+  "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\WebApplication.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -13566,6 +13566,61 @@
         }
       },
       {
+        "HashCode": -1862426603,
+        "Kind": "ITagHelper",
+        "Name": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper",
+        "AssemblyName": "Microsoft.AspNetCore.SpaServices",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "asp-prerender-module"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-module",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ModuleName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-export",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ExportName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-data",
+            "TypeName": "System.Object",
+            "Metadata": {
+              "Common.PropertyName": "CustomDataParameter"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "asp-prerender-timeout",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "TimeoutMillisecondsParameter"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Microsoft.AspNetCore.SpaServices.Prerendering.PrerenderTagHelper"
+        }
+      },
+      {
         "HashCode": 141407075,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -15619,58 +15674,58 @@
   "RootNamespace": "WebApplication",
   "Documents": [
     {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Account\\Login.cshtml",
-      "TargetPath": "Views\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Special\\Index.cshtml",
-      "TargetPath": "Views\\Special\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\UserManage\\Index.cshtml",
-      "TargetPath": "Views\\UserManage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Special\\ShowTime.cshtml",
-      "TargetPath": "Views\\Special\\ShowTime.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\PersonalInfo\\Index.cshtml",
-      "TargetPath": "Views\\PersonalInfo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Study\\Studyknowledge.cshtml",
-      "TargetPath": "Views\\Study\\Studyknowledge.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Account\\CreateUser.cshtml",
-      "TargetPath": "Views\\Account\\CreateUser.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Journal\\Index.cshtml",
-      "TargetPath": "Views\\Journal\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Permissions\\Index.cshtml",
-      "TargetPath": "Views\\Permissions\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\Role\\Index.cshtml",
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Role\\Index.cshtml",
       "TargetPath": "Views\\Role\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "g:\\WebApplication\\WebApplication\\Views\\HomePage\\Index.cshtml",
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\UserManage\\Index.cshtml",
+      "TargetPath": "Views\\UserManage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Account\\CreateUser.cshtml",
+      "TargetPath": "Views\\Account\\CreateUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Study\\Studyknowledge.cshtml",
+      "TargetPath": "Views\\Study\\Studyknowledge.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\HomePage\\Index.cshtml",
       "TargetPath": "Views\\HomePage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Permissions\\Index.cshtml",
+      "TargetPath": "Views\\Permissions\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Journal\\Index.cshtml",
+      "TargetPath": "Views\\Journal\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Account\\Login.cshtml",
+      "TargetPath": "Views\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\PersonalInfo\\Index.cshtml",
+      "TargetPath": "Views\\PersonalInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Special\\Index.cshtml",
+      "TargetPath": "Views\\Special\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Git仓库\\WebApplication\\WebApplication\\Views\\Special\\ShowTime.cshtml",
+      "TargetPath": "Views\\Special\\ShowTime.cshtml",
       "FileKind": "mvc"
     }
   ],

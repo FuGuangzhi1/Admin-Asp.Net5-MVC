@@ -1,16 +1,145 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>角色管理</title>
+    <script src="~/js/vue.js"></script>
+    <script src="~/js/axios.min.js"></script>
+    <!-- 引入样式 -->
+    <link href="~/css/index.css" rel="stylesheet" />
+    <!-- 引入组件库 -->
+    <script src="~/js/index.js"></script>
+    <link href="~/css/Role.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>角色管理</h1>
+    <div id="app">
+        <el-breadcrumb separator-class="el-icon-arrow-right">
+            <el-breadcrumb-item><a href="/Special/Showtime">首页</a></el-breadcrumb-item>
+            <el-breadcrumb-item>系统管理</el-breadcrumb-item>
+            <el-breadcrumb-item>角色管理</el-breadcrumb-item>
+        </el-breadcrumb>
+        <br />
+        <!--表头模糊查询-->
+        <el-form :inline="true" class="demo-form-inline">
+            <el-form-item label="角色名称:">
+                <el-input placeholder="请输入需要查询角色....."></el-input>
+            </el-form-item>
+
+            <div id="buttonCss">
+                <el-form-item>
+                    <el-button type="success" size="small" v-on:click="Search"> Search</el-button>
+                    <el-button type="danger" size="small" v-on:click="dialogFormVisible = true"> Add</el-button>
+                    <el-button type="warning" size="small" @*v-on:click="Search"*@> MassDeletion</el-button>
+                    <el-button type="info" size="small" @*v-on:click="Search"*@> Leading-in</el-button>
+                    <el-button type="primary" size="small" @*v-on:click="Search"*@> Derive</el-button>
+                </el-form-item>
+            </div>
+        </el-form>
+
+        <!--table表格-->
+        <template>
+            <el-table :data="tableData" style="width:100%" height="420" max-height="500">
+                <el-table-column type="selection" width="80" align='center'>
+                </el-table-column>
+
+                <el-table-column label="知识名称" width="180" align='center'>
+                </el-table-column>
+
+                <input id="Hidden1" v-model="form.studyknowledgeId" type="hidden" />
+                <el-table-column label="操作" width="180" fixed="right">
+                    <!--自定义列-->
+                    <template slot-scope="scope">
+                        <el-button type="primary" size="mini" v-on:click="Edit(scope.row)" class="el-icon-edit" circle>
+                        </el-button> &nbsp;
+                        <el-button type="danger" size="mini" v-on:click="Delete(scope.row)" class="el-icon-delete"
+                                   circle> </el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div id="pagination">
+                <!--分页控件-->
+                <el-pagination v-on:size-change="handleSizeChange" v-on:current-change="handleCurrentChange"
+                               :page-sizes="[2,3,5,10]" :page-size=5 layout="total,sizes,prev,pager,next,jumper" :total="total">
+                </el-pagination>
+            </div>
+        </template>
+
+        <!---模态框-->
+        <el-dialog title="提示" :visible.sync="dialogFormVisible" width="500px" :before-close=Close>
+            <el-form :inline="false" class="demo-form-inline" :model="form" :rules="rules" ref="form">
+                <el-form-item prop="">
+                    <el-col :span="8">
+                        &nbsp; &nbsp; 知识名称:
+                    </el-col>
+                    <el-col :span="12">
+                        <el-input placeholder="请输入知识名称....." style="width:240px">
+                        </el-input>
+                    </el-col>
+                </el-form-item>
+
+                <input id="Hidden1" type="hidden" />
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                <el-button v-on:click="Close">取 消</el-button>
+                <el-button type="primary" v-on:click="Confirm('form')">确 定</el-button>
+            </span>
+        </el-dialog>
+
+    </div>
+    <script>
+        const VM = new Vue({
+            el: '#app',
+            data: {
+                currentPage: 1, //初始页
+                pagesize: 5,//每页的数据
+                total: 0,   //总记录数
+                currentPage: 1, //初始页
+                pagesize: 5,//每页的数据
+                tableData: [],
+                dialogFormVisible: false,
+                rules: {},
+                form: {
+
+                }
+            }, mounted() {
+                this.load();
+            },
+            methods: {
+                load() {
+                    this.$message("页面加载事件");
+                },
+                Confirm(form) {
+                    this.$message("添加或者编辑按钮");
+                },
+                Search() {
+                    this.$message("查询");
+                },
+                Edit(row) {
+                    this.$message("编辑");
+                },
+                Delete(row) {
+                    this.$message("删除");
+                },
+                handleSizeChange(val) {
+                    this.$message("分页事件1");
+                },
+                handleCurrentChange(val) {
+                    this.$message("分页事件2");
+                },
+                Close() {
+                    this.$confirm('确认关闭？')
+                        .then(_ => {
+                            this.dialogFormVisible = false;
+                            this.form = {
+                            };
+                        })
+                        .catch(_ => {
+                            this.$message.error('教我做事？');
+                        });
+                }
+            }
+        })
+    </script>
+    <script src="~/js/Role.js"></script>
 </body>
 </html>

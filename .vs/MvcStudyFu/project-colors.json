@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "992eaa5f-a1b4-4a47-aad5-7b0f7c78eb8c": {
+      "ProjectGuid": "992eaa5f-a1b4-4a47-aad5-7b0f7c78eb8c",
+      "DisplayName": "WebApplication",
+      "ColorIndex": 0
+    },
+    "b0e5856f-dcb8-4097-a248-d1223359cf58": {
+      "ProjectGuid": "b0e5856f-dcb8-4097-a248-d1223359cf58",
+      "DisplayName": "MvcStudyFu.Services",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

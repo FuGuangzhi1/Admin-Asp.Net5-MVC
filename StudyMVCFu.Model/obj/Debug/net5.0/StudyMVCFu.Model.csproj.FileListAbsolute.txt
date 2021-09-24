@@ -10,3 +10,15 @@ G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.dll
 G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\ref\StudyMVCFu.Model.dll
 G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.pdb
 G:\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.csproj.AssemblyReference.cache
+E:\Git仓库\WebApplication\StudyMVCFu.Model\bin\Debug\net5.0\StudyMVCFu.Model.deps.json
+E:\Git仓库\WebApplication\StudyMVCFu.Model\bin\Debug\net5.0\StudyMVCFu.Model.dll
+E:\Git仓库\WebApplication\StudyMVCFu.Model\bin\Debug\net5.0\ref\StudyMVCFu.Model.dll
+E:\Git仓库\WebApplication\StudyMVCFu.Model\bin\Debug\net5.0\StudyMVCFu.Model.pdb
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.AssemblyInfoInputs.cache
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.AssemblyInfo.cs
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.csproj.CoreCompileInputs.cache
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.dll
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\ref\StudyMVCFu.Model.dll
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.pdb
+E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Debug\net5.0\StudyMVCFu.Model.csproj.AssemblyReference.cache

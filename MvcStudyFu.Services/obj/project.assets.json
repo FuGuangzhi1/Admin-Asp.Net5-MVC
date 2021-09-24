@@ -8174,19 +8174,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\付广志\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+      "projectUniqueName": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
       "projectName": "MvcStudyFu.Services",
-      "projectPath": "G:\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
-      "packagesPath": "C:\\Users\\付广志\\.nuget\\packages\\",
-      "outputPath": "G:\\WebApplication\\MvcStudyFu.Services\\obj\\",
+      "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+      "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
+      "outputPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\付广志\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8200,11 +8200,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-              "projectPath": "G:\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+            "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+              "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
             },
-            "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
-              "projectPath": "G:\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
+            "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+              "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
             }
           }
         }
@@ -8247,7 +8247,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
       }
     }
   }

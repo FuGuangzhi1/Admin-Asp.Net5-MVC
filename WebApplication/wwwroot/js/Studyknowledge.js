@@ -8,6 +8,8 @@
             pagesize: 5,//每页的数据
             total: 0,   //总记录数
             StudyTypeId: "",
+            loadingTable: false,
+            loadingForm: false,
             //模态框
             dialogFormVisible: false,
             StudyType: [{ studyTypeId: null, studyTypeName: null }],
@@ -40,7 +42,9 @@
                 this.tableData = res.rows;
                 this.total = res.total;
             }, async Search(event) {
+                this.loadingTable = true;
                 await this.load();
+                this.timeOut();
             },
             async GetStudyType() {
                 const { data: res } = await axios.get("/Study/StudyTypeData");
@@ -58,7 +62,9 @@
                         try {
                             const { data: res } = await axios.post
                                 ("/Study/UpdateOrInsertStudyTypeData", f);
+                            this.loadingForm = true;
                             console.log(res);
+                            this.timeOut();
                             this.result(res);
                         } catch {
                             this.$message.error('请求地址错误，或者没有网络，或者服务器爆炸！！！');
@@ -121,14 +127,19 @@
                         var f = new FormData();
                         f.append("id", data.studyknowledgeId);
                         const { data: res } = await axios.post("/Study/DeleteStudyTypeData", f);
+                        this.loadingTable = true;
                         if (res.success) {
+                            this.timeOut();
                             this.$message(res.message);
                             this.load();
                         }
-                        else this.$message.error(res.message);
+                        else {
+                            this.timeOut();
+                            this.$message.error(res.message);
+                        }
                     })
             }, dateFormat(row, colum, cellValue, index) {
-                return this.formatDateTime(row.createDateTime,1);
+                return this.formatDateTime(row.createDateTime, 1);
             }//时间戳转换成日期
             , formatDateTime(inputTime, mode) {
                 var date = new Date(inputTime);
@@ -144,6 +155,11 @@
                 minute = minute < 10 ? ('0' + minute) : minute;
                 //second = second < 10 ? ('0' + second) : second;
                 return mode == undefined ? y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second : y + '-' + m + '-' + d + ' ' + h + ':' + minute;
+            }, timeOut() {
+                setTimeout(() => {
+                    this.loadingTable = false,
+                    this.loadingForm = false
+                }, 1000);
             }
         }
 
