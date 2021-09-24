@@ -7,7 +7,7 @@
 简单的一个登录 成功后界面展示，对应权限给对应的页面  <br/>
 下面各个部分简单描述一下(项目里面会有惊喜哦，突然触发的那种)
 # 登录
-![image](https://user-images.githubusercontent.com/87634542/131846986-3debb16a-d9ce-458c-943f-5cf86f4abefe.png)
+![image](https://user-images.githubusercontent.com/87634542/134720562-bea7930b-d493-4280-8543-9c3489b96e75.png)
 基础账号是：1314520 或者用姓名：小杰 <br/>
 密码：123456  <br/>
 密码这里用到了MD5加密，验证码用的Drawing画的，这个是我网上找资料搬运而来 <br/>
@@ -17,9 +17,13 @@
 还有一些细节大家项目里面自己看 <br/>
 
 # 主界面
-![image](https://user-images.githubusercontent.com/87634542/132249799-1e9168c1-6bbb-45fc-8b51-87074380adce.png)
+![image](https://user-images.githubusercontent.com/87634542/134720705-cca412f8-ceb9-4541-b115-c33da7bd8fdd.png)
 界面改了一天的美观这个颜色还是挺不错的<br/>
 右边闹钟网上借鉴大佬写的css3画布,我没这么好的css功底了<br/>
+# 部分界面展示
+![image](https://user-images.githubusercontent.com/87634542/134720903-63982a1c-e200-47f2-943e-9f33705e3e0b.png)
+![image](https://user-images.githubusercontent.com/87634542/134720990-a9dddb0c-0e58-4140-b197-edac7a21fef0.png)
+
 # 代码分层的介绍
 ![image](https://user-images.githubusercontent.com/87634542/131849035-a7a7a045-4772-49a0-bd23-5907102975d8.png)<br/>
 我用经典的三层文件夹包裹这样大家更能看懂<br/>
