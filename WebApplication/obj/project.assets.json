@@ -10373,19 +10373,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Git仓库\\WebApplication\\WebApplication\\WebApplication.csproj",
+      "projectUniqueName": "H:\\桌面\\WebApplication\\WebApplication\\WebApplication.csproj",
       "projectName": "WebApplication",
-      "projectPath": "E:\\Git仓库\\WebApplication\\WebApplication\\WebApplication.csproj",
-      "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-      "outputPath": "E:\\Git仓库\\WebApplication\\WebApplication\\obj\\",
+      "projectPath": "H:\\桌面\\WebApplication\\WebApplication\\WebApplication.csproj",
+      "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+      "outputPath": "H:\\桌面\\WebApplication\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10399,17 +10399,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-              "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+            "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+              "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
             },
-            "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
-              "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
+            "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
+              "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
             },
-            "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
-              "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
+            "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+              "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
             },
-            "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
-              "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj"
+            "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
+              "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj"
             }
           }
         }
@@ -10481,8 +10481,20 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.9, 5.0.9]"
+            "version": "[5.0.15, 5.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
           }
         ],
         "frameworkReferences": {
@@ -10493,7 +10505,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

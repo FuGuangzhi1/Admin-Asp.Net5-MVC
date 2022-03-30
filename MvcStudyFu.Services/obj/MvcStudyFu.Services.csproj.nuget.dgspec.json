@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {}
+    "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {}
   },
   "projects": {
-    "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+    "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "projectUniqueName": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
         "projectName": "MvcStudyFu.Common",
-        "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
-        "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-        "outputPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\obj\\",
+        "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+        "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+        "outputPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-                "projectPath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+              "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+                "projectPath": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
               }
             }
           }
@@ -75,26 +75,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
+    "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+        "projectUniqueName": "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
         "projectName": "MvcStudyFu.EFCore.SQLSever",
-        "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
-        "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-        "outputPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\obj\\",
+        "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj",
+        "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+        "outputPath": "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,11 +122,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-                "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+              "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+                "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
               },
-              "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-                "projectPath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+              "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+                "projectPath": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
               }
             }
           }
@@ -170,26 +184,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+    "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
+        "projectUniqueName": "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
         "projectName": "MvcStudyFu.Interface",
-        "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
-        "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-        "outputPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\obj\\",
+        "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
+        "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+        "outputPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -203,8 +231,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
-                "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
+              "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj": {
+                "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.EFCore.SQLSever\\MvcStudyFu.EFCore.SQLSever.csproj"
               }
             }
           }
@@ -234,26 +262,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
+    "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+        "projectUniqueName": "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
         "projectName": "MvcStudyFu.Services",
-        "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
-        "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-        "outputPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Services\\obj\\",
+        "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
+        "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+        "outputPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -267,11 +309,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
-                "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
+              "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj": {
+                "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj"
               },
-              "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
-                "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
+              "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj": {
+                "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj"
               }
             }
           }
@@ -309,26 +351,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+    "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+        "projectUniqueName": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
         "projectName": "StudyMVCFu.Model",
-        "projectPath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
-        "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-        "outputPath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\obj\\",
+        "projectPath": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+        "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+        "outputPath": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -369,12 +425,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

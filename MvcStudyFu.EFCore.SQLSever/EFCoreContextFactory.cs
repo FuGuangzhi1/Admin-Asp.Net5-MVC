@@ -43,7 +43,7 @@ namespace MvcStudyFu.EFCore.SQLSever
         {
             var whetherToSeparateReadingAndWriting = _configuration.GetSection("WhetherToSeparateReadingAndWriting");
 
-            if (!whetherToSeparateReadingAndWriting.ToBool())  //是否读写分离
+            if (!whetherToSeparateReadingAndWriting.Value.ToBool())  //是否读写分离
                 return new StudyMVCDBContext(_dBConnectionOption.MainConnectionString);
             try
             {

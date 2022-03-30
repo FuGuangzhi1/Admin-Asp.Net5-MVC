@@ -8,25 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication
 build_property.RootNamespace = WebApplication
-build_property.ProjectDir = g:\WebApplication\WebApplication\
-build_property.RazorLangVersion = 5.0
+build_property.ProjectDir = H:\桌面\WebApplication\WebApplication\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = g:\WebApplication\WebApplication
+build_property.MSBuildProjectDirectory = H:\桌面\WebApplication\WebApplication
 build_property._RazorSourceGeneratorDebug = 
-build_property._RazorSourceGeneratorHeapDumps = 
 
-[g:/WebApplication/WebApplication/Views/AccountControllers/CreateUser.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENvbnRyb2xsZXJzXENyZWF0ZVVzZXIuY3NodG1s
+[H:/桌面/WebApplication/WebApplication/Views/Account/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGVVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/WebApplication/WebApplication/Views/AccountControllers/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudENvbnRyb2xsZXJzXExvZ2luLmNzaHRtbA==
+[H:/桌面/WebApplication/WebApplication/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/WebApplication/WebApplication/Views/HomePage/Index.cshtml]
+[H:/桌面/WebApplication/WebApplication/Views/HomePage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVBhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/WebApplication/WebApplication/Views/Study/Studyknowledge.cshtml]
+[H:/桌面/WebApplication/WebApplication/Views/Journal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm91cm5hbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/Permissions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVybWlzc2lvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/PersonalInfo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYWxJbmZvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/Role/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/Special/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlY2lhbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/Special/ShowTime.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlY2lhbFxTaG93VGltZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/Study/Studyknowledge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZHlcU3R1ZHlrbm93bGVkZ2UuY3NodG1s
-build_metadata.AdditionalFiles.CssScope =
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/桌面/WebApplication/WebApplication/Views/UserManage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlck1hbmFnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

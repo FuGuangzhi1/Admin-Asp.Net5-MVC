@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "S+8G0IoSKMYeM07h79R3b5pJM63CLACQtmWY599eivas/4nrKREeVmdN8COCe7mr2KqTl+oamksp1nMPsP8ylA==",
+  "dgSpecHash": "K8XWOk1QOJLAVJnwRBWuoGanLCizY8UdCM28Rh8rLSF1070BzrgwIK6sOO/rbAOw1ROrC/kgGxDEkaDBQm6W2g==",
   "success": true,
-  "projectFilePath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
+  "projectFilePath": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\protobuf-net.core\\3.0.101\\protobuf-net.core.3.0.101.nupkg.sha512"
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\protobuf-net.core\\3.0.101\\protobuf-net.core.3.0.101.nupkg.sha512",
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

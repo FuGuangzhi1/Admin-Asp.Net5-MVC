@@ -582,19 +582,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+      "projectUniqueName": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
       "projectName": "MvcStudyFu.Common",
-      "projectPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
-      "packagesPath": "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\.nuget\\packages\\",
-      "outputPath": "E:\\Git仓库\\WebApplication\\MvcStudyFu.Common\\obj\\",
+      "projectPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\MvcStudyFu.Common.csproj",
+      "packagesPath": "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\",
+      "outputPath": "H:\\桌面\\WebApplication\\MvcStudyFu.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator.DESKTOP-QSUFVR3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -608,8 +608,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
-              "projectPath": "E:\\Git仓库\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
+            "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj": {
+              "projectPath": "H:\\桌面\\WebApplication\\StudyMVCFu.Model\\StudyMVCFu.Model.csproj"
             }
           }
         }
@@ -655,12 +655,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

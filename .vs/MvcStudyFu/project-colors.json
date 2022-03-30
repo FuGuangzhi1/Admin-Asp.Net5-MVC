@@ -10,6 +10,11 @@
       "ProjectGuid": "b0e5856f-dcb8-4097-a248-d1223359cf58",
       "DisplayName": "MvcStudyFu.Services",
       "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 2
