@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HAm4MSL5N0s5Vz7eXrXJf9EYpZLFDwwR7z9yph8f7k46a+R788fTwD9esh//cIe7qNHukDk6uwyGNtkgvfKUIA==",
+  "dgSpecHash": "vAnhYd3Ojod3MYC/WgvU2r/UUFBJYiy4gg29RwIRITJevTP5SUCvoJ/qK334gYRJiEptXM/Iatk0PUKykd6BWA==",
   "success": true,
   "projectFilePath": "H:\\桌面\\WebApplication\\MvcStudyFu.Interface\\MvcStudyFu.Interface.csproj",
   "expectedPackageFiles": [
@@ -105,10 +105,7 @@
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

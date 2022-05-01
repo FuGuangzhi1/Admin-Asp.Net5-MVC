@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+cI8X9Bzcr3S1BdA7QQvho/KNqgQWraJMIT411xXvvstQbqY1MXdFgVg1N8N51MyF/Lqs12nwo0eLv2jLQCGzQ==",
+  "dgSpecHash": "iwO8aajlQmK6qYTtoFOELofFFK4uWJIL7ZfLmGNeL9+NpubDxUAAKsPdmT/dUuD9Mre9mb5NKlQ3H4bbr3BjQg==",
   "success": true,
   "projectFilePath": "H:\\桌面\\WebApplication\\MvcStudyFu.Services\\MvcStudyFu.Services.csproj",
   "expectedPackageFiles": [
@@ -154,10 +154,7 @@
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.9\\z.entityframework.extensions.efcore.5.2.9.nupkg.sha512",
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.9\\z.entityframework.plus.efcore.5.2.9.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.expressions.eval\\4.0.52\\z.expressions.eval.4.0.52.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.expressions.eval\\4.0.52\\z.expressions.eval.4.0.52.nupkg.sha512"
   ],
   "logs": []
 }

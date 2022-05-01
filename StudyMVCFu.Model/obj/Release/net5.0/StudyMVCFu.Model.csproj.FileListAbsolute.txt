@@ -22,3 +22,15 @@ E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model
 E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.dll
 E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\ref\StudyMVCFu.Model.dll
 E:\Git仓库\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.pdb
+H:\桌面\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\StudyMVCFu.Model.deps.json
+H:\桌面\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\StudyMVCFu.Model.dll
+H:\桌面\WebApplication\StudyMVCFu.Model\bin\Release\net5.0\StudyMVCFu.Model.pdb
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.csproj.AssemblyReference.cache
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.GeneratedMSBuildEditorConfig.editorconfig
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.AssemblyInfoInputs.cache
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.AssemblyInfo.cs
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.csproj.CoreCompileInputs.cache
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.dll
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\refint\StudyMVCFu.Model.dll
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\StudyMVCFu.Model.pdb
+H:\桌面\WebApplication\StudyMVCFu.Model\obj\Release\net5.0\ref\StudyMVCFu.Model.dll

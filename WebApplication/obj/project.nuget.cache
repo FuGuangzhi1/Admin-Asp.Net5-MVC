@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qUlJRCgkSZU9zJFkuoET2UABm14o3bHTflbrOL8vm4yEFJt9CQw+OthtEcx3qOADX3KznL3EjiTw3HqZeuqenw==",
+  "dgSpecHash": "cF2nOf3QmgpsVHnJqRYX4JJCiCj/2g6xO252ngWSzRnVWl2tZY8EnN6tW6kGYnFrMzzqUHosU3+uJqTMKZEdqQ==",
   "success": true,
   "projectFilePath": "H:\\桌面\\WebApplication\\WebApplication\\WebApplication.csproj",
   "expectedPackageFiles": [
@@ -201,11 +201,7 @@
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\webpack\\4.0.0\\webpack.4.0.0.nupkg.sha512",
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.9\\z.entityframework.extensions.efcore.5.2.9.nupkg.sha512",
     "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.9\\z.entityframework.plus.efcore.5.2.9.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.expressions.eval\\4.0.52\\z.expressions.eval.4.0.52.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\Administrator.DESKTOP-H6DDKC0\\.nuget\\packages\\z.expressions.eval\\4.0.52\\z.expressions.eval.4.0.52.nupkg.sha512"
   ],
   "logs": []
 }

@@ -14,7 +14,6 @@ namespace MvcStudyFu.Common
     //以及一个Captcha类来生成并验证验证码
     public static class Captcha
     {
-
         const string Letters = "2346789ABCDEFGHJKLMNPRTUVWXYZ";
 
         public static string GenerateCaptchaCode()
@@ -29,14 +28,6 @@ namespace MvcStudyFu.Common
             }
             return sb.ToString();
         }
-        //public static bool ValidateCaptchaCode(string userInputCaptcha, HttpContext context)
-        //{
-        //    //var isValid = userInputCaptcha == context.Session.GetString("CaptchaCode");
-        //    //context.Session.Remove("CaptchaCode");
-        //    // return isValid;
-
-        //    return default;
-        //}
         public static CaptchaResult GenerateCaptchaImage(int width, int height, string captchaCode)
         {
             using Bitmap baseMap = new Bitmap(width, height);
@@ -48,7 +39,10 @@ namespace MvcStudyFu.Common
             AdjustRippleEffect();
             MemoryStream ms = new MemoryStream();
             baseMap.Save(ms, ImageFormat.Png);
-            return new CaptchaResult { CaptchaCode = captchaCode, CaptchaByteData = ms.ToArray(), Timestamp = DateTime.Now };
+            return new CaptchaResult
+            { CaptchaCode = captchaCode,
+                CaptchaByteData = ms.ToArray(),
+                Timestamp = DateTime.Now };
             int GetFontSize(int imageWidth, int captchCodeCount)
             {
                 var averageSize = imageWidth / captchCodeCount;
