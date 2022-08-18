@@ -1,5 +1,4 @@
 # 项目简介
-<b>本项目开源但不允许商用，仅用于学习交流。</b><br/>
 项目使用ASP.Net Core MVC(.net5.0)写的 <br/>
 ORM框架使用的EFCore （简单用本机电脑配置了一个简单的读写分离）  <br/>
 数据库默认支持是Sqlsever 重写OnConfiguring可支持任意数据库  <br/>
